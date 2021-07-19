@@ -47,7 +47,7 @@
                     </div>
                     <div class="col-md-5">
                         <h5 class="font-weight-bold color-blue mb-3">Terdaftar dan Diawasi</h5>
-                        <img src="@/assets/images/common/lembaga.png" alt="">
+                        <img src="@/assets/images/common/lembaga.png" width="300px" alt="">
                     </div>
                 </div>
             </div>
