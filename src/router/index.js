@@ -11,6 +11,8 @@ import Register from '../views/auth/Register.vue';
 import PersonalData from '../views/Personal-data.vue';
 import Scoring from '../views/Scoring.vue';
 import PinjamanCepat from '../views/PinjamanCepat.vue';
+import PinjamanModal from '../views/PinjamanModal.vue';
+import DanaUmroh from '../views/DanaUmroh.vue';
 
 Vue.use(VueRouter)
 
@@ -64,6 +66,14 @@ const routes = [
   {
     path: '/pinjaman-cepat',
     component: PinjamanCepat,
+  },
+  {
+    path: '/pinjaman-modal',
+    component: PinjamanModal,
+  },
+  {
+    path: '/dana-umrah',
+    component: DanaUmroh,
   },
 ]
 
