@@ -102,29 +102,16 @@ export default {
             customNav : [
                 "<span class='fa fa-chevron-left'></span>",
                 "<span class='fa fa-chevron-right'></span>"
-                ]
+                ],
         }
     },
-    mounted: function(){
-        this.scroll();
-        window.addEventListener('scroll', this.scroll)
+    mounted() {
+        const body = document.querySelector('body')
+        body.setAttribute('data-page','')
     },
     methods: {
         scrollTo(target){
             myFunction.scrollTo(target)
-        },
-        scroll(){
-            let now = document.documentElement.scrollTop;
-            const navbarTop = document.querySelector('.navbar-top')
-            const navbarBrandImg = document.querySelector('.navbar-brand img')
-            if(now>0){
-                navbarTop.classList.add('scrolled');
-                navbarBrandImg.src = require('../../assets/images/common/logo-dark.png')
-            }
-            else{
-                navbarTop.classList.remove('scrolled');
-                navbarBrandImg.src = require('../../assets/images/common/logo.png')
-            }
         },
         togglePromo(){
             this.clickedPromo = !this.clickedPromo
