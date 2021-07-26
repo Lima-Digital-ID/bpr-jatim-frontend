@@ -6,5 +6,5 @@ export const myFunction = {
             left: 0,
             behavior: 'smooth'
         });        
-    }
+    },
 }

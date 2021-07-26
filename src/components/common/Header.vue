@@ -1,8 +1,8 @@
 <template>
-    <nav class="navbar navbar-expand-lg navbar-top fixed-top py-3">
+    <nav class="navbar navbar-expand-lg navbar-top fixed-top py-3" :class="classNav">
         <div class="container custom">
             <a class="navbar-brand" href="#">
-                <img src="@/assets/images/common/logo.png" width="250" alt="" srcset="">
+                <img :src="this.srcLogo" width="250" alt="" srcset="">
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon fa fa-bars mt-2 color-darkBlue"></span>
@@ -25,11 +25,11 @@
                                         </div>
                                         <div class="row mt-5">
                                             <div class="col-auto">
-                                                <router-link to="/about" class="megamenu-link">
+                                                <router-link to="/profile" class="megamenu-link">
                                                     <h6>Profil <span class="fa fa-chevron-right fa-sm ml-1"></span></h6>
                                                     <p class="color-softGrey2 font-weight-light">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt ab aliquam saepe ipsum laudantium vel neque distinctio reiciendis rem.</p>
                                                 </router-link>
-                                                <router-link to="/about" class="megamenu-link">
+                                                <router-link to="/transparansi" class="megamenu-link">
                                                     <h6>Transparansi <span class="fa fa-chevron-right fa-sm ml-1"></span></h6>
                                                     <p class="color-softGrey2 font-weight-light">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt ab aliquam saepe ipsum laudantium vel neque distinctio reiciendis rem.</p>
                                                 </router-link>
@@ -95,8 +95,49 @@
                     <li class="nav-item">
                         <router-link class="nav-link" to="/">UMKM Binaan</router-link>
                     </li>
-                    <li class="nav-item">
-                        <router-link class="nav-link" to="/">Berita</router-link>
+                    <li class="nav-item megamenu-nav dropdown">
+                        <router-link class="nav-link dropdown-toggle" data-toggle="dropdown" to="">Berita</router-link>
+                        <div class="megamenu dropdown-menu py-5" id="megaMenuProdukLayanan">
+                            <div class="container custom">
+                            <div class="row">
+                                <div class="col-auto">
+                                    <h4 class="text-border blue color-blue">Berita</h4>
+                                </div>
+                            </div>
+                                <div class="row mt-5">
+                                    <div class="col-md-6">
+                                        <router-link to="/berita" class="megamenu-link">
+                                            <h6>Berita <span class="fa fa-chevron-right fa-sm ml-1"></span></h6>
+                                            <p class="color-softGrey2 font-weight-light">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt ab aliquam saepe ipsum laudantium vel neque distinctio reiciendis rem.</p>
+                                        </router-link>
+                                        <a href="#" class="megamenu-link">
+                                            <h6>Promo <span class="fa fa-chevron-right fa-sm ml-1"></span></h6>
+                                            <p class="color-softGrey2 font-weight-light">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt ab aliquam saepe ipsum laudantium vel neque distinctio reiciendis rem.</p>
+                                        </a>
+                                        <a href="#" class="megamenu-link">
+                                            <h6>ePaper UMKM <span class="fa fa-chevron-right fa-sm ml-1"></span></h6>
+                                            <p class="color-softGrey2 font-weight-light">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt ab aliquam saepe ipsum laudantium vel neque distinctio reiciendis rem.</p>
+                                        </a>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <a href="#" class="megamenu-link">
+                                            <h6>Penghargaan <span class="fa fa-chevron-right fa-sm ml-1"></span></h6>
+                                            <p class="color-softGrey2 font-weight-light">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt ab aliquam saepe ipsum laudantium vel neque distinctio reiciendis rem.</p>
+                                        </a>
+                                        <a href="#" class="megamenu-link">
+                                            <h6>Karier <span class="fa fa-chevron-right fa-sm ml-1"></span></h6>
+                                            <p class="color-softGrey2 font-weight-light">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt ab aliquam saepe ipsum laudantium vel neque distinctio reiciendis rem.</p>
+                                        </a>
+                                        <a href="#" class="megamenu-link">
+                                            <h6>Form Pengaduan Nasabah <span class="fa fa-chevron-right fa-sm ml-1"></span></h6>
+                                            <p class="color-softGrey2 font-weight-light">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt ab aliquam saepe ipsum laudantium vel neque distinctio reiciendis rem.</p>
+                                        </a>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
                     </li>
                 </ul>
             </div>
@@ -107,13 +148,16 @@
 <script>
     export default {
         name : 'Header',
-        props : ['navTransition'],
+        props :['navTransition','classNav'],
         data() {
             return {
                 loopLayanan : [],
+                logo : this.classNav==='scrolled' ? 'logo-dark.png' : 'logo.png',
+                srcLogo : ""
             }
         },
         mounted() {
+            this.srcLogo = require("@/assets/images/common/"+this.logo)
             const megamenu = document.querySelectorAll(".megamenu");
 
             for (let i = 0; i < megamenu.length; i++) {
@@ -121,8 +165,27 @@
                     e.stopPropagation()
                 });
             }
+
+            this.scroll();
+            document.addEventListener('scroll', this.scroll)
         },
         methods: {
+            scroll(){
+                const page = document.querySelector('body').getAttribute('data-page')
+                if(page!=='scrolled'){
+                    let now = document.documentElement.scrollTop;
+                    const navbarTop = document.querySelector('.navbar-top')
+                    const navbarBrandImg = document.querySelector('.navbar-brand img')
+                    if(now>0){
+                        navbarTop.classList.add('scrolled');
+                        navbarBrandImg.src = require('@/assets/images/common/logo-dark.png')
+                    }
+                    else{
+                        navbarTop.classList.remove('scrolled');
+                        navbarBrandImg.src = require('@/assets/images/common/logo.png')
+                    }
+                }
+            },
             showProdukLayanan(tipe,event){
                 event.preventDefault();
                 

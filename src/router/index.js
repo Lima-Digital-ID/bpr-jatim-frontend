@@ -1,6 +1,9 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
+import Berita from '@/views/Berita'
+import Profile from '@/views/tentang/Profile'
+import Transparansi from '@/views/tentang/Transparansi'
 
 Vue.use(VueRouter)
 
@@ -9,6 +12,21 @@ const routes = [
     path: '/',
     name: 'Home',
     component: Home
+  },
+  {
+    path: '/berita',
+    name: 'Berita',
+    component: Berita
+  },
+  {
+    path: '/profile',
+    name: 'Profile',
+    component: Profile
+  },
+  {
+    path: '/transparansi',
+    name: 'Transparansi',
+    component: Transparansi
   },
   {
     path: '/about',
