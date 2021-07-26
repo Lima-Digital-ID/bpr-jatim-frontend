@@ -6,7 +6,7 @@
         <div class="container custom">
             <div class="row">
                 <div class="col-md-6">
-                    <h4 class="font-weight-bold">Berita Terbaru</h4>
+                    <h3 class="font-weight-bold">Berita Terbaru</h3>
                     <p>Kumpulan informasi berita terbaru seputar Bank BPR Jatim dalam semangatnya
                         mengembangkan UMKM di Jawa Timur</p>
                 </div>

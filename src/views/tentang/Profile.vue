@@ -17,13 +17,13 @@
             <div class="container custom">
                 <div class="row mt-5 mb-4">
                     <div class="col-md-7">
-                        <h4 class="font-weight-bold color-blue">Sejarah Bank UMKM</h4>
-                        <p class="color-grey">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam ex veniam at minima animi dignissimos culpa reprehenderit</p>
+                        <h3 class="font-weight-bold color-blue">Sejarah Bank UMKM</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam ex veniam at minima animi dignissimos culpa reprehenderit</p>
                     </div>
                 </div>
                 <div class="row align-items-center">
                     <div class="col-md-5">
-                        <img src="https://images.unsplash.com/photo-1590402494682-cd3fb53b1f70?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80" class="img-cover" height="450px" alt="" srcset="">
+                        <img src="https://images.unsplash.com/photo-1590402494682-cd3fb53b1f70?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80" class="img-cover img-sejarah" height="450px" alt="" srcset="">
                     </div>
                     <div class="col-md-7 font-weight-light col-sejarah">
                         <p class="color-dark2">
@@ -50,8 +50,8 @@
             <div class="container custom">
                 <div class="row">
                     <div class="col-md-6">
-                        <h4 class="font-weight-bold color-blue">Visi Misi Bank UMKM</h4>
-                        <p class="color-grey">
+                        <h3 class="font-weight-bold color-blue">Visi Misi Bank UMKM</h3>
+                        <p>
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. 
@@ -109,7 +109,7 @@ terpercaya.
 
                     </div>
                     <div class="col-md-5">
-                        <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=667&q=80" class="img-cover" height="450px" alt="" srcset="">
+                        <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=667&q=80" class="img-cover img-visimisi" height="450px" alt="" srcset="">
                     </div>
                 </div>
             </div>
@@ -181,7 +181,9 @@ pemerintah Bank UMKM Jawa Timur</p>
                 </div>
                 <div class="row mt-5 justify-content-center">
                     <div class="col-md-7">
-                        <img src="http://www.bprjatim.co.id/img/struktur/Struktur%20BPR_2018-11-01%2008_19_47.jpg" class="img-fluid" alt="" srcset="">
+                        <div class="img-struktur">
+                            <img src="http://www.bprjatim.co.id/img/struktur/Struktur%20BPR_2018-11-01%2008_19_47.jpg" class="img-fluid" alt="" srcset="">
+                        </div>
                     </div>
                 </div>
                 <div class="row mt-4">
@@ -191,7 +193,7 @@ pemerintah Bank UMKM Jawa Timur</p>
                             <div class="title">Komisaris Utama</div>
                         </div>
                         <p class="font-14 color-grey mb-1"><i>President Commissioner</i></p>
-                        <h5 class="font-weight-bold"> Dr. Suprianto, SH, MH</h5>                        
+                        <h6 class="font-weight-bold"> Dr. Suprianto, SH, MH</h6>                        
                     </div>
                     <div class="col-md-3 col-6 text-center">
                         <div class="img-manajemen mb-2">
@@ -199,7 +201,7 @@ pemerintah Bank UMKM Jawa Timur</p>
                             <div class="title">Komisaris</div>
                         </div>
                         <p class="font-14 color-grey mb-1"><i>Commissioner</i></p>
-                        <h5 class="font-weight-bold">Karsali, SH</h5>                        
+                        <h6 class="font-weight-bold">Karsali, SH</h6>                        
                     </div>
                     <div class="col-md-3 col-6 text-center">
                         <div class="img-manajemen mb-2">
@@ -207,7 +209,7 @@ pemerintah Bank UMKM Jawa Timur</p>
                             <div class="title">Direktur Utama</div>
                         </div>
                         <p class="font-14 color-grey mb-1"><i>President Director</i></p>
-                        <h5 class="font-weight-bold">Drs. Yudhi Wahyu Maharani, Ak, MM</h5>                        
+                        <h6 class="font-weight-bold">Drs. Yudhi Wahyu Maharani, Ak, MM</h6>                        
                     </div>
                     <div class="col-md-3 col-6 text-center">
                         <div class="img-manajemen mb-2">
@@ -215,7 +217,7 @@ pemerintah Bank UMKM Jawa Timur</p>
                             <div class="title">Direktur Pemasaran</div>
                         </div>
                         <p class="font-14 color-grey mb-1"><i>Marketing Director</i></p>
-                        <h5 class="font-weight-bold"> Bambang Rushadi, SE, MM</h5>                        
+                        <h6 class="font-weight-bold"> Bambang Rushadi, SE, MM</h6>                        
                     </div>
                 </div>
 
@@ -225,7 +227,7 @@ pemerintah Bank UMKM Jawa Timur</p>
             <div class="left">
                 <div class="content">
                         <div class="row">
-                            <div class="col-md-5">
+                            <div class="col-md-6">
                                 <div class="row">
                                     <div class="col-md-6">
                                         <h5 class="color-darkBlue font-weight-bold mb-1">Kantor Pusat</h5>
@@ -241,7 +243,7 @@ pemerintah Bank UMKM Jawa Timur</p>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-7">
+                            <div class="col-md-6">
                                 <h5 class="color-darkBlue font-weight-bold mb-1">Pemilik</h5>
                                 <p class="font-weight-light">Pemerintah Provinsi Jawa Timur <br>
                                 Pemerintah Kota/Kabupaten se-Jawa Timur <br>
@@ -319,8 +321,8 @@ export default {
     background : var(--softGrey)
 }
 .bg-visimisi{
-    background: #fbfdff;
-    border-radius: 5px;
+    background: white;
+    border-radius: 14px;
     border :1px solid var(--softGrey);
 }
 .bg-visimisi .fa{
@@ -352,12 +354,15 @@ export default {
     background: rgba(0, 127, 231, 0.7);
 }
 .peranan{
-    background : rgba(255, 255, 255, 0.6);
+    background : rgba(255, 255, 255, 0.8);
     border-radius: 5px;
     text-align : center;
 }
-.img-manajemen{
+.img-manajemen, .img-struktur{
     position: relative;
+    background: white;
+    padding : 20px;
+    border-radius: 14px;
 }
 .img-manajemen .title{
     position: absolute;
@@ -366,7 +371,7 @@ export default {
     text-align: center;
     font-weight: bold;
     left : 0;
-    background : var(--red);
+    background : var(--blue);
     color : white;
     padding : 0.5rem 1rem;
 }
@@ -414,5 +419,10 @@ export default {
     border-radius : 100%;
     transform: translateX(-50%);
 }
-
+.img-visimisi{
+    border-bottom-left-radius: 50px;
+}
+.img-sejarah{
+    border-bottom-right-radius: 50px;
+}
 </style>

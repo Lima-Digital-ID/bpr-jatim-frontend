@@ -1,12 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@300;400;500;700&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@300;400;500;700&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap');
 :root {
-    --blue: #007fe7;
+    --blue: #0770CD;
     --darkBlue : #2f3b55;
     --darkBlue2 : #485b84;
-    --softGrey :#eef1f6;
+    --softGrey :#f6f8fd;
     --red : #dc464f;
     --green : #7AE59F;
-    --yellow : #fbd935;
+    --yellow : #ffca63;
     --grey : #b3b3b3;
 }
 a{
@@ -17,9 +18,11 @@ a:hover{
     color : inherit;
 }
 body{
-    font-family: 'Catamaran', sans-serif;    
+    /* font-family: 'Catamaran', sans-serif;     */
+    font-family: 'Poppins', sans-serif;
     color : var(--darkBlue) !important;
     scroll-behavior: smooth;
+    background: var(--softGrey);
 }
 .font-weight-medium{
     font-weight: 400;
@@ -225,7 +228,7 @@ body{
     border : none
 }
 .custom-nav-tabs a{
-    background: var(--softGrey) !important;
+    background: white !important;
     color : var(--darkBlue)  !important;
     padding : 1rem 1.5rem;
     border-radius: 0px !important;
@@ -243,7 +246,7 @@ body{
     color : white  !important;
 }
 .custom-tab-content{
-    background: var(--softGrey);
+    background: white;
     border-radius : 0px 10px 10px 10px;
 }
 .list-kurs{
@@ -269,7 +272,7 @@ body{
     margin-right: 0;
 }
 .box-kurs{
-    background: white;
+    background: var(--softGrey);
     margin-right: 1rem;
     padding : 1rem;
     min-width: 250px;
@@ -286,6 +289,7 @@ body{
     height : 400px;
 }
 .berita-style-1{
+    background: white;
     height : 300px;
     width: 100%;
     position: relative;
@@ -361,16 +365,16 @@ body{
     border-radius: 8px;
 }
 .berita-style-2{
+    background: white;
     padding : 1rem;
     border-radius: 10px;
     transition: all.5s ease;
     -webkit-transition: all.5s ease;
     -o-transition: all.5s ease;
     -moz-transition: all.5s ease;
-    box-shadow: 0 10px 30px 1px rgba(47, 59, 85, 0.1);
 }
-.berita-style-2:hover{
-    box-shadow: 0 10px 30px 10px rgba(47, 59, 85, 0.2);
+.berita-style-2:hover, .box-white:hover{
+    box-shadow: 0 10px 30px 10px rgba(47, 59, 85, 0.1);
 }
 .berita-style-2 .top{
     position: relative;
@@ -384,6 +388,9 @@ body{
     position: absolute;
     bottom : 10px;
     left : 10px;
+}
+.berita-style-2 .bottom h6{
+    color : var(--blue);
 }
 .btn-primary{
     background: var(--blue) !important;
@@ -568,7 +575,7 @@ body{
     padding : 5px;
     position: relative;
 }
-.search-hero input{
+.search-hero input,.search-hero select,.search-hero button{
     border-radius: 0px;
     width: 100%;
     background : transparent;
@@ -576,14 +583,37 @@ body{
     border :none;
     line-height: 40px;
 }
-.search-hero .fa-search{
+.search-hero input,.search-hero span,.search-hero select, .search-hero input::placeholder{
+    color : var(--grey) !important;
+}
+.search-hero:not(.with-select) .fa-search{
     position: absolute;
     right: 10px;
     top : 50%;
     transform: translateY(-50%);
     font-size: 25px;
 }
-.search-hero input, .search-hero input::placeholder{
+.search-hero.with-select{
+    width: 100%;
+    display: flex;
+}
+.search-hero.with-select input{
+    width : 50%;
+}
+.search-hero.with-select select{
+    border-left: 1px solid rgba(179, 179, 194, 0.4);
+    width : 40%;
+    padding-left : 20px;
+}
+.search-hero.with-select button{
+    width : 10%;
+    background: var(--blue);
+    border-radius: 0px 5px 5px 0px;
+}
+.search-hero.with-select button span{
+    color : white !important;
+}
+.search-hero:not(.with-select) input, .search-hero:not(.with-select) input::placeholder{
     color : var(--darkBlue);
     font-size: 20px;
     font-style: italic;
@@ -637,3 +667,20 @@ body{
 .mt-navbar{
     margin-top : 120px;
 }
+.box-white{
+    border-radius: 14px;
+    background: white;
+    padding : 20px;
+    transition: all .5s ease;
+    -webkit-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+}
+.box-white img{
+    border-radius: 10px;
+}
+#berita-section{
+    min-height: 40vh;
+    margin-top : 92px;
+}
+

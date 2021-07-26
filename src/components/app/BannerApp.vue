@@ -3,7 +3,7 @@
         <div class="container custom">
             <div class="row align-items-center">
                 <div class="col-md-6">
-                    <h4 class="font-weight-bold">Aplikasi Peminjaman Bank UMKM</h4>
+                    <h3 class="font-weight-bold">Aplikasi Peminjaman Bank UMKM</h3>
                     <p>Berusaha membantu pelaku usaha mikro, kecil, menengah 
                         maupun masyarakat umum untuk mengembangkan usaha
                         yang dimiliki</p>
