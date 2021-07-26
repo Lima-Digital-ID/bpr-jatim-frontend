@@ -1,4 +1,4 @@
-<template lang="">
+<template>
   <div>
       <Navbar/>
       
@@ -11,12 +11,12 @@
                 <form id="msform">
                     <!-- progressbar -->
                     <ul id="progressbar">
-                        <li class="active" id="account"><strong>KTP</strong></li>
-                        <li id="personal"><strong>Bank</strong></li>
-                        <li id="payment"><strong>Pekerjaan</strong></li>
-                        <li id="confirm"><strong>Kontak</strong></li>
+                        <li class="active" id="account"><strong>1</strong></li>
+                        <li id="personal"><strong>2</strong></li>
+                        <li id="payment"><strong>3</strong></li>
+                        <li id="confirm"><strong>4</strong></li>
                     </ul>
-                    <div class="progress">
+                    <div class="progress">``
                         <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
                     </div> <br> <!-- fieldsets -->
                     <fieldset>
@@ -28,10 +28,111 @@
                                 <div class="col-5">
                                     <h2 class="steps">Step 1 - 4</h2>
                                 </div>
-                            </div>
-                                
-                        <label></label>
+                            </div>      
                             
+                        <div class="form-group">
+                            <label class="fieldlabels">Jenis Kelamin: *</label>
+                            <div class="custom-control custom-radio">
+                                <input type="radio" id="pria" name="customRadio" class="custom-control-input">
+                                <label class="custom-control-label" for="pria">Pria</label>
+                                </div>
+                            <div class="custom-control custom-radio">
+                                <input type="radio" id="wanita" name="customRadio" class="custom-control-input">
+                                <label class="custom-control-label" for="wanita">Wanita</label>
+                            </div>
+
+                        </div>
+
+                        <div class="form-group">
+                            <label class="fieldlabels">Status Perkawinan: *</label>
+                                <div class="custom-control custom-radio">
+                                <input type="radio" id="belumMenikah" name="customRadio" class="custom-control-input">
+                                <label class="custom-control-label" for="belumMenikah">Belum Menikah</label>
+                                </div>
+                            <div class="custom-control custom-radio">
+                                <input type="radio" id="menikah" name="customRadio" class="custom-control-input">
+                                <label class="custom-control-label" for="menikah">Menikah</label>
+                            </div>
+                            <div class="custom-control custom-radio">
+                                <input type="radio" id="jandaOrDuda" name="customRadio" class="custom-control-input">
+                                <label class="custom-control-label" for="jandaOrDuda">Janda/Duda</label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="fieldlabels">Jumlah Tanggungan: *</label>
+                                <div class="custom-control custom-radio">
+                                <input type="radio" id="noTanggungan" name="customRadio" class="custom-control-input">
+                                <label class="custom-control-label" for="noTanggungan">Tidak ada tanggungan</label>
+                                </div>
+                            <div class="custom-control custom-radio">
+                                <input type="radio" id="1-orang" name="customRadio" class="custom-control-input">
+                                <label class="custom-control-label" for="1-orang">1 Orang</label>
+                            </div>
+                            <div class="custom-control custom-radio">
+                                <input type="radio" id="2-orang" name="customRadio" class="custom-control-input">
+                                <label class="custom-control-label" for="2-orang">2 Orang</label>
+                            </div>
+                            <div class="custom-control custom-radio">
+                                <input type="radio" id="3-orang" name="customRadio" class="custom-control-input">
+                                <label class="custom-control-label" for="3-orang">
+                                    3 sd 5 &lt; Orang</label>
+                            </div>
+                            <div class="custom-control custom-radio">
+                                <input type="radio" id="5-orang" name="customRadio" class="custom-control-input">
+                                <label class="custom-control-label" for="5-orang">
+                                   &lt; 5 Orang</label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="fieldlabels">Pendidikan Tertanggung: *</label>
+                            <div class="custom-control custom-radio">
+                                <input type="radio" id="noTanggungan" name="customRadio" class="custom-control-input">
+                                <label class="custom-control-label" for="noTanggungan">Belom Sekolah/TK</label>
+                                </div>
+                            <div class="custom-control custom-radio">
+                                <input type="radio" id="1-orang" name="customRadio" class="custom-control-input">
+                                <label class="custom-control-label" for="1-orang">SD</label>
+                            </div>
+                            <div class="custom-control custom-radio">
+                                <input type="radio" id="2-orang" name="customRadio" class="custom-control-input">
+                                <label class="custom-control-label" for="2-orang">SMP</label>
+                            </div>
+                            <div class="custom-control custom-radio">
+                                <input type="radio" id="3-orang" name="customRadio" class="custom-control-input">
+                                <label class="custom-control-label" for="3-orang">SMA</label>
+                            </div>
+                            <div class="custom-control custom-radio">
+                                <input type="radio" id="5-orang" name="customRadio" class="custom-control-input">
+                                <label class="custom-control-label" for="5-orang">Kuliah</label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="fieldlabels">Usia Peminjam: *</label>
+                            <div class="custom-control custom-radio">
+                                <input type="radio" id="noTanggungan" name="customRadio" class="custom-control-input">
+                                <label class="custom-control-label" for="noTanggungan"> &lt; 25 tahun</label>
+                                </div>
+                            <div class="custom-control custom-radio">
+                                <input type="radio" id="1-orang" name="customRadio" class="custom-control-input">
+                                <label class="custom-control-label" for="1-orang"> > 25 tahun s/d 35 tahun</label>
+                            </div>
+                            <div class="custom-control custom-radio">
+                                <input type="radio" id="2-orang" name="customRadio" class="custom-control-input">
+                                <label class="custom-control-label" for="2-orang">> 35 tahun s/d 40 tahun</label>
+                            </div>
+                            <div class="custom-control custom-radio">
+                                <input type="radio" id="3-orang" name="customRadio" class="custom-control-input">
+                                <label class="custom-control-label" for="3-orang">> 40 tahun s/d 55 tahun</label>
+                            </div>
+                            <div class="custom-control custom-radio">
+                                <input type="radio" id="5-orang" name="customRadio" class="custom-control-input">
+                                <label class="custom-control-label" for="5-orang">> 55 tahun</label>
+                            </div>
+                        </div>
+
                         </div> 
                         <input type="button" name="next" class="next action-button" value="Next" />
                     </fieldset>
@@ -39,21 +140,125 @@
                         <div class="form-card">
                             <div class="row">
                                 <div class="col-7">
-                                    <h2 class="fs-title">Form Rekening:</h2>
+                                    <h2 class="fs-title">Analisa Capacity:</h2>
                                 </div>
                                 <div class="col-5">
                                     <h2 class="steps">Step 2 - 4</h2>
                                 </div>
                             </div>
-                            
-                              <label class="fieldlabels">Nama akun bank: *</label>
-                                <input type="text" name="fname" placeholder="" /> 
-                              <label class="">Bank: *</label> 
-                              <select class="form-control">
-                                <option selected readonly disabled>Pilih Bank</option>
-                              </select>
-                              <label class="fieldlabels">No.Rekening: *</label> 
-                                <input type="number" name="phno" placeholder="" /> 
+
+                        <div class="form-group">
+                            <label class="fieldlabels">Pendidikan Terakhir: *</label>
+                            <div class="custom-control custom-radio">
+                                <input type="radio" id="1-orang" name="customRadio" class="custom-control-input">
+                                <label class="custom-control-label" for="1-orang">SD</label>
+                            </div>
+                            <div class="custom-control custom-radio">
+                                <input type="radio" id="2-orang" name="customRadio" class="custom-control-input">
+                                <label class="custom-control-label" for="2-orang">SMP</label>
+                            </div>
+                            <div class="custom-control custom-radio">
+                                <input type="radio" id="3-orang" name="customRadio" class="custom-control-input">
+                                <label class="custom-control-label" for="3-orang">SMA</label>
+                            </div>
+                            <div class="custom-control custom-radio">
+                                <input type="radio" id="5-orang" name="customRadio" class="custom-control-input">
+                                <label class="custom-control-label" for="5-orang">S1</label>
+                            </div>
+                            <div class="custom-control custom-radio">
+                                <input type="radio" id="noTanggungan" name="customRadio" class="custom-control-input">
+                                <label class="custom-control-label" for="noTanggungan">S2</label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="fieldlabels">Jenis Pekerjaan: *</label>
+                            <div class="custom-control custom-radio">
+                                <input type="radio" id="1-orang" name="customRadio" class="custom-control-input">
+                                <label class="custom-control-label" for="1-orang">Profesi</label>
+                            </div>
+                            <div class="custom-control custom-radio">
+                                <input type="radio" id="2-orang" name="customRadio" class="custom-control-input">
+                                <label class="custom-control-label" for="2-orang">Pegawai Negeri</label>
+                            </div>
+                            <div class="custom-control custom-radio">
+                                <input type="radio" id="3-orang" name="customRadio" class="custom-control-input">
+                                <label class="custom-control-label" for="3-orang">Pegawai Swasta</label>
+                            </div>
+                            <div class="custom-control custom-radio">
+                                <input type="radio" id="5-orang" name="customRadio" class="custom-control-input">
+                                <label class="custom-control-label" for="5-orang">Pensiunan</label>
+                            </div>
+                            <div class="custom-control custom-radio">
+                                <input type="radio" id="noTanggungan" name="customRadio" class="custom-control-input">
+                                <label class="custom-control-label" for="noTanggungan">Ibu Rumah Tangga</label>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="fieldlabels">Lama Bekerja: *</label>
+                            <div class="custom-control custom-radio">
+                                <input type="radio" id="1-orang" name="customRadio" class="custom-control-input">
+                                <label class="custom-control-label" for="1-orang">&lt; 1 tahun</label>
+                            </div>
+                            <div class="custom-control custom-radio">
+                                <input type="radio" id="2-orang" name="customRadio" class="custom-control-input">
+                                <label class="custom-control-label" for="2-orang">> 1 tahun s/d 3 tahun</label>
+                            </div>
+                            <div class="custom-control custom-radio">
+                                <input type="radio" id="3-orang" name="customRadio" class="custom-control-input">
+                                <label class="custom-control-label" for="3-orang">> 3 tahun s/d 5 tahun</label>
+                            </div>
+                            <div class="custom-control custom-radio">
+                                <input type="radio" id="5-orang" name="customRadio" class="custom-control-input">
+                                <label class="custom-control-label" for="5-orang">> 5 tahun s/d 10 tahun</label>
+                            </div>
+                            <div class="custom-control custom-radio">
+                                <input type="radio" id="noTanggungan" name="customRadio" class="custom-control-input">
+                                <label class="custom-control-label" for="noTanggungan">> 10 tahun</label>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="fieldlabels">Status Pekerjaan: *</label>
+                            <div class="custom-control custom-radio">
+                                <input type="radio" id="1-orang" name="customRadio" class="custom-control-input">
+                                <label class="custom-control-label" for="1-orang">Pegawai Tetap</label>
+                            </div>
+                            <div class="custom-control custom-radio">
+                                <input type="radio" id="2-orang" name="customRadio" class="custom-control-input">
+                                <label class="custom-control-label" for="2-orang">CPNS</label>
+                            </div>
+                            <div class="custom-control custom-radio">
+                                <input type="radio" id="3-orang" name="customRadio" class="custom-control-input">
+                                <label class="custom-control-label" for="3-orang">Pegawai Kontrak</label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="fieldlabels">Tujuan Pinjaman: *</label>
+                            <div class="custom-control custom-radio">
+                                <input type="radio" id="1-orang" name="customRadio" class="custom-control-input">
+                                <label class="custom-control-label" for="1-orang">Biaya Pendidikan</label>
+                            </div>
+                            <div class="custom-control custom-radio">
+                                <input type="radio" id="2-orang" name="customRadio" class="custom-control-input">
+                                <label class="custom-control-label" for="2-orang">Pembelian Kendaraan Bermotor</label>
+                            </div>
+                            <div class="custom-control custom-radio">
+                                <input type="radio" id="3-orang" name="customRadio" class="custom-control-input">
+                                <label class="custom-control-label" for="3-orang">Pembelian Peralatan Rumah Tangga</label>
+                            </div>
+                            <div class="custom-control custom-radio">
+                                <input type="radio" id="5-orang" name="customRadio" class="custom-control-input">
+                                <label class="custom-control-label" for="5-orang">Renovasi Rumah</label>
+                            </div>
+                            <div class="custom-control custom-radio">
+                                <input type="radio" id="noTanggungan" name="customRadio" class="custom-control-input">
+                                <label class="custom-control-label" for="noTanggungan">Kebutuhan konsumtif lain-lain</label>
+                            </div>
+                        </div>
+
                         </div> 
                           <input type="button" name="next" class="next action-button" value="Next" /> <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
                     </fieldset>
@@ -61,24 +266,156 @@
                         <div class="form-card">
                             <div class="row">
                                 <div class="col-7">
-                                    <h2 class="fs-title">Form Pekerjaan:</h2>
+                                    <h2 class="fs-title">Analisa Repayment Capacity:</h2>
                                 </div>
                                 <div class="col-5">
                                     <h2 class="steps">Step 3 - 4</h2>
                                 </div>
                             </div> 
+                        
+                        <div class="form-group">
+                            <label class="fieldlabels">Nilai Aset: *</label>
+                            <div class="custom-control custom-radio">
+                                <input type="radio" id="1-orang" name="customRadio" class="custom-control-input">
+                                <label class="custom-control-label" for="1-orang"> &lt; 100 Juta</label>
+                            </div>
+                            <div class="custom-control custom-radio">
+                                <input type="radio" id="2-orang" name="customRadio" class="custom-control-input">
+                                <label class="custom-control-label" for="2-orang">> 100 - 200 Juta</label>
+                            </div>
+                            <div class="custom-control custom-radio">
+                                <input type="radio" id="3-orang" name="customRadio" class="custom-control-input">
+                                <label class="custom-control-label" for="3-orang">> 200 - 300 Juta</label>
+                            </div>
+                            <div class="custom-control custom-radio">
+                                <input type="radio" id="5-orang" name="customRadio" class="custom-control-input">
+                                <label class="custom-control-label" for="5-orang">> 300 Juta - 500 Juta</label>
+                            </div>
+                            <div class="custom-control custom-radio">
+                                <input type="radio" id="noTanggungan" name="customRadio" class="custom-control-input">
+                                <label class="custom-control-label" for="noTanggungan">> 500 Juta</label>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="fieldlabels">Penghasilan / Gaji: *</label>
+                            <div class="custom-control custom-radio">
+                                <input type="radio" id="1-orang" name="customRadio" class="custom-control-input">
+                                <label class="custom-control-label" for="1-orang"> &lt; 2 Juta</label>
+                            </div>
+                            <div class="custom-control custom-radio">
+                                <input type="radio" id="2-orang" name="customRadio" class="custom-control-input">
+                                <label class="custom-control-label" for="2-orang">> 2 - 3,5 Juta</label>
+                            </div>
+                            <div class="custom-control custom-radio">
+                                <input type="radio" id="3-orang" name="customRadio" class="custom-control-input">
+                                <label class="custom-control-label" for="3-orang">> 3,5 - 5,5 Juta</label>
+                            </div>
+                            <div class="custom-control custom-radio">
+                                <input type="radio" id="5-orang" name="customRadio" class="custom-control-input">
+                                <label class="custom-control-label" for="5-orang">> 5,5 Juta - 7 Juta</label>
+                            </div>
+                            <div class="custom-control custom-radio">
+                                <input type="radio" id="noTanggungan" name="customRadio" class="custom-control-input">
+                                <label class="custom-control-label" for="noTanggungan">> 7 Juta</label>
+                            </div>
+                        </div>
 
-                            <label class="fieldlabels">Pekerjaan: *</label>
-                              <input type="text" class="form-control"/>
+                        <div class="form-group">
+                            <label class="fieldlabels">Pengeluaran Biaya Rumah Tangga: *</label>
+                            <div class="custom-control custom-radio">
+                                <input type="radio" id="1-orang" name="customRadio" class="custom-control-input">
+                                <label class="custom-control-label" for="1-orang"> &lt; 1 Juta</label>
+                            </div>
+                            <div class="custom-control custom-radio">
+                                <input type="radio" id="2-orang" name="customRadio" class="custom-control-input">
+                                <label class="custom-control-label" for="2-orang">> 1 - 1,5 Juta</label>
+                            </div>
+                            <div class="custom-control custom-radio">
+                                <input type="radio" id="3-orang" name="customRadio" class="custom-control-input">
+                                <label class="custom-control-label" for="3-orang">> 1,5 - 2 Juta</label>
+                            </div>
+                            <div class="custom-control custom-radio">
+                                <input type="radio" id="5-orang" name="customRadio" class="custom-control-input">
+                                <label class="custom-control-label" for="5-orang">> 2 Juta - 3 Juta</label>
+                            </div>
+                            <div class="custom-control custom-radio">
+                                <input type="radio" id="noTanggungan" name="customRadio" class="custom-control-input">
+                                <label class="custom-control-label" for="noTanggungan">> 3 Juta</label>
+                            </div>
+                        </div>
 
-                            <label class="fieldlabels">Jabatan: *</label>
-                              <input type="text" class="form-control"/>
+                        <div class="form-group">
+                            <label class="fieldlabels">Debt to Euity Ratio: *</label>
+                            <div class="custom-control custom-radio">
+                                <input type="radio" id="1-orang" name="customRadio" class="custom-control-input">
+                                <label class="custom-control-label" for="1-orang">&lt; 250%</label>
+                            </div>
+                            <div class="custom-control custom-radio">
+                                <input type="radio" id="2-orang" name="customRadio" class="custom-control-input">
+                                <label class="custom-control-label" for="2-orang">200% &lt; DER &lt; 250%</label>
+                            </div>
+                            <div class="custom-control custom-radio">
+                                <input type="radio" id="3-orang" name="customRadio" class="custom-control-input">
+                                <label class="custom-control-label" for="3-orang">150% &lt; DER &lt; 200%</label>
+                            </div>
+                            <div class="custom-control custom-radio">
+                                <input type="radio" id="5-orang" name="customRadio" class="custom-control-input">
+                                <label class="custom-control-label" for="5-orang">100% &lt; DER &lt; 150%</label>
+                            </div>
+                            <div class="custom-control custom-radio">
+                                <input type="radio" id="noTanggungan" name="customRadio" class="custom-control-input">
+                                <label class="custom-control-label" for="noTanggungan">&lt; 100%</label>
+                            </div>
+                        </div>
 
-                            <label class="fieldlabels">Nama perusahaan: *</label>
-                              <input type="text" class="form-control"/>
+                        <div class="form-group">
+                            <label class="fieldlabels">ROA (Return on Asset): *</label>
+                            <div class="custom-control custom-radio">
+                                <input type="radio" id="1-orang" name="customRadio" class="custom-control-input">
+                                <label class="custom-control-label" for="1-orang">&lt; 1%</label>
+                            </div>
+                            <div class="custom-control custom-radio">
+                                <input type="radio" id="2-orang" name="customRadio" class="custom-control-input">
+                                <label class="custom-control-label" for="2-orang">1% &lt; ROA  &lt; 1,5%</label>
+                            </div>
+                            <div class="custom-control custom-radio">
+                                <input type="radio" id="3-orang" name="customRadio" class="custom-control-input">
+                                <label class="custom-control-label" for="3-orang">1,5% &lt; ROA &lt; 2,0%</label>
+                            </div>
+                            <div class="custom-control custom-radio">
+                                <input type="radio" id="5-orang" name="customRadio" class="custom-control-input">
+                                <label class="custom-control-label" for="5-orang">2% &lt; ROA &lt; 2,5%</label>
+                            </div>
+                            <div class="custom-control custom-radio">
+                                <input type="radio" id="noTanggungan" name="customRadio" class="custom-control-input">
+                                <label class="custom-control-label" for="noTanggungan">> 2,5%</label>
+                            </div>
+                        </div>
 
-                            <label class="fieldlabels">Kontak perusahaan: *</label>
-                              <input type="text" class="form-control"/>
+                        <div class="form-group">
+                            <label class="fieldlabels">ROE (Return on Equity): *</label>
+                            <div class="custom-control custom-radio">
+                                <input type="radio" id="1-orang" name="customRadio" class="custom-control-input">
+                                <label class="custom-control-label" for="1-orang">&lt; 1%</label>
+                            </div>
+                            <div class="custom-control custom-radio">
+                                <input type="radio" id="2-orang" name="customRadio" class="custom-control-input">
+                                <label class="custom-control-label" for="2-orang">1% &lt; ROE  &lt; 1,5%</label>
+                            </div>
+                            <div class="custom-control custom-radio">
+                                <input type="radio" id="3-orang" name="customRadio" class="custom-control-input">
+                                <label class="custom-control-label" for="3-orang">1,5% &lt; ROE &lt; 2,0%</label>
+                            </div>
+                            <div class="custom-control custom-radio">
+                                <input type="radio" id="5-orang" name="customRadio" class="custom-control-input">
+                                <label class="custom-control-label" for="5-orang">2% &lt; ROE &lt; 2,5%</label>
+                            </div>
+                            <div class="custom-control custom-radio">
+                                <input type="radio" id="noTanggungan" name="customRadio" class="custom-control-input">
+                                <label class="custom-control-label" for="noTanggungan">> 2,5%</label>
+                            </div>
+                        </div>
 
                           </div> 
                         <input type="button" name="next" class="next action-button" value="Next" /> <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
@@ -87,76 +424,88 @@
                         <div class="form-card">
                             <div class="row">
                                 <div class="col-7">
-                                    <h2 class="fs-title">Form Kontak:</h2>
+                                    <h2 class="fs-title">Analisa Repayment Capacity:</h2>
                                 </div>
                                 <div class="col-5">
                                     <h2 class="steps">Step 4 - 4</h2>
                                 </div>
                             </div> 
+
+                            <!--  -->
+
+                        <div class="form-group">
+                            <label class="fieldlabels">Pinjaman di Bank/Lembaga Keuangan Lain: *</label>
+                            <div class="custom-control custom-radio">
+                                <input type="radio" id="1-orang" name="customRadio" class="custom-control-input">
+                                <label class="custom-control-label" for="1-orang"> Tidak ada pinjaman</label>
+                            </div>
+                            <div class="custom-control custom-radio">
+                                <input type="radio" id="2-orang" name="customRadio" class="custom-control-input">
+                                <label class="custom-control-label" for="2-orang">1 Pinjaman</label>
+                            </div>
+                            <div class="custom-control custom-radio">
+                                <input type="radio" id="3-orang" name="customRadio" class="custom-control-input">
+                                <label class="custom-control-label" for="3-orang">2 s/d 3 pinjaman</label>
+                            </div>
+                            <div class="custom-control custom-radio">
+                                <input type="radio" id="5-orang" name="customRadio" class="custom-control-input">
+                                <label class="custom-control-label" for="5-orang">4 s/d 5 pinjaman</label>
+                            </div>
+                            <div class="custom-control custom-radio">
+                                <input type="radio" id="noTanggungan" name="customRadio" class="custom-control-input">
+                                <label class="custom-control-label" for="noTanggungan">> 5 pinjaman</label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="fieldlabels">Kondisi SLIK: *</label>
+                            <div class="custom-control custom-radio">
+                                <input type="radio" id="1-orang" name="customRadio" class="custom-control-input">
+                                <label class="custom-control-label" for="1-orang"> Kolektibilitas Lancar</label>
+                            </div>
+                            <div class="custom-control custom-radio">
+                                <input type="radio" id="2-orang" name="customRadio" class="custom-control-input">
+                                <label class="custom-control-label" for="2-orang"> Kolektibilitas Dalam Perhatian Khusus</label>
+                            </div>
+                            <div class="custom-control custom-radio">
+                                <input type="radio" id="3-orang" name="customRadio" class="custom-control-input">
+                                <label class="custom-control-label" for="3-orang">Kolektibilitas Kurang Lancar</label>
+                            </div>
+                            <div class="custom-control custom-radio">
+                                <input type="radio" id="5-orang" name="customRadio" class="custom-control-input">
+                                <label class="custom-control-label" for="5-orang">Kolektibilitas Diragukan</label>
+                            </div>
+                            <div class="custom-control custom-radio">
+                                <input type="radio" id="noTanggungan" name="customRadio" class="custom-control-input">
+                                <label class="custom-control-label" for="noTanggungan">Kolektibilitas Macet</label>
+                            </div>
+                        </div>
+                            <!--  -->
                             
-                            <label>Hubungan ke satu</label>
-                              <select class="form-control">
-                                  <option selected readonly disabled>Pilih hubungan</option>
-                                  <option>Keluarga</option>
-                                  <option>Saudara</option>
-                                  <option>Teman</option>
-                              </select>
+                        <div class="form-group">
+                            <label class="fieldlabels">Total Angsuran Bank/Lembaga Kuangan Lain: *</label>
+                            <div class="custom-control custom-radio">
+                                <input type="radio" id="1-orang" name="customRadio" class="custom-control-input">
+                                <label class="custom-control-label" for="1-orang"> &lt; 1,5 Juta</label>
+                            </div>
+                            <div class="custom-control custom-radio">
+                                <input type="radio" id="2-orang" name="customRadio" class="custom-control-input">
+                                <label class="custom-control-label" for="2-orang"> > 1,5 Juta - 2 Juta</label>
+                            </div>
+                            <div class="custom-control custom-radio">
+                                <input type="radio" id="3-orang" name="customRadio" class="custom-control-input">
+                                <label class="custom-control-label" for="3-orang">> 2 Juta - 2,5 Juta</label>
+                            </div>
+                            <div class="custom-control custom-radio">
+                                <input type="radio" id="5-orang" name="customRadio" class="custom-control-input">
+                                <label class="custom-control-label" for="5-orang">> 2,5 Juta - 3 Juta</label>
+                            </div>
+                            <div class="custom-control custom-radio">
+                                <input type="radio" id="noTanggungan" name="customRadio" class="custom-control-input">
+                                <label class="custom-control-label" for="noTanggungan">> 3 Juta</label>
+                            </div>
+                        </div>
 
-                              <label>Nama Penjamin</label>
-                                <input type="text" class="form-control">
-
-                              <label>NIK Penjamin</label>
-                                <input type="number" class="form-control">
-
-                              <label>No.Handphone Penjamin</label>
-                                <input type="number" class="form-control">
-
-                              <label>Alamat Penjamin</label>
-                                <textarea class="form-control"></textarea>
-
-                                <hr>
-
-                                <label>Hubungan ke dua</label>
-                              <select class="form-control">
-                                  <option selected readonly disabled>Pilih hubungan</option>
-                                  <option>Keluarga</option>
-                                  <option>Saudara</option>
-                                  <option>Teman</option>
-                              </select>
-
-                              <label>Nama Penjamin</label>
-                                <input type="text" class="form-control">
-
-                              <label>NIK Penjamin</label>
-                                <input type="number" class="form-control">
-
-                              <label>No.Handphone Penjamin</label>
-                                <input type="number" class="form-control">
-
-                              <label>Alamat Penjamin</label>
-                                <textarea class="form-control"></textarea>
-
-                                <hr>
-
-                                <label>Hubungan ke tiga</label>
-                              <select class="form-control">
-                                  <option selected readonly disabled>Pilih hubungan</option>
-                                  <option>Keluarga</option>
-                                  <option>Saudara</option>
-                                  <option>Teman</option>
-                              </select>
-
-                              <label>Nama Penjamin</label>
-                                <input type="text" class="form-control">
-
-                              <label>NIK Penjamin</label>
-                                <input type="number" class="form-control">
-
-                              <label>No.Handphone Penjamin</label>
-                                <input type="number" class="form-control">
-
-                              <label>Alamat Penjamin</label>
-                                <textarea class="form-control"></textarea>
                         </div>
                         <input type="button" name="next" class="next action-button" value="Finish" /> 
                     </fieldset>

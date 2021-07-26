@@ -6,6 +6,7 @@ import Login from '../views/auth/Login.vue';
 import Register from '../views/auth/Register.vue';
 import PersonalData from '../views/Personal-data.vue';
 import Scoring from '../views/Scoring.vue';
+import PinjamanCepat from '../views/PinjamanCepat.vue';
 
 Vue.use(VueRouter)
 
@@ -35,6 +36,10 @@ const routes = [
   {
     path: '/scoring',
     component: Scoring,
+  },
+  {
+    path: '/pinjaman-cepat',
+    component: PinjamanCepat,
   },
 ]
 
