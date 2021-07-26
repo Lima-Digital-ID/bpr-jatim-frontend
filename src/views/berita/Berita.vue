@@ -1,6 +1,6 @@
 <template>
     <div>
-        <Header class-nav="scrolled" />
+        <Header class-nav="transparent-black" />
         <section id="hero-content" class="section-hero-content" style="background-image:url('https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=749&q=80')">
             <div class="hero-content d-flex align-items-center">
                 <div class="container custom py-5">
@@ -79,7 +79,7 @@
                                     </div>
                                 </div>
                                 <div class="col-8 pl-1">
-                                    <h5 class="mb-0">Berita 1 Judulnya A</h5>
+                                    <h6 class="mb-0 font-weight-bold">Berita 1 Judulnya A</h6>
                                     <a href="" class="color-red font-13">20 Juli 2021, 17:00</a>
                                     <p class="font-13 mt-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis officiis Nobis officiis</p>
                                 </div>
@@ -95,7 +95,7 @@
                                     </div>
                                 </div>
                                 <div class="col-8 pl-1">
-                                    <h5 class="mb-0">Berita 1 Judulnya A</h5>
+                                    <h6 class="mb-0 font-weight-bold">Berita 1 Judulnya A</h6>
                                     <a href="" class="color-red font-13">20 Juli 2021, 17:00</a>
                                     <p class="font-13 mt-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis officiis Nobis officiis</p>
                                 </div>
@@ -111,7 +111,7 @@
                                     </div>
                                 </div>
                                 <div class="col-8 pl-1">
-                                    <h5 class="mb-0">Berita 1 Judulnya A</h5>
+                                    <h6 class="mb-0 font-weight-bold">Berita 1 Judulnya A</h6>
                                     <a href="" class="color-red font-13">20 Juli 2021, 17:00</a>
                                     <p class="font-13 mt-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis officiis Nobis officiis</p>
                                 </div>

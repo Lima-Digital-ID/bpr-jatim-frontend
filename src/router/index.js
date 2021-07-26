@@ -2,7 +2,8 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 
 import Home from '../views/Home.vue'
-import Berita from '@/views/Berita'
+import Promo from '@/views/berita/Promo'
+import Berita from '@/views/berita/Berita'
 import Profile from '@/views/tentang/Profile'
 import Transparansi from '@/views/tentang/Transparansi'
 import Login from '../views/auth/Login.vue';
@@ -32,6 +33,11 @@ const routes = [
     path: '/transparansi',
     name: 'Transparansi',
     component: Transparansi
+  },
+  {
+    path: '/promo',
+    name: 'Promo',
+    component: Promo
   },
   {
     path: '/about',

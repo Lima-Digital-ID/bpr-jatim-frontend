@@ -1,6 +1,6 @@
 <template>
     <div>
-        <Header class-nav=""/>
+        <Header class-nav="transparent-black"/>
             <section id="hero-transparansi" class="pb-5">
                 <div class="container custom">
                     <div class="row align-items-center">
@@ -34,7 +34,7 @@
                             <div class="tab-content custom-tab-content" id="nav-tabContent">
                                 <div class="tab-pane  px-4 pt-4 fade show active" id="nav-komposisi" role="tabpanel" aria-labelledby="nav-komposisi-tab">
                                     <div class="table-responsive">
-                                        <table class="table">
+                                        <table class="table table-hover">
                                             <thead>
                                                 <tr>
                                                     <td>Pemilik Saham / Shareowners</td>
@@ -158,9 +158,8 @@
                                         </table>
                                     </div>
                                 </div>
-                                <div class="tab-pane fade" id="nav-persentase" role="tabpanel" aria-labelledby="nav-persentase-tab">
-                                    <highcharts :options="chartOptions"></highcharts>                                    
-                                </div>
+                                <div class="tab-pane fade p-4" id="nav-persentase" role="tabpanel" aria-labelledby="nav-persentase-tab">
+                                 </div>
                             </div>
                         </div>
                     </div>
@@ -173,24 +172,9 @@
 <script>
 import Header from '@/components/common/Header'
 import Footer from '@/components/common/Footer'
-import {Chart} from 'highcharts-vue'
-
 export default {
     name : "Transparansi",
-    components : {Header,Footer,highcharts:Chart},
-    data() {
-        return {
-        chartOptions: {
-            series: [{
-            data: [1,2,3] // sample data
-            }]
-        }
-        }
-    },
-    mounted() {
-        const header = document.querySelector(".navbar-top")
-        header.classList.add('scrolled')
-    },
+    components : {Header,Footer},
 }
 </script>
 
@@ -224,9 +208,6 @@ export default {
         opacity: 0.3;
         z-index : -1;
         border-radius : 50px 0px 0px 50px;
-    }
-    .navbar-top{
-        background : transparent !important;
     }
     .scroll-bottom{
         -webkit-animation: ripple 1s linear infinite;

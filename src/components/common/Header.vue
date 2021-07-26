@@ -110,10 +110,10 @@
                                             <h6>Berita <span class="fa fa-chevron-right fa-sm ml-1"></span></h6>
                                             <p class="color-softGrey2 font-weight-light">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt ab aliquam saepe ipsum laudantium vel neque distinctio reiciendis rem.</p>
                                         </router-link>
-                                        <a href="#" class="megamenu-link">
+                                        <router-link to="/promo" class="megamenu-link">
                                             <h6>Promo <span class="fa fa-chevron-right fa-sm ml-1"></span></h6>
                                             <p class="color-softGrey2 font-weight-light">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt ab aliquam saepe ipsum laudantium vel neque distinctio reiciendis rem.</p>
-                                        </a>
+                                        </router-link>
                                         <a href="#" class="megamenu-link">
                                             <h6>ePaper UMKM <span class="fa fa-chevron-right fa-sm ml-1"></span></h6>
                                             <p class="color-softGrey2 font-weight-light">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt ab aliquam saepe ipsum laudantium vel neque distinctio reiciendis rem.</p>
@@ -152,7 +152,7 @@
         data() {
             return {
                 loopLayanan : [],
-                logo : this.classNav==='scrolled' ? 'logo-dark.png' : 'logo.png',
+                logo : this.classNav!=="transparent-white" ? 'logo-dark.png' : 'logo.png',
                 srcLogo : ""
             }
         },
@@ -171,19 +171,16 @@
         },
         methods: {
             scroll(){
-                const page = document.querySelector('body').getAttribute('data-page')
-                if(page!=='scrolled'){
-                    let now = document.documentElement.scrollTop;
-                    const navbarTop = document.querySelector('.navbar-top')
-                    const navbarBrandImg = document.querySelector('.navbar-brand img')
-                    if(now>0){
-                        navbarTop.classList.add('scrolled');
-                        navbarBrandImg.src = require('@/assets/images/common/logo-dark.png')
-                    }
-                    else{
-                        navbarTop.classList.remove('scrolled');
-                        navbarBrandImg.src = require('@/assets/images/common/logo.png')
-                    }
+                let now = document.documentElement.scrollTop;
+                const navbarTop = document.querySelector('.navbar-top')
+                const navbarBrandImg = document.querySelector('.navbar-brand img')
+                if(now>0){
+                    navbarTop.classList.add('scrolled');
+                    navbarBrandImg.src = require('@/assets/images/common/logo-dark.png')
+                }
+                else{
+                    navbarTop.classList.remove('scrolled');
+                    navbarBrandImg.src = require('@/assets/images/common/'+this.logo)
                 }
             },
             showProdukLayanan(tipe,event){

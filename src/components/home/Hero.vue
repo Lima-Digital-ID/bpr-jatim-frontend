@@ -1,7 +1,7 @@
 <template>
     <section id="hero" style="height: 100vh;">
         <div class="video-container" :class="{focus : heroFocus}">
-            <Header :nav-transition="navTransition"/>
+            <Header :nav-transition="navTransition" class-nav="transparent-white"/>
             <div class="close-focus" @click="toggleHeroFocus"><span class="fa fa-times-circle"></span></div>
             <iframe width="100%" id="myVideo" height="100%" src="https://www.youtube.com/embed/AcbP83N5RzY?controls=0&autoplay=1&mute=1&loop=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             <div class="layer"></div>
@@ -104,10 +104,6 @@ export default {
                 "<span class='fa fa-chevron-right'></span>"
                 ],
         }
-    },
-    mounted() {
-        const body = document.querySelector('body')
-        body.setAttribute('data-page','')
     },
     methods: {
         scrollTo(target){

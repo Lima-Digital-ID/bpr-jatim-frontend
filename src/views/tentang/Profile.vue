@@ -1,6 +1,6 @@
 <template>
     <div>
-        <Header class-nav=""/>
+        <Header class-nav="transparent-white"/>
         <section class="hero-profile d-flex align-items-center">
             <div class="container custom d-flex align-items-center">
                 <div class="row align-items-center">
@@ -312,10 +312,6 @@ import Footer from '@/components/common/Footer'
 export default {
     name : 'Profile',
     components: {Header,Footer},
-    mounted() {
-        const body = document.querySelector('body')
-        body.setAttribute('data-page','scrolled')
-    },
 }
 </script>
 <style scoped>
