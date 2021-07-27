@@ -1,37 +1,40 @@
 <template>
     <div>
         <Header class-nav="transparent-black" />
-        <section id="hero-content" class="section-hero-content" style="background-image:url('https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=749&q=80')">
-            <div class="hero-content d-flex align-items-center">
-                <div class="container custom py-5">
-                    <div class="row align-items-center justify-content-center text-center">
-                        <div class="col-md-7">
-                            <h2 class="color-white font-weight-bold">Berita Bank UMKM</h2>
-                            <p class="color-white font-14 font-weight-light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem quam perspiciatis molestiae, quo velit, sit incidunt,    </p>
-                            <div class="search-hero">
-                                <input type="text" class="search-hero" placeholder="Cari Berita Disini..." autofocus="true">
-                                <span class="fa fa-search"></span>
-                            </div>
-                            <br>
-                            <a href="" class="btn btn-primary mr-2">Bisnis</a>
-                            <a href="" class="btn btn-primary mr-2">Info Bank UMKM</a>
-                            <a href="" class="btn btn-primary mr-2">Pinjaman</a>
-                            <a href="#" class="dropdown">
-                                <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Kategori Lainnya
-                                </button>
-                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                    <a class="dropdown-item" href="#">Action</a>
-                                    <a class="dropdown-item" href="#">Another action</a>
-                                    <a class="dropdown-item" href="#">Something else here</a>
-                                </div>
-                            </a>                        
-                        </div>
+        <section id="berita-section" class="d-flex align-items-end py-5">
+            <div class="container custom">
+                <div class="row">
+                    <div class="col">
+                        <h1 class="font-weight-bold">Berita <span class="color-blue">Bank UMKM</span></h1>
+                        <p>Dapatkan berita terbaru dari Bank UMKM Jawa Timur</p>
                     </div>
                 </div>
-            </div>            
+                <div class="row mt-3">
+                    <div class="col-md-8">
+                        <div class="search-hero p-0">
+                            <input type="text" class="pl-3 search-hero" placeholder="Cari Berita Disini..." autofocus="true">
+                            <span class="fa fa-search"></span>
+                        </div>
+                        <br>
+                        <a href="" class="btn btn-primary mr-2">Bisnis</a>
+                        <a href="" class="btn btn-primary mr-2">Info Bank UMKM</a>
+                        <a href="" class="btn btn-primary mr-2">Pinjaman</a>
+                        <a href="#" class="dropdown">
+                            <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Kategori Lainnya
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="#">Action</a>
+                                <a class="dropdown-item" href="#">Another action</a>
+                                <a class="dropdown-item" href="#">Something else here</a>
+                            </div>
+                        </a>                        
+                    </div>
+                </div>
+            </div>
         </section>
-        <section id="berita" class="py-5">
+
+        <section id="berita" class="pt-3 pb-5">
             <div class="container custom">
                 <div class="row">
                     <div class="col-md-6">

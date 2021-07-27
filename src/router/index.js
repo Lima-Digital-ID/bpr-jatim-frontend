@@ -3,6 +3,9 @@ import VueRouter from 'vue-router'
 
 import Home from '../views/Home.vue'
 import Promo from '@/views/berita/Promo'
+import Epaper from '@/views/berita/Epaper'
+import Penghargaan from '@/views/berita/Penghargaan'
+import UmkmBinaan from '@/views/umkm-binaan/UmkmBinaan'
 import Berita from '@/views/berita/Berita'
 import Profile from '@/views/tentang/Profile'
 import Transparansi from '@/views/tentang/Transparansi'
@@ -41,6 +44,21 @@ const routes = [
     path: '/promo',
     name: 'Promo',
     component: Promo
+  },
+  {
+    path: '/epaper',
+    name: 'Epaper',
+    component: Epaper
+  },
+  {
+    path: '/penghargaan',
+    name: 'Penghargaan',
+    component: Penghargaan
+  },
+  {
+    path: '/umkm',
+    name: 'UmkmBinaan',
+    component: UmkmBinaan
   },
   {
     path: '/about',

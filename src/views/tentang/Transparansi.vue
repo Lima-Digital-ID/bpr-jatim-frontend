@@ -8,9 +8,9 @@
                             <h1 class="font-weight-bold">
                                 Transparansi Bank UMKM
                                 <br>
-                                <span class="color-red">Jawa Timur</span>
+                                <span class="color-blue">Jawa Timur</span>
                             </h1>
-                            <p class="color-grey">Bank BPR Jatim Bank UMKM Jawa Timur sebagai perusahaan terbuka memiliki kewajiban untuk melakukan keterbukaan dan transparansi informasi laporan kinerja kepada pihak investor, masyarakat pasar modal, dan pemegang saham.</p>
+                            <p class="color-dark2">Bank BPR Jatim Bank UMKM Jawa Timur sebagai perusahaan terbuka memiliki kewajiban untuk melakukan keterbukaan dan transparansi informasi laporan kinerja kepada pihak investor, masyarakat pasar modal, dan pemegang saham.</p>
                             <br>
                             <span class="scroll-bottom fa fa-arrow-down"></span>
                         </div>
@@ -193,7 +193,7 @@ export default {
         bottom : 0;
         right : 0;
         border-radius: 50px;
-        background : var(--red);
+        background : var(--blue);
         opacity: 0.1;
         transform: translate(50%,50%);
     }
@@ -204,8 +204,8 @@ export default {
         right: 0;
         top : 0;
         height: 100%;
-        background : var(--red);
-        opacity: 0.3;
+        background : var(--blue);
+        opacity: 0.2;
         z-index : -1;
         border-radius : 50px 0px 0px 50px;
     }
@@ -245,9 +245,18 @@ export default {
     .table thead td:last-child{
         border-top-right-radius: 8px;
     }
+    .table td, .table th{
+        padding : 1rem;
+    }
+    .table tbody{
+        color : var(--darkBlue2)
+    }
     .table thead{
         font-weight: bold;
         background: var(--blue);
-        color : white
+        color : white;
+    }
+    .table-hover tbody tr:hover{
+        background: rgba(246,248,253,0.8);
     }
 </style>

@@ -93,7 +93,7 @@
                         </div>
                     </li>
                     <li class="nav-item">
-                        <router-link class="nav-link" to="/">UMKM Binaan</router-link>
+                        <router-link class="nav-link" to="/umkm">UMKM Binaan</router-link>
                     </li>
                     <li class="nav-item megamenu-nav dropdown">
                         <router-link class="nav-link dropdown-toggle" data-toggle="dropdown" to="">Berita</router-link>
@@ -114,16 +114,16 @@
                                             <h6>Promo <span class="fa fa-chevron-right fa-sm ml-1"></span></h6>
                                             <p class="color-softGrey2 font-weight-light">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt ab aliquam saepe ipsum laudantium vel neque distinctio reiciendis rem.</p>
                                         </router-link>
-                                        <a href="#" class="megamenu-link">
+                                        <router-link to="/epaper" class="megamenu-link">
                                             <h6>ePaper UMKM <span class="fa fa-chevron-right fa-sm ml-1"></span></h6>
                                             <p class="color-softGrey2 font-weight-light">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt ab aliquam saepe ipsum laudantium vel neque distinctio reiciendis rem.</p>
-                                        </a>
+                                        </router-link>
                                     </div>
                                     <div class="col-md-6">
-                                        <a href="#" class="megamenu-link">
+                                        <router-link to="/penghargaan" class="megamenu-link">
                                             <h6>Penghargaan <span class="fa fa-chevron-right fa-sm ml-1"></span></h6>
                                             <p class="color-softGrey2 font-weight-light">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt ab aliquam saepe ipsum laudantium vel neque distinctio reiciendis rem.</p>
-                                        </a>
+                                        </router-link>
                                         <a href="#" class="megamenu-link">
                                             <h6>Karier <span class="fa fa-chevron-right fa-sm ml-1"></span></h6>
                                             <p class="color-softGrey2 font-weight-light">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt ab aliquam saepe ipsum laudantium vel neque distinctio reiciendis rem.</p>
