@@ -8,6 +8,7 @@ import Penghargaan from '@/views/berita/Penghargaan'
 import Bisnis from '@/views/produk-layanan/Bisnis'
 import UmkmBinaan from '@/views/umkm-binaan/UmkmBinaan'
 import Berita from '@/views/berita/Berita'
+import DetailBerita from '@/views/berita/DetailBerita'
 import Profile from '@/views/tentang/Profile'
 import Transparansi from '@/views/tentang/Transparansi'
 import Login from '../views/auth/Login.vue';
@@ -65,6 +66,11 @@ const routes = [
     path: '/bisnis/:id',
     name: 'Bisnis',
     component: Bisnis
+  },
+  {
+    path: '/berita/:id',
+    name: 'DetailBerita',
+    component: DetailBerita
   },
   {
     path: '/about',

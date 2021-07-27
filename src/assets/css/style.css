@@ -373,7 +373,7 @@ body{
     -o-transition: all.5s ease;
     -moz-transition: all.5s ease;
 }
-.berita-style-2:hover, .box-white:hover{
+.berita-style-2:hover, .box-white:not(.no-hover):hover{
     box-shadow: 0 10px 30px 10px rgba(47, 59, 85, 0.1);
 }
 .berita-style-2 .top{
