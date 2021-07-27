@@ -12,7 +12,7 @@
                             </h1>
                             <p class="color-dark2">Bank BPR Jatim Bank UMKM Jawa Timur sebagai perusahaan terbuka memiliki kewajiban untuk melakukan keterbukaan dan transparansi informasi laporan kinerja kepada pihak investor, masyarakat pasar modal, dan pemegang saham.</p>
                             <br>
-                            <span class="scroll-bottom fa fa-arrow-down"></span>
+                            <a href="#" @click="scrollTo('#saham')"><span class="scroll-bottom fa fa-arrow-down"></span></a>
                         </div>
                         <div class="col-md-6 text-center">
                             <div class="img-hero">
@@ -159,7 +159,8 @@
                                     </div>
                                 </div>
                                 <div class="tab-pane fade p-4" id="nav-persentase" role="tabpanel" aria-labelledby="nav-persentase-tab">
-                                 </div>
+                                    <highcharts :options="chartOptions"></highcharts>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -172,12 +173,66 @@
 <script>
 import Header from '@/components/common/Header'
 import Footer from '@/components/common/Footer'
+import {Chart} from 'highcharts-vue'
+import {myFunction} from '@/helper/myFunction'
+
 export default {
     name : "Transparansi",
-    components : {Header,Footer},
+    components : {Header,Footer,Highcharts:Chart},
+    methods:{
+        scrollTo(target){
+            myFunction.scrollTo(target)
+        },
+    },
+    data() {
+        return {
+        chartOptions: {
+            chart: {
+                plotBackgroundColor: null,
+                plotBorderWidth: null,
+                plotShadow: false,
+                type: 'pie'
+            },
+            title: {
+                text: 'Persentase Pemegang Saham Bank BPR Jatim'
+            },
+            tooltip: {
+                pointFormat: '{series.name}: <b>Rp.{point.y}</b>'
+            },
+            plotOptions: {
+                pie: {
+                    allowPointSelect: true,
+                    cursor: 'pointer',
+                    dataLabels: {
+                        enabled: true,
+                        format: '<b>{point.name}</b>: {point.percentage:.1f} %'
+                    }
+                }
+            },
+            series: [{
+                name: 'Nominal',
+                colorByPoint: true,
+                data: [{
+                    name: 'Pemerintah Provinsi Jatim (3.603.803 Lembar)',
+                    y: 360380300,
+                    sliced: true,
+                    selected: true,
+                    color : '#0770cd'
+                }, {
+                    name: 'Pemerintah Kabupaten/Kota Jatim (501.510 Lembar)',
+                    y: 50151000,
+                    color : '#2f3b55'
+                }, {
+                    name: 'DPD Bank Jatim (11.510 Lembar)',
+                    y: 1151000
+                },
+                ]
+            }]      
+        },
+    }
+  },
 }
 </script>
-
 <style scoped>
     #hero-transparansi{
         padding-top : 150px;

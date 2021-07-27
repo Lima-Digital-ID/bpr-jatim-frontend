@@ -5,6 +5,7 @@ import Home from '../views/Home.vue'
 import Promo from '@/views/berita/Promo'
 import Epaper from '@/views/berita/Epaper'
 import Penghargaan from '@/views/berita/Penghargaan'
+import Bisnis from '@/views/produk-layanan/Bisnis'
 import UmkmBinaan from '@/views/umkm-binaan/UmkmBinaan'
 import Berita from '@/views/berita/Berita'
 import Profile from '@/views/tentang/Profile'
@@ -59,6 +60,11 @@ const routes = [
     path: '/umkm',
     name: 'UmkmBinaan',
     component: UmkmBinaan
+  },
+  {
+    path: '/bisnis/:id',
+    name: 'Bisnis',
+    component: Bisnis
   },
   {
     path: '/about',

@@ -28,6 +28,7 @@
                                 <img src="http://www.bprjatim.co.id/img/epaper/majalah%20UMKM%20edisi%2021-1_2021-03-31_17:45:00.jpg" class="img-cover" alt="" srcset="">
                                 <p class="mt-3 mb-1 font-14 color-red">Maret 2021</p>
                                 <h5 class="font-weight-bold color-darkBlue">Judul E-Paper</h5>
+                                <a href="" class="btn btn-circle-secondary btn-block mt-3">Baca Sekarang</a>
                             </div>
                         </a>
                     </div>
@@ -37,6 +38,7 @@
                                 <img src="http://www.bprjatim.co.id/img/epaper/majalah%20UMKM%20edisi%2020-1_2020-09-24_9:06:36.jpg" class="img-cover" alt="" srcset="">
                                 <p class="mt-3 mb-1 font-14 color-red">Maret 2021</p>
                                 <h5 class="font-weight-bold color-darkBlue">Judul E-Paper</h5>
+                                <a href="" class="btn btn-circle-secondary btn-block mt-3">Baca Sekarang</a>
                             </div>
                         </a>
                     </div>
@@ -46,6 +48,7 @@
                                 <img src="http://www.bprjatim.co.id/img/epaper/majalah%20UMKM%20edisi%2018-1_2019-12-30_11:08:45.jpg" class="img-cover" alt="" srcset="">
                                 <p class="mt-3 mb-1 font-14 color-red">Maret 2021</p>
                                 <h5 class="font-weight-bold color-darkBlue">Judul E-Paper</h5>
+                                <a href="" class="btn btn-circle-secondary btn-block mt-3">Baca Sekarang</a>
                             </div>
                         </a>
                     </div>
@@ -55,6 +58,7 @@
                                 <img src="http://www.bprjatim.co.id/img/epaper/majalah%20UMKM%20edisi%2016-1_2019-08-19_10:54:42.jpg" class="img-cover" alt="" srcset="">
                                 <p class="mt-3 mb-1 font-14 color-red">Maret 2021</p>
                                 <h5 class="font-weight-bold color-darkBlue">Judul E-Paper</h5>
+                                <a href="" class="btn btn-circle-secondary btn-block mt-3">Baca Sekarang</a>
                             </div>
                         </a>
                     </div>
@@ -76,5 +80,10 @@ export default {
 <style scoped>
     .img-cover{
         height: 316px !important;
+    }
+    .btn-circle-secondary{
+        padding-top : 0.8rem;
+        padding-bottom: 0.8rem;
+        background: #eaeefb;
     }
 </style>

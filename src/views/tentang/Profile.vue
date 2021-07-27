@@ -7,7 +7,7 @@
                     <div class="col-md-7">
                         <h1 class="font-weight-bold mb-4 color-white">Profil Bank UMKM <br> Jawa Timur</h1>
                         <p class="font-weight-light mb-4 color-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae sed atque incidunt eos, distinctio vitae assumenda aliquid quas amet hicaliquid quas amet hicaliquid quas amet hic</p>
-                        <a href="" class="btn btn-circle-primary px-4 py-2">Selengkapnya</a>
+                        <a href="#" @click="scrollTo('#sejarah')" class="btn btn-circle-primary px-4 py-2">Selengkapnya</a>
                         <a href="" class="color-white ml-4"><span class="fa fa-play"></span> Tonton Video</a>
                     </div>
                 </div>
@@ -310,10 +310,16 @@ pemerintah Bank UMKM Jawa Timur</p>
 <script>
 import Header from '@/components/common/Header'
 import Footer from '@/components/common/Footer'
+import {myFunction} from '@/helper/myFunction'
 
 export default {
     name : 'Profile',
     components: {Header,Footer},
+    methods:{
+        scrollTo(target){
+            myFunction.scrollTo(target)
+        },
+    },
 }
 </script>
 <style scoped>

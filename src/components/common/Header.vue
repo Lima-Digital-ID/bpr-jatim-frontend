@@ -76,14 +76,16 @@
                                     <div class="col-md-6 text-center">
                                         <div class="row" v-if="this.loopLayanan.length > 0">
                                             <div class="col-md-4 mb-3" v-for="item in this.loopLayanan" :key="item.id">
-                                                <div class="berita-style-1 small-style">
-                                                    <img src="@/assets/images/common/cs.png" alt="">
-                                                    <div class="layer">
-                                                        <div class="content d-flex align-items-center justify-content-center">
-                                                                <p class="mb-0">{{item.productName}}</p>
+                                                <router-link :to="item.link">
+                                                    <div class="berita-style-1 small-style">
+                                                        <img src="@/assets/images/common/cs.png" alt="">
+                                                        <div class="layer">
+                                                            <div class="content d-flex align-items-center justify-content-center">
+                                                                    <p class="mb-0">{{item.productName}}</p>
+                                                            </div>
                                                         </div>
                                                     </div>
-                                                </div>
+                                                </router-link>
                                             </div>
                                         </div>
                                         <img v-else src="@/assets/images/common/app.png" width="80%" alt="" srcset="">
@@ -191,42 +193,50 @@
                         {
                             id : 1,
                             banner : "cs.png",
-                            productName : "Tambun"
+                            productName : "Tambun",
+                            link : tipe+"/1"
                         },
                         {
                             id : 2,
                             banner : "cs.png",
-                            productName : "Sikemas"
+                            productName : "Sikemas",
+                            link : tipe+"/1"
                         },
                         {
                             id : 3,
                             banner : "cs.png",
-                            productName : "Simpel"
+                            productName : "Simpel",
+                            link : tipe+"/1"
                         },
                         {
                             id : 4,
                             banner : "cs.png",
-                            productName : "Deposito On Call"
+                            productName : "Deposito On Call",
+                            link : tipe+"/1"
                         },
                         {
                             id : 5,
                             banner : "cs.png",
-                            productName : "Deposito Keluarga"
+                            productName : "Deposito Keluarga",
+                            link : tipe+"/1"
                         },
                         {
                             id : 6,
                             banner : "cs.png",
-                            productName : "Deposito Berjangka"
+                            productName : "Deposito Berjangka",
+                            link : tipe+"/1"
                         },
                         {
                             id : 7,
                             banner : "cs.png",
-                            productName : "Sikemas Berhadiah"
+                            productName : "Sikemas Berhadiah",
+                            link : tipe+"/1"
                         },
                         {
                             id : 8,
                             banner : "cs.png",
-                            productName : "Langsung"
+                            productName : "Langsung",
+                            link : tipe+"/1"
                         }
                     ]
                 }
@@ -235,37 +245,44 @@
                         {
                             id : 1,
                             banner : "cs.png",
-                            productName : "Kusuma"
+                            productName : "Kusuma",
+                            link : tipe+"/1"
                         },
                         {
                             id : 2,
                             banner : "cs.png",
-                            productName : "Krida Mas"
+                            productName : "Krida Mas",
+                            link : tipe+"/1"
                         },
                         {
                             id : 3,
                             banner : "cs.png",
-                            productName : "Mulus"
+                            productName : "Mulus",
+                            link : tipe+"/1"
                         },
                         {
                             id : 4,
                             banner : "cs.png",
-                            productName : "Dagulir"
+                            productName : "Dagulir",
+                            link : tipe+"/1"
                         },
                         {
                             id : 5,
                             banner : "cs.png",
-                            productName : "PKPJ"
+                            productName : "PKPJ",
+                            link : tipe+"/1"
                         },
                         {
                             id : 6,
                             banner : "cs.png",
-                            productName : "Kuips"
+                            productName : "Kuips",
+                            link : tipe+"/1"
                         },
                         {
                             id : 7,
                             banner : "cs.png",
-                            productName : "Hippams"
+                            productName : "Hippams",
+                            link : tipe+"/1"
                         },
                     ]
                 }

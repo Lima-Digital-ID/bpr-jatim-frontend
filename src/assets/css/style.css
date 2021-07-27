@@ -400,6 +400,10 @@ body{
     color :white;
     background: var(--blue) !important;
 }
+.btn-circle-primary:hover{
+    color :white;
+}
+
 .app-feature{
     border : 1px solid var(--softGrey);
 }
@@ -683,4 +687,7 @@ body{
     min-height: 40vh;
     margin-top : 92px;
 }
-
+.btn-circle-secondary{
+    background: var(--softGrey);
+    border-radius: 50px;
+}
