@@ -48,6 +48,14 @@
                                 <label for="formGroupExampleInput2">Lampiran KTP Istri</label>
                                 <input type="file" class="form-control" id="formGroupExampleInput2" placeholder="Another input placeholder">
                             </div>
+                            <div class="form-group">
+                                <label for="formGroupExampleInput2">NIB</label>
+                                <input type="file" class="form-control" id="formGroupExampleInput2" placeholder="Another input placeholder">
+                            </div>
+                            <div class="form-group">
+                                <label for="formGroupExampleInput2">Akta Notaris</label>
+                                <input type="file" class="form-control" id="formGroupExampleInput2" placeholder="Another input placeholder">
+                            </div>
                         </div>
 
                         <div class="col-md-6">
@@ -63,6 +71,16 @@
 
                             <div class="form-group">
                                 <label for="formGroupExampleInput2">Lampiran Domisili Usaha</label>
+                                <input type="file" class="form-control" id="formGroupExampleInput2" placeholder="Another input placeholder">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="formGroupExampleInput2">Surat Domisili </label>
+                                <input type="file" class="form-control" id="formGroupExampleInput2" placeholder="Another input placeholder">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="formGroupExampleInput2">NPWP Usaha</label>
                                 <input type="file" class="form-control" id="formGroupExampleInput2" placeholder="Another input placeholder">
                             </div>
                         </div>
