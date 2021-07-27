@@ -11,13 +11,20 @@ import Berita from '@/views/berita/Berita'
 import DetailBerita from '@/views/berita/DetailBerita'
 import Profile from '@/views/tentang/Profile'
 import Transparansi from '@/views/tentang/Transparansi'
+
+// auth
 import Login from '../views/auth/Login.vue';
 import Register from '../views/auth/Register.vue';
-import PersonalData from '../views/Personal-data.vue';
-import Scoring from '../views/Scoring.vue';
-import PinjamanCepat from '../views/PinjamanCepat.vue';
-import PinjamanModal from '../views/PinjamanModal.vue';
-import DanaUmroh from '../views/DanaUmroh.vue';
+// Data diri & scoring
+import PersonalData from '../views/verifikasiAndScoring/Personal-data.vue';
+import Scoring from '../views/verifikasiAndScoring/Scoring.vue';
+// Syarat Pinjaman cepat, modal, dana umroh
+import SyaratPinjamanCepat from '../views/SyaratPinjaman/SyaratPinjamanCepat.vue';
+import SyaratPinjamanModal from '../views/SyaratPinjaman/SyaratPinjamanModal.vue';
+import SyaratDanaUmroh from '../views/SyaratPinjaman/SyaratDanaUmroh.vue';
+// Pinjaman modal & dana umroh
+import PinjamanModal from '../views/FormPinjaman/PinjamanModal.vue';
+import PinjamanDanaUmroh from '../views/FormPinjaman/PinjamanDanaUmroh.vue';
 
 Vue.use(VueRouter)
 
@@ -94,16 +101,24 @@ const routes = [
     component: Scoring,
   },
   {
-    path: '/pinjaman-cepat',
-    component: PinjamanCepat,
+    path: '/syarat-pinjaman-cepat',
+    component: SyaratPinjamanCepat,
+  },
+  {
+    path: '/syarat-pinjaman-modal',
+    component: SyaratPinjamanModal,
+  },
+  {
+    path: '/syarat-dana-umrah',
+    component: SyaratDanaUmroh,
   },
   {
     path: '/pinjaman-modal',
     component: PinjamanModal,
   },
   {
-    path: '/dana-umrah',
-    component: DanaUmroh,
+    path: '/pinjaman-dana-umroh',
+    component: PinjamanDanaUmroh,
   },
 ]
 
