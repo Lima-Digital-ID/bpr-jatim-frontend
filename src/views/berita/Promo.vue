@@ -12,7 +12,7 @@
                 <div class="row mt-3">
                     <div class="col-md-8">
                         <div class="search-hero p-0">
-                            <input type="text" class="pl-3 search-hero" placeholder="Cari Berita Disini..." autofocus="true">
+                            <input type="text" class="pl-3 search-hero" placeholder="Cari Promo Disini..." autofocus="true">
                             <span class="fa fa-search"></span>
                         </div>
                     </div>
@@ -22,39 +22,12 @@
         <section id="promo" class="pb-5">
             <div class="container custom">
                 <div class="row">
-                    <div class="col-md-3">
+                    <div class="col-md-3" v-for="data in promo" :key="data.id">
                         <a href="">
                             <div class="box-white">
-                                <img src="http://www.bprjatim.co.id/img/promo/6_2019-08-27_10:23:29.jpg" class="img-cover" alt="">
-                                <h5 class="font-weight-bold color-red mt-3">Promo 1</h5>
-                                <p class="mb-0 font-14 color-dark2 font-weight-light">Lorem ipsum dolor sit amet, consectetur adipisicing elit ....</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-md-3">
-                        <a href="">
-                            <div class="box-white">
-                                <img src="http://www.bprjatim.co.id/img/promo/KREDIT%204_2018-11-02_12_28_27.jpg" class="img-cover" alt="">
-                                <h5 class="font-weight-bold color-red mt-3">Promo 2</h5>
-                                <p class="mb-0 font-14 color-dark2 font-weight-light">Lorem ipsum dolor sit amet, consectetur adipisicing elit ....</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-md-3">
-                        <a href="">
-                            <div class="box-white">
-                                <img src="http://www.bprjatim.co.id/img/promo/KREDIT%203_2018-11-02_12_20_40.jpg" class="img-cover" alt="">
-                                <h5 class="font-weight-bold color-red mt-3">Promo 3</h5>
-                                <p class="mb-0 font-14 color-dark2 font-weight-light">Lorem ipsum dolor sit amet, consectetur adipisicing elit ....</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-md-3">
-                        <a href="">
-                            <div class="box-white">
-                                <img src="http://www.bprjatim.co.id/img/promo/KREDIT%202_2018-11-02_12_17_29.jpg" class="img-cover" alt="">
-                                <h5 class="font-weight-bold color-red mt-3">Promo 4</h5>
-                                <p class="mb-0 font-14 color-dark2 font-weight-light">Lorem ipsum dolor sit amet, consectetur adipisicing elit ....</p>
+                                <img :src="data.cover" class="img-cover" alt="">
+                                <h5 class="font-weight-bold color-red mt-3">{{data.judul}} ...</h5>
+                                <p class="mb-0 font-14 color-dark2 font-weight-light">{{data.konten}} ...</p>
                             </div>
                         </a>
                     </div>
@@ -70,7 +43,21 @@ import Header from '@/components/common/Header'
 import Footer from '@/components/common/Footer'
 export default {
     name : 'Promo',
-    components : {Header,Footer}
+    components : {Header,Footer},
+    data() {
+        return {
+            promo : []
+        }
+    },
+    mounted() {
+        this.axios
+        .get(this.$serverURL+'api/get-promo')
+        .then(res => {
+            this.promo = res.data.promo.data
+        })
+        .catch(err => console.log(err))
+    },
+
 }
 </script>
 

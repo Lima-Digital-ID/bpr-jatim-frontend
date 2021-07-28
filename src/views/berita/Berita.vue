@@ -38,91 +38,44 @@
             <div class="container custom">
                 <div class="row">
                     <div class="col-md-6">
-                        <carousel class="owl-berita" :nav="false" :loop="true" :margin="10" :dots="true" :items="1">
-                            <div class="item mb-3">
-                                <div class="berita-style-1 h-400">
-                                    <img src="@/assets/images/berita/1.png" alt="">
-                                    <div class="layer">
-                                        <div class="content">
-                                            <span class="label-blue-rgb px-3 py-1 font-13">Bisnis</span>
-                                            <div class="bottom">
-                                                <h5 class="font-weight-bold  mb-1">Bussiness Matching Petik Keuangan</h5>
-                                                <p class="font-13 font-weight-light">Kegiatan dengan tema One Pesantren One Product resmi di buka
-                                                    oleh Gubernur Jawa Timur Ibu Khofifah...</p>
-                                            </div>
-                                        </div>
-                                    </div>
+                      <div v-if="beritaSlide.length>0">
+                            <carousel class="owl-berita" :nav="false" :loop="true" :margin="10" :dots="true" :items="1">
+                                <div class="item mb-3" v-for="data in beritaSlide" :key="data.id">
+                                    <router-link :to="'/berita/'+data.slug">
+                                        <BeritaStyle1 :data="data" add-class="h-400"/>
+                                    </router-link>
                                 </div>
-                            </div>
-                            <div class="item mb-3">
-                                <div class="berita-style-1 h-400">
-                                    <img src="@/assets/images/berita/1.png" alt="">
-                                    <div class="layer">
-                                        <div class="content">
-                                            <span class="label-blue-rgb px-3 py-1 font-13">Bisnis</span>
-                                            <div class="bottom">
-                                                <h5 class="font-weight-bold  mb-1">Bussiness Matching Petik Keuangan</h5>
-                                                <p class="font-13 font-weight-light">Kegiatan dengan tema One Pesantren One Product resmi di buka
-                                                    oleh Gubernur Jawa Timur Ibu Khofifah...</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </carousel>
+                            </carousel>
+                        </div>
                     </div>
                     <div class="col-md-6">
-                        <div class="img-berita-style-3 mb-3">
-                            <div class="row">
-                                <div class="col-4">
-                                    <div class="img">
-                                        <div class="layer"></div>
-                                        <span class="label-blue-rgb font-13 px-3">Info</span>
-                                        <img src="@/assets/images/berita/2.png" alt="" class="img-fluid">
+                        <div class="img-berita-style-3 mb-3" v-for="data in beritaRight" :key="data.id">
+                            <router-link :to="'/berita/'+data.slug">
+                                <div class="row">
+                                    <div class="col-4">
+                                        <div class="img">
+                                            <div class="layer"></div>
+                                            <span class="label-blue-rgb font-13 px-3">Info</span>
+                                            <img :src="data.cover" alt="" class="img-fluid">
+                                        </div>
+                                    </div>
+                                    <div class="col-8 pl-1">
+                                        <h6 class="mb-0 font-weight-bold color-darkBlue">{{data.judul}}</h6>
+                                        <p class="my-1 color-red font-13">{{data.tgl}}</p>
+                                        <p class="font-13 mt-1 color-darkBlue">{{data.konten}}...</p>
                                     </div>
                                 </div>
-                                <div class="col-8 pl-1">
-                                    <h6 class="mb-0 font-weight-bold">Berita 1 Judulnya A</h6>
-                                    <a href="" class="color-red font-13">20 Juli 2021, 17:00</a>
-                                    <p class="font-13 mt-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis officiis Nobis officiis</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="img-berita-style-3 mb-3">
-                            <div class="row">
-                                <div class="col-4">
-                                    <div class="img">
-                                        <div class="layer"></div>
-                                        <span class="label-blue-rgb font-13 px-3">Info</span>
-                                        <img src="@/assets/images/berita/2.png" alt="" class="img-fluid">
-                                    </div>
-                                </div>
-                                <div class="col-8 pl-1">
-                                    <h6 class="mb-0 font-weight-bold">Berita 1 Judulnya A</h6>
-                                    <a href="" class="color-red font-13">20 Juli 2021, 17:00</a>
-                                    <p class="font-13 mt-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis officiis Nobis officiis</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="img-berita-style-3 mb-3">
-                            <div class="row">
-                                <div class="col-4">
-                                    <div class="img">
-                                        <div class="layer"></div>
-                                        <span class="label-blue-rgb font-13 px-3">Info</span>
-                                        <img src="@/assets/images/berita/2.png" alt="" class="img-fluid">
-                                    </div>
-                                </div>
-                                <div class="col-8 pl-1">
-                                    <h6 class="mb-0 font-weight-bold">Berita 1 Judulnya A</h6>
-                                    <a href="" class="color-red font-13">20 Juli 2021, 17:00</a>
-                                    <p class="font-13 mt-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis officiis Nobis officiis</p>
-                                </div>
-                            </div>
+                            </router-link>
                         </div>
                     </div>
                 </div>
-                <BeritaStyle2 class="mt-4"/>
+                <div class="row mt-3">
+                    <div class="col-md-3" v-for="data in beritaBox" :key="data.id">
+                        <router-link :to="'/berita/'+data.slug">
+                            <BeritaStyle2 :data="data"/>
+                        </router-link>
+                    </div>
+                </div>
             </div>
         </section>
         <Footer/>
@@ -134,8 +87,33 @@ import Header from '@/components/common/Header';
 import Footer from '@/components/common/Footer'
 import carousel from 'vue-owl-carousel'
 import BeritaStyle2 from '@/components/berita/BeritaStyle2'
+import BeritaStyle1 from '@/components/berita/BeritaStyle1'
+import {myFunction} from '@/helper/myFunction'
+
 export default {
     name : "Berita",
-    components : {Header,Footer,carousel,BeritaStyle2},
+    components : {Header,Footer,carousel,BeritaStyle2,BeritaStyle1},
+    data() {
+        return {
+            beritaSlide : [],
+            beritaRight : [],
+            beritaBox : []
+        }
+    },
+    mounted() {
+        this.axios
+        .get(this.$serverURL+'api/get-berita')
+        .then(res => {
+            this.beritaSlide = res.data.berita['slide']
+            this.beritaRight = res.data.berita['right']
+            this.beritaBox = res.data.berita['box']
+        })
+        .catch(err => console.log(err))
+    },
+    methods: {
+        tglIndo(tgl){
+            return myFunction.tglIndo(tgl)
+        }
+    }, 
 }
 </script>

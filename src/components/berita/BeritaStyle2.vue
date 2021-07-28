@@ -1,65 +1,19 @@
 <template>
-    <div class="row mt-3">
-        <div class="col-md-3">
-            <div class="berita-style-2 mb-3">
-                <div class="top">
-                    <img src="@/assets/images/promo/1.png" alt="">
-                    <span class="label-blue-rgb px-3 font-13">Bisnis</span>
-                </div>
-                <div class="bottom mt-3">
-                    <h6 class="font-weight-bold">Penyerahan Bantuan Oleh Gubernur Jawa Timur</h6>
-                    <p class="font-13">Pemerintah Provinsi Jawa Timur beserta
-                        rombongan, yang diwakili oleh Gubernur
-                        Jawa Timur</p>
-                </div>
-            </div>
+    <div class="berita-style-2 mb-3">
+        <div class="top">
+            <img :src="data.cover" alt="">
+            <span class="label-blue-rgb px-3 font-13">Kategori</span>
         </div>
-        <div class="col-md-3">
-            <div class="berita-style-2 mb-3">
-                <div class="top">
-                    <img src="@/assets/images/promo/1.png" alt="">
-                    <span class="label-blue-rgb px-3 font-13">Bisnis</span>
-                </div>
-                <div class="bottom mt-3">
-                    <h6 class="font-weight-bold">Penyerahan Bantuan Oleh Gubernur Jawa Timur</h6>
-                    <p class="font-13">Pemerintah Provinsi Jawa Timur beserta
-                        rombongan, yang diwakili oleh Gubernur
-                        Jawa Timur</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-3">
-            <div class="berita-style-2 mb-3">
-                <div class="top">
-                    <img src="@/assets/images/promo/1.png" alt="">
-                    <span class="label-blue-rgb px-3 font-13">Bisnis</span>
-                </div>
-                <div class="bottom mt-3">
-                    <h6 class="font-weight-bold">Penyerahan Bantuan Oleh Gubernur Jawa Timur</h6>
-                    <p class="font-13">Pemerintah Provinsi Jawa Timur beserta
-                        rombongan, yang diwakili oleh Gubernur
-                        Jawa Timur</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-3">
-            <div class="berita-style-2 mb-3">
-                <div class="top">
-                    <img src="@/assets/images/promo/1.png" alt="">
-                    <span class="label-blue-rgb px-3 font-13">Bisnis</span>
-                </div>
-                <div class="bottom mt-3">
-                    <h6 class="font-weight-bold">Penyerahan Bantuan Oleh Gubernur Jawa Timur</h6>
-                    <p class="font-13">Pemerintah Provinsi Jawa Timur beserta
-                        rombongan, yang diwakili oleh Gubernur
-                        Jawa Timur</p>
-                </div>
-            </div>
+        <div class="bottom mt-3">
+            <h6 class="font-weight-bold">{{data.judul}}</h6>
+            <p class="my-1 color-red font-13">{{data.tgl}}</p>
+            <p class="font-14 color-darkBlue">{{data.konten}}</p>
         </div>
     </div>
 </template>
 <script>
 export default {
-    name : "BeritaStyle2"
+    name : "BeritaStyle2",
+    props : ['data'],
 }
 </script>

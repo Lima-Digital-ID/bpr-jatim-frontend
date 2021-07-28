@@ -14,39 +14,13 @@
         <section class="pb-5">
             <div class="container custom">
                 <div class="row">
-                    <div class="col-md-3">
+                    <div class="col-md-3" v-for="data in penghargaan" :key="data.id">
                         <a href="">
                             <div class="box-white">
-                                <img src="http://www.bprjatim.co.id/img/phg/Damandiri_2018-10-29_04_12_12.jpg" class="img-cover" alt="" srcset="">
-                                <h5 class="font-weight-bold color-yellow mt-3 mb-1">Judul Penghargaan</h5>
-                                <p class="mt-1 mb-0 font-14 color-dark2 font-weight-light">Lorem ipsum dolor sit amet, consectetur adipisicing elit ....</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-md-3">
-                        <a href="">
-                            <div class="box-white">
-                                <img src="http://www.bprjatim.co.id/img/phg/Infobank_2018-10-29_04_13_26.jpg" class="img-cover" alt="" srcset="">
-                                <h5 class="font-weight-bold color-yellow mt-3 mb-1">Judul Penghargaan</h5>
-                                <p class="mt-1 mb-0 font-14 color-dark2 font-weight-light">Lorem ipsum dolor sit amet, consectetur adipisicing elit ....</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-md-3">
-                        <a href="">
-                            <div class="box-white">
-                                <img src="http://www.bprjatim.co.id/img/phg/Greatest_2018-10-29_04_16_11.jpg" class="img-cover" alt="" srcset="">
-                                <h5 class="font-weight-bold color-yellow mt-3 mb-1">Judul Penghargaan</h5>
-                                <p class="mt-1 mb-0 font-14 color-dark2 font-weight-light">Lorem ipsum dolor sit amet, consectetur adipisicing elit ....</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-md-3">
-                        <a href="">
-                            <div class="box-white">
-                                <img src="http://www.bprjatim.co.id/img/phg/Platinum_2018-10-29_04_17_30.jpg" class="img-cover" alt="" srcset="">
-                                <h5 class="font-weight-bold color-yellow mt-3 mb-1">Judul Penghargaan</h5>
-                                <p class="mt-1 mb-0 font-14 color-dark2 font-weight-light">Lorem ipsum dolor sit amet, consectetur adipisicing elit ....</p>
+                                <img :src="data.cover" class="img-cover" alt="" srcset="">
+                                <h5 class="font-weight-bold color-yellow mt-3 mb-1">{{data.judul}}</h5>
+                                <div class="mt-1 mb-0 font-14 color-dark2 font-weight-light" v-html="data.konten">
+                                </div>
                             </div>
                         </a>
                     </div>
@@ -62,7 +36,25 @@ import Header from '@/components/common/Header'
 import Footer from '@/components/common/Footer'
 export default {
     name : "penghargaan",
-    components : {Header,Footer}
+    components : {Header,Footer},
+    data() {
+        return {
+            penghargaan : []
+        }
+    },
+    methods: {
+        konten(text){
+            return text
+        }
+    },
+    mounted() {
+        this.axios
+        .get(this.$serverURL+'api/get-penghargaan')
+        .then(res => {
+            this.penghargaan = res.data.penghargaan.data
+        })
+        .catch(err => console.log(err))
+    },
 }
 </script>
 <style scoped>

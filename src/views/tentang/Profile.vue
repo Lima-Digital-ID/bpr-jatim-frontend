@@ -5,8 +5,8 @@
             <div class="container custom d-flex align-items-center">
                 <div class="row align-items-center">
                     <div class="col-md-7">
-                        <h1 class="font-weight-bold mb-4 color-white">Profil Bank UMKM <br> Jawa Timur</h1>
-                        <p class="font-weight-light mb-4 color-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae sed atque incidunt eos, distinctio vitae assumenda aliquid quas amet hicaliquid quas amet hicaliquid quas amet hic</p>
+                        <h1 class="font-weight-bold mb-4 color-white">Profil Bank UMKM <br> <span class="color-blue">Jawa Timur</span></h1>
+                        <p class="font-weight-light mb-4 color-white">Melalui perjalanan panjang sejarah yang telah dilalui, Bank BPR Jatim Bank UMKM Jawa Timur selalu berkomitmen memberikan kontribusi terbaik guna membangun masyarakat Jawa Timur melalui berbagai produk layanan terbaik.</p>
                         <a href="#" @click="scrollTo('#sejarah')" class="btn btn-circle-primary px-4 py-2">Selengkapnya</a>
                         <a href="" class="color-white ml-4"><span class="fa fa-play"></span> Tonton Video</a>
                     </div>
@@ -16,9 +16,9 @@
         <section id="sejarah" class="py-5">
             <div class="container custom">
                 <div class="row mt-5 mb-4">
-                    <div class="col-md-7">
+                    <div class="col-md-6">
                         <h3 class="font-weight-bold color-blue">Sejarah Bank UMKM</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam ex veniam at minima animi dignissimos culpa reprehenderit</p>
+                        <p>Sejarah Bank UMKM dari mulai terbentuk sampai sekarang menjadi mitra dari binis atau UMKM di Jawa Timur</p>
                     </div>
                 </div>
                 <div class="row align-items-center">
@@ -51,10 +51,7 @@
                 <div class="row">
                     <div class="col-md-6">
                         <h3 class="font-weight-bold color-blue">Visi Misi Bank UMKM</h3>
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        <p>Komitmen untuk membantu masyarakat dalam meningkatkan usaha atau bisnis yang digeluti
                         </p>
                     </div>
                 </div>

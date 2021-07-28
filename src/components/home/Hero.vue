@@ -31,52 +31,16 @@
                         <div class="text-right font-13 hide-promo c-pointer color-white"  @click="togglePromo">
                             <span class="fa fa-chevron-down mr-2"></span> Sembunyikan Promo 
                         </div>
-                        <carousel class="mt-3 owl-promo" :nav="true" :loop="true" :margin="10" :dots="false" :responsive="{0:{items:3},600:{items:4},1000:{items:6}}" :navText="customNav">
-                                <a href="">
-                                    <img src="@/assets/images/promo/1.png" class="img-fluid" alt="">
-                                    <div class="font-weight-bold font-16 color-red mt-2">Promo 1</div>
-                                </a>
-                                <a href="">
-                                    <img src="@/assets/images/promo/2.png" class="img-fluid" alt="">
-                                    <div class="font-weight-bold font-16 color-red mt-2">Promo 2</div>
-                                </a>
-                                <a href="">
-                                    <img src="@/assets/images/promo/3.png" class="img-fluid" alt="">
-                                    <div class="font-weight-bold font-16 color-red mt-2">Promo 3</div>
-                                </a>
-                                <a href="">
-                                    <img src="@/assets/images/promo/4.png" class="img-fluid" alt="">
-                                    <div class="font-weight-bold font-16 color-red mt-2">Promo 4</div>
-                                </a>
-                                <a href="">
-                                    <img src="@/assets/images/promo/1.png" class="img-fluid" alt="">
-                                    <div class="font-weight-bold font-16 color-red mt-2">Promo 5</div>
-                                </a>
-                                <a href="">
-                                    <img src="@/assets/images/promo/2.png" class="img-fluid" alt="">
-                                    <div class="font-weight-bold font-16 color-red mt-2">Promo 6</div>
-                                </a>
-                                <a href="">
-                                    <img src="@/assets/images/promo/3.png" class="img-fluid" alt="">
-                                    <div class="font-weight-bold font-16 color-red mt-2">Promo 7</div>
-                                </a>
-                                <a href="">
-                                    <img src="@/assets/images/promo/3.png" class="img-fluid" alt="">
-                                    <div class="font-weight-bold font-16 color-red mt-2">Promo 7</div>
-                                </a>
-                                <a href="">
-                                    <img src="@/assets/images/promo/3.png" class="img-fluid" alt="">
-                                    <div class="font-weight-bold font-16 color-red mt-2">Promo 7</div>
-                                </a>
-                                <a href="">
-                                    <img src="@/assets/images/promo/3.png" class="img-fluid" alt="">
-                                    <div class="font-weight-bold font-16 color-red mt-2">Promo 7</div>
-                                </a>
-                                <a href="">
-                                    <img src="@/assets/images/promo/3.png" class="img-fluid" alt="">
-                                    <div class="font-weight-bold font-16 color-red mt-2">Promo 7</div>
-                                </a>
-                         </carousel>
+                        <div v-if="promo.length>0">
+                            <carousel class="mt-3 owl-promo" :nav="true" :loop="true" :margin="20" :dots="false" :responsive="{0:{items:3},600:{items:4},1000:{items:6}}" :navText="customNav">
+                                <div class="item" v-for="data in promo" :key="data.id">
+                                    <a href="">
+                                        <img :src="data.cover" class="img-cover img-promo" alt="">
+                                        <div class="font-weight-bold font-16 color-red mt-2">{{data.judul}}...</div>
+                                    </a>
+                                </div>
+                            </carousel>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -94,11 +58,18 @@ export default {
         Header,
         carousel
     },
+    mounted() {
+        this.axios
+        .get(this.$serverURL+'api/get-promo-home')
+        .then(res => (this.promo = res.data.data))
+        .catch(err => console.log(err))
+    },
     data(){
         return{
             clickedPromo : false,
             heroFocus : false,
             navTransition : false,
+            promo: [],
             customNav : [
                 "<span class='fa fa-chevron-left'></span>",
                 "<span class='fa fa-chevron-right'></span>"
@@ -121,3 +92,9 @@ export default {
 
 }
 </script>
+<style scoped>
+    .img-promo{
+        height: 150px !important;
+        border-radius: 10px;
+    }
+</style>

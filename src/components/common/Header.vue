@@ -27,11 +27,11 @@
                                             <div class="col-auto">
                                                 <router-link to="/profile" class="megamenu-link">
                                                     <h6>Profil <span class="fa fa-chevron-right fa-sm ml-1"></span></h6>
-                                                    <p class="color-softGrey2 font-weight-light">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt ab aliquam saepe ipsum laudantium vel neque distinctio reiciendis rem.</p>
+                                                    <p class="color-softGrey2 font-weight-light">Profil Bank BPR Jatim. Selalu berkomitmen memberikan kontribusi terbaik untuk masyarakat.</p>
                                                 </router-link>
                                                 <router-link to="/transparansi" class="megamenu-link">
                                                     <h6>Transparansi <span class="fa fa-chevron-right fa-sm ml-1"></span></h6>
-                                                    <p class="color-softGrey2 font-weight-light">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt ab aliquam saepe ipsum laudantium vel neque distinctio reiciendis rem.</p>
+                                                    <p class="color-softGrey2 font-weight-light">Bank BPR Jatim Bank UMKM Jawa Timur sebagai perusahaan terbuka memiliki kewajiban untuk melakukan transparansi</p>
                                                 </router-link>
                                             </div>
                                         </div>
@@ -58,17 +58,17 @@
                                     <div class="col-md-6">
                                         <div class="row mt-5">
                                             <div class="col-auto">
-                                                <a href="#" class="megamenu-link" @click="showProdukLayanan('personal',$event)">
+                                                <a href="#" class="megamenu-link" @click="showProdukLayanan(1,$event)">
                                                     <h6>Personal <span class="fa fa-chevron-right fa-sm ml-1"></span></h6>
-                                                    <p class="color-softGrey2 font-weight-light">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt ab aliquam saepe ipsum laudantium vel neque distinctio reiciendis rem.</p>
+                                                    <p class="color-softGrey2 font-weight-light">Bank BPR Jatim Bank UMKM Jawa Timur memberikan banyak pilihan simpanan dalam bentuk tabungan dengan berbagai keuntungan</p>
                                                 </a>
-                                                <a href="#" class="megamenu-link" @click="showProdukLayanan('bisnis',$event)">
+                                                <a href="#" class="megamenu-link" @click="showProdukLayanan(2,$event)">
                                                     <h6>Bisnis <span class="fa fa-chevron-right fa-sm ml-1"></span></h6>
-                                                    <p class="color-softGrey2 font-weight-light">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt ab aliquam saepe ipsum laudantium vel neque distinctio reiciendis rem.</p>
+                                                    <p class="color-softGrey2 font-weight-light">Pembiayaan eskpansi bisnis yang prospektif untuk peningkatan kesejahteraan lewat UMKM dan koperasi yang produktif. Bank BPR Jatim Bank UMKM Jawa Timur menawarkan beberapa skim perkreditan.</p>
                                                 </a>
-                                                <a href="#" class="megamenu-link" @click="showProdukLayanan('layanan',$event)">
+                                                <a href="#" class="megamenu-link" @click="showProdukLayanan(3,$event)">
                                                     <h6>Layanan <span class="fa fa-chevron-right fa-sm ml-1"></span></h6>
-                                                    <p class="color-softGrey2 font-weight-light">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt ab aliquam saepe ipsum laudantium vel neque distinctio reiciendis rem.</p>
+                                                    <p class="color-softGrey2 font-weight-light">Bank BPR Jatim Bank UMKM Jawa Timur menyediakan berbagai layanan yang bisa Anda nikmati di setiap kantor cabang kami.</p>
                                                 </a>
                                             </div>
                                         </div>
@@ -76,12 +76,12 @@
                                     <div class="col-md-6 text-center">
                                         <div class="row" v-if="this.loopLayanan.length > 0">
                                             <div class="col-md-4 mb-3" v-for="item in this.loopLayanan" :key="item.id">
-                                                <router-link :to="item.link">
+                                                <router-link :to="'/produk-layanan/'+item.slug">
                                                     <div class="berita-style-1 small-style">
-                                                        <img src="@/assets/images/common/cs.png" alt="">
+                                                        <img :src="item.cover" alt="">
                                                         <div class="layer">
                                                             <div class="content d-flex align-items-center justify-content-center">
-                                                                    <p class="mb-0">{{item.productName}}</p>
+                                                                    <p class="mb-0">{{item.judul}}</p>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -110,30 +110,30 @@
                                     <div class="col-md-6">
                                         <router-link to="/berita" class="megamenu-link">
                                             <h6>Berita <span class="fa fa-chevron-right fa-sm ml-1"></span></h6>
-                                            <p class="color-softGrey2 font-weight-light">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt ab aliquam saepe ipsum laudantium vel neque distinctio reiciendis rem.</p>
+                                            <p class="color-softGrey2 font-weight-light">Lihat berita dan informasi terbaru dari Bank UMKM</p>
                                         </router-link>
                                         <router-link to="/promo" class="megamenu-link">
                                             <h6>Promo <span class="fa fa-chevron-right fa-sm ml-1"></span></h6>
-                                            <p class="color-softGrey2 font-weight-light">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt ab aliquam saepe ipsum laudantium vel neque distinctio reiciendis rem.</p>
+                                            <p class="color-softGrey2 font-weight-light">Bank UMKM menyediakan berbagai promo menarik untuk pelaku bisnis di Jawa Timur</p>
                                         </router-link>
                                         <router-link to="/epaper" class="megamenu-link">
                                             <h6>ePaper UMKM <span class="fa fa-chevron-right fa-sm ml-1"></span></h6>
-                                            <p class="color-softGrey2 font-weight-light">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt ab aliquam saepe ipsum laudantium vel neque distinctio reiciendis rem.</p>
+                                            <p class="color-softGrey2 font-weight-light">E-Paper Bank UMKM dibuat untuk memberikan ilmu dan pengetuhuan lebih kepada pelaku bisnis</p>
                                         </router-link>
                                     </div>
                                     <div class="col-md-6">
                                         <router-link to="/penghargaan" class="megamenu-link">
                                             <h6>Penghargaan <span class="fa fa-chevron-right fa-sm ml-1"></span></h6>
-                                            <p class="color-softGrey2 font-weight-light">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt ab aliquam saepe ipsum laudantium vel neque distinctio reiciendis rem.</p>
+                                            <p class="color-softGrey2 font-weight-light">Berbagai penghargaan yang diraih oleh Bank UMKM.</p>
                                         </router-link>
                                         <a href="#" class="megamenu-link">
                                             <h6>Karier <span class="fa fa-chevron-right fa-sm ml-1"></span></h6>
-                                            <p class="color-softGrey2 font-weight-light">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt ab aliquam saepe ipsum laudantium vel neque distinctio reiciendis rem.</p>
+                                            <p class="color-softGrey2 font-weight-light">Cek disini untuk mengetahui informasi terkait jenjang karier di Bank UMKM</p>
                                         </a>
-                                        <a href="#" class="megamenu-link">
+                                        <router-link to="/pengaduan" class="megamenu-link">
                                             <h6>Form Pengaduan Nasabah <span class="fa fa-chevron-right fa-sm ml-1"></span></h6>
-                                            <p class="color-softGrey2 font-weight-light">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt ab aliquam saepe ipsum laudantium vel neque distinctio reiciendis rem.</p>
-                                        </a>
+                                            <p class="color-softGrey2 font-weight-light">Anda memiliki kritik dan saran? Ajukan sekarang sebagai bahan evaluasi kami</p>
+                                        </router-link>
 
                                     </div>
                                 </div>
@@ -187,105 +187,15 @@
             },
             showProdukLayanan(tipe,event){
                 event.preventDefault();
-                
-                if(tipe==='personal'){
-                    this.loopLayanan = [
-                        {
-                            id : 1,
-                            banner : "cs.png",
-                            productName : "Tambun",
-                            link : tipe+"/1"
-                        },
-                        {
-                            id : 2,
-                            banner : "cs.png",
-                            productName : "Sikemas",
-                            link : tipe+"/1"
-                        },
-                        {
-                            id : 3,
-                            banner : "cs.png",
-                            productName : "Simpel",
-                            link : tipe+"/1"
-                        },
-                        {
-                            id : 4,
-                            banner : "cs.png",
-                            productName : "Deposito On Call",
-                            link : tipe+"/1"
-                        },
-                        {
-                            id : 5,
-                            banner : "cs.png",
-                            productName : "Deposito Keluarga",
-                            link : tipe+"/1"
-                        },
-                        {
-                            id : 6,
-                            banner : "cs.png",
-                            productName : "Deposito Berjangka",
-                            link : tipe+"/1"
-                        },
-                        {
-                            id : 7,
-                            banner : "cs.png",
-                            productName : "Sikemas Berhadiah",
-                            link : tipe+"/1"
-                        },
-                        {
-                            id : 8,
-                            banner : "cs.png",
-                            productName : "Langsung",
-                            link : tipe+"/1"
-                        }
-                    ]
-                }
-                else if(tipe==='bisnis'){
-                    this.loopLayanan = [
-                        {
-                            id : 1,
-                            banner : "cs.png",
-                            productName : "Kusuma",
-                            link : tipe+"/1"
-                        },
-                        {
-                            id : 2,
-                            banner : "cs.png",
-                            productName : "Krida Mas",
-                            link : tipe+"/1"
-                        },
-                        {
-                            id : 3,
-                            banner : "cs.png",
-                            productName : "Mulus",
-                            link : tipe+"/1"
-                        },
-                        {
-                            id : 4,
-                            banner : "cs.png",
-                            productName : "Dagulir",
-                            link : tipe+"/1"
-                        },
-                        {
-                            id : 5,
-                            banner : "cs.png",
-                            productName : "PKPJ",
-                            link : tipe+"/1"
-                        },
-                        {
-                            id : 6,
-                            banner : "cs.png",
-                            productName : "Kuips",
-                            link : tipe+"/1"
-                        },
-                        {
-                            id : 7,
-                            banner : "cs.png",
-                            productName : "Hippams",
-                            link : tipe+"/1"
-                        },
-                    ]
-                }
+
+                this.axios
+                .get(this.$serverURL+'api/get-nav-item-produk-layanan/'+tipe)
+                .then(res => {
+                    this.loopLayanan = res.data.data
+                    console.log(this.loopLayanan)
+                })
+                .catch(err => console.log(err))
+
             }
         },
     }

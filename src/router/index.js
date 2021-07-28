@@ -5,7 +5,7 @@ import Home from '../views/Home.vue'
 import Promo from '@/views/berita/Promo'
 import Epaper from '@/views/berita/Epaper'
 import Penghargaan from '@/views/berita/Penghargaan'
-import Bisnis from '@/views/produk-layanan/Bisnis'
+import ProdukLayanan from '@/views/produk-layanan/ProdukLayanan'
 import UmkmBinaan from '@/views/umkm-binaan/UmkmBinaan'
 import Berita from '@/views/berita/Berita'
 import DetailBerita from '@/views/berita/DetailBerita'
@@ -63,12 +63,17 @@ const routes = [
     component: UmkmBinaan
   },
   {
-    path: '/bisnis/:id',
-    name: 'Bisnis',
-    component: Bisnis
+    path: '/umkm/:idKota',
+    name: 'UmkmBinaanByKota',
+    component: UmkmBinaan
   },
   {
-    path: '/berita/:id',
+    path: '/produk-layanan/:slug',
+    name: 'ProdukLayanan',
+    component: ProdukLayanan
+  },
+  {
+    path: '/berita/:slug',
     name: 'DetailBerita',
     component: DetailBerita
   },
