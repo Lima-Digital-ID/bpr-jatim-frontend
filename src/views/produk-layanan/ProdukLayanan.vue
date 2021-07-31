@@ -17,7 +17,7 @@
                 <div class="row">
                     <div class="col-md-3">
                         <ul class="link-content">
-                            <li v-for="data in sideMenu" :key="data.id"><router-link :to="'/produk-layanan/'+data.slug">{{data.judul}}</router-link></li>
+                            <li v-for="data in sideMenu" :class="checkActive(data.slug)" :key="data.id"><router-link :to="'/produk-layanan/'+data.slug">{{data.judul}}</router-link></li>
                         </ul>
                     </div>
                     <div class="col-md-9">
@@ -44,15 +44,28 @@ export default {
         }
     },
     mounted() {
-        this.axios
-        .get(this.$serverURL+'api/get-konten-produk-layanan/'+this.$route.params.slug)
-        .then(res => {
-            this.detail = res.data.data
-            this.sideMenu = res.data.sidemenu
-        })
-        .catch(err => console.log(err))
+        this.getApi()
     },
-    
+    watch: {
+        $route(){
+            this.getApi()
+            window.scrollTo(0,0)
+        }
+    },
+    methods: {
+        getApi(){
+            this.axios
+            .get(this.$serverURL+'api/get-konten-produk-layanan/'+this.$route.params.slug)
+            .then(res => {
+                this.detail = res.data.data
+                this.sideMenu = res.data.sidemenu
+            })
+            .catch(err => console.log(err))
+        },
+        checkActive(slug) {
+            return slug == this.$route.params.slug ? 'active' : ''
+        }
+    },
 }
 </script>
 <style scoped>
@@ -75,5 +88,8 @@ export default {
     }
     .link-content li a{
         color : var(--darkBlue);
+    }
+    .link-content li a:hover, .link-content li.active a{
+        color : var(--blue);
     }
 </style>

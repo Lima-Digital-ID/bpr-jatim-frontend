@@ -14,19 +14,41 @@
         <section class="pb-5">
             <div class="container custom">
                 <div class="row">
-                    <div class="col-md-3" v-for="data in penghargaan" :key="data.id">
-                        <a href="">
+                    <div class="col-md-3" v-for="(data,index) in penghargaan" :key="data.id">
+                        <a href="" data-toggle="modal" @click="getDetail(index)" data-target="#modal-detail">
                             <div class="box-white">
                                 <img :src="data.cover" class="img-cover" alt="" srcset="">
-                                <h5 class="font-weight-bold color-yellow mt-3 mb-1">{{data.judul}}</h5>
-                                <div class="mt-1 mb-0 font-14 color-dark2 font-weight-light" v-html="data.konten">
-                                </div>
+                                <h5 class="text-center font-weight-bold color-yellow mt-3 mb-1">{{data.judul}}</h5>
                             </div>
                         </a>
                     </div>
                 </div>
             </div>
         </section>
+        <div class="modal fade" id="modal-detail" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title font-weight-bold" id="judul"></h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container custom">
+                            <div class="row">
+                                <div class="col-md-5">
+                                    <img src="" style="border-radius : 14px" id='cover' class="img-fluid" alt="">
+                                </div>
+                                <div class="col-md-7">
+                                    <p id="konten"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <Footer/>
     </div>
 </template>
@@ -43,8 +65,11 @@ export default {
         }
     },
     methods: {
-        konten(text){
-            return text
+        getDetail(index){
+            const data = this.penghargaan[index]
+            document.getElementById('judul').innerHTML = data.judul
+            document.getElementById('cover').src = data.cover
+            document.getElementById('konten').innerHTML = data.konten
         }
     },
     mounted() {

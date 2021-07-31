@@ -8,7 +8,7 @@
                         <h1 class="font-weight-bold mt-5">{{this.detail.judul}}</h1>
                         <span class="label-blue-rgb px-3 py-1 font-13">Bisnis</span>
                         <div class="mt-3 d-flex font-14 justify-content-between">
-                            <p class="color-red">{{tglIndo(this.detail.created_at)}}</p>
+                            <p class="color-red">{{this.detail.tgl}}</p>
                             <div class="d-flex">
                                 <p class="mr-3">
                                     <span class="fa fa-user"></span> Admin
@@ -63,25 +63,33 @@ export default {
         }
     },
     mounted() {
-        this.axios
-        .get(this.$serverURL+'api/get-detail-berita/'+this.$route.params.slug)
-        .then(res => {
-            this.detail = res.data.berita
-        })
-        .catch(err => console.log(err))
-
-        this.axios
-        .get(this.$serverURL+'api/get-berita-home')
-        .then(res => {
-            this.beritaSlide = res.data.data['slide']
-            this.beritaBox = res.data.data['box']
-        })
-        .catch(err => console.log(err))
-
+        this.updatePage(this.$route.params.slug)
     },
+    watch: {
+        $route() {
+            this.updatePage(this.$route.params.slug)
+            window.scrollTo(0,0)
+        }
+    },    
     methods: {
         tglIndo(tgl){
             return myFunction.tglIndo(tgl)
+        },
+        updatePage(param){
+            this.axios
+            .get(this.$serverURL+'api/get-detail-berita/'+param)
+            .then(res => {
+                this.detail = res.data.berita
+            })
+            .catch(err => console.log(err))
+
+            this.axios
+            .get(this.$serverURL+'api/get-berita-home')
+            .then(res => {
+                this.beritaSlide = res.data.data['slide']
+                this.beritaBox = res.data.data['box']
+            })
+            .catch(err => console.log(err))
         }
     }, 
 }

@@ -11,23 +11,23 @@
                             </div>
                         </div>
                         <div class="d-none d-lg-block col text-right">
-                            <p>Update Terakhir 12 Juli 2021 17:00</p>
+                            <p>Update Terakhir {{this.lastUpdate}}</p>
                         </div>
                     </div>
                     <div class="tab-content custom-tab-content" id="nav-tabContent">
                     <div class="tab-pane  px-4 pt-4 fade show active" id="nav-kurs" role="tabpanel" aria-labelledby="nav-kurs-tab">
                         <div class="list-kurs d-flex justify-content-start">
 
-                            <div v-for="data in kurs" :key="data.nama" class="box-kurs mb-4">
+                            <div v-for="(data,index) in kurs" :key="data.nama" class="box-kurs mb-4">
                                 <h5 class="font-weight-bold color-blue">{{data.nama}}</h5>
                                 <hr class="my-3">
                                 <div class="kurs-info mb-2">
                                     <div class="font-weight-bold">Jual</div>
-                                    <div>{{rupiah(data.harga_jual)}} <span class="ml-2 fa fa-caret-up color-green"></span> </div>
+                                    <div>{{rupiah(data.harga_jual)}} <span class="ml-2 fa" :class="infoKurs('jual',index)"></span> </div>
                                 </div>
                                 <div class="kurs-info">
                                     <div class=" font-weight-bold">Beli</div>
-                                    <div>{{rupiah(data.harga_beli)}} <span class="ml-2 fa fa-caret-up color-green"></span> </div>
+                                    <div>{{rupiah(data.harga_beli)}} <span class="ml-2 fa" :class="infoKurs('beli',index)"></span> </div>
                                 </div>
                             </div>
 
@@ -39,38 +39,44 @@
                             <div class="row">
                                 <div class="col-md-3">
                                     <label for="" class="font-weight-bold">Jenis Kurs</label>
-                                    <select name="" id="" class="form-control">
-                                        <option value="">Jual</option>
-                                        <option value="">Beli</option>
+                                    <select name="" id="jenis-kurs" class="form-control" @change="setMataUangNull">
+                                        <option value="jual">Jual</option>
+                                        <option value="beli">Beli</option>
                                     </select>
                                 </div>
                                 <div class="col-md-3">
                                     <label for="" class="font-weight-bold">Mata Uang</label>
-                                    <select name="" id="" class="form-control">
+                                    <select name="" v-model="selected" id="mata-uang" class="form-control" @change="setNominalNull">
                                         <option value="">--Pilih Mata Uang--</option>
-                                        <option  v-for="data in kurs" :key="data.nama" :value="data.id">{{data.nama}}</option>
+                                        <option :data-jual="data.harga_jual" :data-beli="data.harga_beli"  v-for="data in kurs" :key="data.nama" :value="data.id">{{data.nama}}</option>
                                     </select>
                                 </div>
                                 <div class="col-md-3">
                                     <label for="" class="font-weight-bold">Nominal</label>
-                                    <input type="text" class="form-control">
+                                    <input type="number" id="nominal" class="form-control" @keyup="getOutputCalc">
                                 </div>
                                 <div class="col-md-3">
                                     <label for="" class="font-weight-bold">Output Rupiah</label>
-                                    <input type="text" class="form-control" style="background:#f6f8fd" readonly>
+                                    <input type="text" id="output" class="form-control" style="background:#f6f8fd" readonly>
                                 </div>
                             </div>
                         </div>
                     </div>
                     </div>
                     <div class="d-sm-block d-lg-none mt-3 font-13 font-weight-bold">
-                        <p>*Update Terakhir 12 Juli 2021 17:00</p>
+                        <p>*Update Terakhir {{this.lastUpdate}}</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 </template>
+
+<style scoped>
+    .fa-minus{
+        color : #d6dde9;
+    }
+</style>
 
 <script>
 import {myFunction} from '@/helper/myFunction'
@@ -79,18 +85,61 @@ export default {
     name : 'Kurs',
     data(){
         return{
-            kurs : []
+            kurs : [],
+            lastUpdate : '',
+            selected : ''
         }
     },
     mounted() {
         this.axios
         .get(this.$serverURL+'api/get-kurs-home')
-        .then(res => (this.kurs = res.data.data))
+        .then(res => {
+            this.kurs = res.data.data
+            this.lastUpdate =  res.data.lastUpdate
+        })
         .catch(err => console.log(err))
     },
     methods: {
         rupiah(nominal){
             return myFunction.rupiah(nominal)
+        },
+        infoKurs(tipe,index){
+            const data = this.kurs[index]
+            const field = tipe=='jual' ? data.ket_jual : data.ket_beli
+            let classFa = ''
+            if(field=='turun'){
+                classFa = 'fa-caret-down color-red'
+            }
+            else if(field=='naik'){
+                classFa = 'fa-caret-up color-green'
+            }
+            else{
+                classFa = 'fa-minus color-grey'
+            }
+
+            return classFa
+        },
+        setMataUangNull(){
+            this.selected = ''
+            document.getElementById('nominal').value = ''
+            document.getElementById('output').value = ''
+        },
+        setNominalNull: function(event){
+            if(event.target.value==''){
+                document.getElementById('nominal').value = ''
+                document.getElementById('output').value = ''
+            }
+            else{
+                this.getOutputCalc()
+            }
+        },
+        getOutputCalc(){
+            const jenisKurs = document.getElementById('jenis-kurs').value
+            const mataUang = document.getElementById('mata-uang')
+            const nominal = document.getElementById('nominal').value
+            const nominalMataUang = jenisKurs=='beli' ? mataUang.options[mataUang.selectedIndex].getAttribute('data-beli') : mataUang.options[mataUang.selectedIndex].getAttribute('data-jual')
+            const output = nominal * nominalMataUang
+            document.getElementById('output').value = myFunction.rupiah(output)
         }
     },
 }

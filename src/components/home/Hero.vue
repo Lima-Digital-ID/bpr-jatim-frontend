@@ -6,23 +6,44 @@
             <iframe width="100%" id="myVideo" height="100%" src="https://www.youtube.com/embed/AcbP83N5RzY?controls=0&autoplay=1&mute=1&loop=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             <div class="layer"></div>
             <div class="hero d-flex align-items-center">
-                <div class="container custom pl-4"  id="hero-text">
+                <div class="container custom pl-4">
                     <div class="row">
-                        <div class="col">
-                            <h1 class="font-weight-bold"> <span class="color-blue">SELAMAT DATANG DI</span> <br> <span class="color-white">BANK UMKM JAWA TIMUR</span></h1>
-                            <a href="#" @click="toggleHeroFocus"><span class="playVideo fa fa-play color-blue mt-4"></span> </a>
+                        <div class="col-md-7" id="hero-text">
+                            <div class="row my-5">
+                                <div class="col-md-12">
+                                    <h1 class="font-weight-bold"> <span class="color-blue">SELAMAT DATANG DI</span> <br> <span class="color-white">BANK UMKM JAWA TIMUR</span></h1>
+                                    <a href="#" @click="toggleHeroFocus"><span class="playVideo fa fa-play color-blue mt-4"></span> </a>
+                                </div>
+                            </div>
+                            <div class="row mt-5">
+                                <div class="col">
+                                    <a href="#" class="font-weight-light" @click="togglePromo">
+                                        <span class="color-blue fa fa-newspaper fa-lg mr-2"></span> 
+                                        <span class="color-white">Promo Terbaru</span>
+                                    </a>
+                                    <a href="#" class="ml-4 font-weight-light" @click="scrollTo('#kurs-section')" data-target="#kurs-section">
+                                        <span class="color-blue fa fa-coins fa-lg mr-2"></span> 
+                                        <span class="color-white">Kurs Bank UMKM</span>
+                                    </a>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="row mt-5">
-                        <div class="col">
-                            <a href="#" class="font-weight-light" @click="togglePromo">
-                                <span class="color-blue fa fa-newspaper fa-lg mr-2"></span> 
-                                <span class="color-white">Promo Terbaru</span>
-                            </a>
-                            <a href="#" class="ml-4 font-weight-light" @click="scrollTo('#kurs-section')" data-target="#kurs-section">
-                                <span class="color-blue fa fa-coins fa-lg mr-2"></span> 
-                                <span class="color-white">Kurs Bank UMKM</span>
-                            </a>
+                        <div class="col-md-5 d-sm-block d-none" id="hero-simulasi">
+                            <div class="simulasi">
+                                <div class="top p-4">
+                                    <h4 class="text-center color-white font-weight-bold">Simulasi Angsuran Pinjaman</h4>
+                                    <p class="text-center color-white mb-0">Dengan Bunga {{bunga}}%</p>
+                                </div>
+                                <div class="bottom p-4">
+                                    <input type="text" id="nominal" @keyup="getEstimasi" class="form-control" placeholder="Nominal">
+                                    <br>
+                                    <select name="" id="tenor" @change="getEstimasi" class="form-control">
+                                        <option value="">---Tenor---</option>
+                                        <option :value="data.tenor" v-for="data in tenor" :key="data.id">{{data.tenor}} Tahun</option>
+                                    </select>
+                                    <h4 class="mt-3 text-center font-weight-bold">Estimasi Angsuran Perbulan <br> Rp. <span id="estimasi">0</span></h4>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -56,13 +77,7 @@ export default {
     name : 'Hero',
     components : {
         Header,
-        carousel
-    },
-    mounted() {
-        this.axios
-        .get(this.$serverURL+'api/get-promo-home')
-        .then(res => (this.promo = res.data.data))
-        .catch(err => console.log(err))
+        carousel,
     },
     data(){
         return{
@@ -74,7 +89,25 @@ export default {
                 "<span class='fa fa-chevron-left'></span>",
                 "<span class='fa fa-chevron-right'></span>"
                 ],
+            bunga : '',
+            tenor : [],
         }
+    },
+    mounted() {
+        this.axios
+        .get(this.$serverURL+'api/get-promo-home')
+        .then(res => (this.promo = res.data.data))
+        .catch(err => console.log(err))
+
+        this.axios
+        .get(this.$serverURL+'api/get-bunga-home')
+        .then(res => (this.bunga = res.data.data))
+        .catch(err => console.log(err))
+
+        this.axios
+        .get(this.$serverURL+'api/get-tenor-home')
+        .then(res => (this.tenor = res.data.data))
+        .catch(err => console.log(err))
     },
     methods: {
         scrollTo(target){
@@ -87,6 +120,18 @@ export default {
             this.heroFocus = !this.heroFocus
             this.clickedPromo = false
             this.navTransition= true
+        },
+        getEstimasi(){
+            const nominal = document.getElementById('nominal').value
+            const tenor = document.getElementById('tenor').value
+            if(nominal!='' && tenor!=''){
+                const perBulan = nominal / (tenor * 12)
+                const riba = nominal * this.bunga / 100
+                const ttlPerBulan = perBulan + riba
+                console.log(ttlPerBulan)
+                document.getElementById('estimasi').innerHTML = myFunction.rupiah(ttlPerBulan.toFixed(2))
+            }
+
         }
     },
 
@@ -96,5 +141,18 @@ export default {
     .img-promo{
         height: 150px !important;
         border-radius: 10px;
+    }
+    .simulasi{
+        background: rgb(255, 255, 255, 0.8);
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 10px 100px 10px rgba(255, 255, 255, 0.2);
+    }
+    .simulasi .top{
+        background: rgb(7, 112, 205, 0.8);
+    }
+    .simulasi .bottom input::placeholder{
+        color : #495057;
+        font-weight : normal;
     }
 </style>

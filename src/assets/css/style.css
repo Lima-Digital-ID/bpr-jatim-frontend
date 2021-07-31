@@ -79,7 +79,7 @@ body{
     /* padding : 2rem 1rem;
  */
 }
-.navbar-top .navbar-nav li a:hover{
+.navbar-top .navbar-nav li a:hover, .navbar-nav li a.active{
     color : var(--blue) !important;
 }
 #myVideo{
@@ -120,7 +120,7 @@ body{
     font-size: 35px;
     color : white;
 }
-.video-container .layer, .video-container .hero #hero-text, .video-container #navbarNav.transition{
+.video-container .layer, .video-container .hero #hero-text, .video-container .hero #hero-simulasi, .video-container #navbarNav.transition{
     transition: all 3s ease;
     -webkit-transition: all 3s ease;
     -o-transition: all 3s ease;
@@ -137,6 +137,12 @@ body{
     -webkit-transform: translateX(-100%);
     -o-transform: translateX(-100%);
     -moz-transform: translateX(-100%);
+}
+.video-container.focus .hero #hero-simulasi{
+    transform: translateX(150%);
+    -webkit-transform: translateX(150%);
+    -o-transform: translateX(150%);
+    -moz-transform: translateX(150%);
 }
 .video-container.focus #navbarNav{
     transform: translateX(100%);

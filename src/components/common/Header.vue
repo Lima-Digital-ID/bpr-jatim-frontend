@@ -10,10 +10,10 @@
             <div class="collapse navbar-collapse" :class="{transition : navTransition}" id="navbarNav">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item active">
-                        <router-link class="nav-link" to="/">Beranda</router-link>
+                        <router-link class="nav-link" :class="checkActiveMenu([''])" to="/">Beranda</router-link>
                     </li>
                     <li class="nav-item megamenu-nav dropdown">
-                        <router-link class="nav-link dropdown-toggle" data-toggle="dropdown" to="">Tentang</router-link>
+                        <router-link class="nav-link dropdown-toggle" :class="checkActiveMenu(['profile','transparansi'])" data-toggle="dropdown" to="">Tentang</router-link>
                         <div class="dropdown-menu megamenu py-5">
                             <div class="container custom">
                                 <div class="row align-items-center">
@@ -46,7 +46,7 @@
                         </div>
                     </li>
                     <li class="nav-item megamenu-nav dropdown">
-                        <router-link class="nav-link dropdown-toggle" data-toggle="dropdown" to="">Produk & Layanan</router-link>
+                        <router-link class="nav-link dropdown-toggle" :class="checkActiveMenu(['produk-layanan'])" data-toggle="dropdown" to="">Produk & Layanan</router-link>
                         <div class="megamenu dropdown-menu py-5" id="megaMenuProdukLayanan">
                             <div class="container custom">
                             <div class="row">
@@ -76,7 +76,7 @@
                                     <div class="col-md-6 text-center">
                                         <div class="row" v-if="this.loopLayanan.length > 0">
                                             <div class="col-md-4 mb-3" v-for="item in this.loopLayanan" :key="item.id">
-                                                <router-link :to="'/produk-layanan/'+item.slug">
+                                                <router-link @click.native="hideDropdown" :to="'/produk-layanan/'+item.slug">
                                                     <div class="berita-style-1 small-style">
                                                         <img :src="item.cover" alt="">
                                                         <div class="layer">
@@ -95,10 +95,10 @@
                         </div>
                     </li>
                     <li class="nav-item">
-                        <router-link class="nav-link" to="/umkm">UMKM Binaan</router-link>
+                        <router-link class="nav-link" :class="checkActiveMenu(['umkm'])" to="/umkm">UMKM Binaan</router-link>
                     </li>
                     <li class="nav-item megamenu-nav dropdown">
-                        <router-link class="nav-link dropdown-toggle" data-toggle="dropdown" to="">Berita</router-link>
+                        <router-link class="nav-link dropdown-toggle" :class="checkActiveMenu(['berita','promo','epaper','penghargaan','karier','pengaduan'])" data-toggle="dropdown" to="">Berita</router-link>
                         <div class="megamenu dropdown-menu py-5" id="megaMenuProdukLayanan">
                             <div class="container custom">
                             <div class="row">
@@ -192,10 +192,16 @@
                 .get(this.$serverURL+'api/get-nav-item-produk-layanan/'+tipe)
                 .then(res => {
                     this.loopLayanan = res.data.data
-                    console.log(this.loopLayanan)
                 })
                 .catch(err => console.log(err))
 
+            },
+            hideDropdown(){
+                document.getElementById('megaMenuProdukLayanan').classList.remove('show')
+            },
+            checkActiveMenu(menu){
+                const urlNow = this.$route.path.split('/')[1]
+                return menu.includes(urlNow) ? 'active' : ''
             }
         },
     }

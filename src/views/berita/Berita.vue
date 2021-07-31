@@ -12,23 +12,11 @@
                 <div class="row mt-3">
                     <div class="col-md-8">
                         <div class="search-hero p-0">
-                            <input type="text" class="pl-3 search-hero" placeholder="Cari Berita Disini..." autofocus="true">
+                            <form v-on:submit.prevent="searchHandler()">
+                            <input type="text" class="pl-3 search-hero" placeholder="Cari Berita Disini..." autofocus="true" id="key" ref="key">
                             <span class="fa fa-search"></span>
+                             </form>
                         </div>
-                        <br>
-                        <a href="" class="btn btn-primary mr-2">Bisnis</a>
-                        <a href="" class="btn btn-primary mr-2">Info Bank UMKM</a>
-                        <a href="" class="btn btn-primary mr-2">Pinjaman</a>
-                        <a href="#" class="dropdown">
-                            <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Kategori Lainnya
-                            </button>
-                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                <a class="dropdown-item" href="#">Action</a>
-                                <a class="dropdown-item" href="#">Another action</a>
-                                <a class="dropdown-item" href="#">Something else here</a>
-                            </div>
-                        </a>                        
                     </div>
                 </div>
             </div>
@@ -88,7 +76,6 @@ import Footer from '@/components/common/Footer'
 import carousel from 'vue-owl-carousel'
 import BeritaStyle2 from '@/components/berita/BeritaStyle2'
 import BeritaStyle1 from '@/components/berita/BeritaStyle1'
-import {myFunction} from '@/helper/myFunction'
 
 export default {
     name : "Berita",
@@ -97,22 +84,40 @@ export default {
         return {
             beritaSlide : [],
             beritaRight : [],
-            beritaBox : []
+            beritaBox : [],
+            search : typeof this.$route.query.key !== 'undefined' && this.$route.query.key != '' ? true : false
+        }
+    },
+    watch: {
+        $route(){
+            this.getData()
         }
     },
     mounted() {
-        this.axios
-        .get(this.$serverURL+'api/get-berita')
-        .then(res => {
-            this.beritaSlide = res.data.berita['slide']
-            this.beritaRight = res.data.berita['right']
-            this.beritaBox = res.data.berita['box']
-        })
-        .catch(err => console.log(err))
+        this.getData()
+        const keyword = typeof this.$route.query.key !== 'undefined' ? this.$route.query.key : ''
+        document.getElementById('key').value = keyword
+
     },
     methods: {
-        tglIndo(tgl){
-            return myFunction.tglIndo(tgl)
+        searchHandler(){
+            this.$router.push('/berita?key='+this.$refs.key.value)
+        },
+        getData(){
+            const isKeyword = typeof this.$route.query.key !== 'undefined' && this.$route.query.key != '' ? "?keyword="+this.$route.query.key : ''
+            this.axios
+                .get(this.$serverURL+'api/get-berita'+isKeyword)
+                .then(res => {
+                    if(isKeyword!=''){
+                        this.beritaBox = res.data.berita['box']
+                    }
+                    else{
+                        this.beritaSlide = res.data.berita['slide']
+                        this.beritaRight = res.data.berita['right']
+                        this.beritaBox = res.data.berita['box']
+                    }
+                })
+                .catch(err => console.log(err))
         }
     }, 
 }

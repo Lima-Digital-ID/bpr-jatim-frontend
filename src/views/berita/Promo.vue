@@ -12,8 +12,10 @@
                 <div class="row mt-3">
                     <div class="col-md-8">
                         <div class="search-hero p-0">
-                            <input type="text" class="pl-3 search-hero" placeholder="Cari Promo Disini..." autofocus="true">
-                            <span class="fa fa-search"></span>
+                            <form v-on:submit.prevent="searchHandler()">
+                                <input type="text" class="pl-3 search-hero" placeholder="Cari Promo Disini..." autofocus="true" id="key" ref="key">
+                                <span class="fa fa-search"></span>
+                            </form>
                         </div>
                     </div>
                 </div>
@@ -22,8 +24,8 @@
         <section id="promo" class="pb-5">
             <div class="container custom">
                 <div class="row">
-                    <div class="col-md-3" v-for="data in promo" :key="data.id">
-                        <a href="">
+                    <div class="col-md-3" v-for="(data, index) in promo" :key="data.id">
+                        <a href="" data-toggle="modal" @click="getDetail(index)" data-target="#modal-detail">
                             <div class="box-white">
                                 <img :src="data.cover" class="img-cover" alt="">
                                 <h5 class="font-weight-bold color-red mt-3">{{data.judul}} ...</h5>
@@ -34,6 +36,30 @@
                 </div>
             </div>
         </section>
+        <div class="modal fade" id="modal-detail" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title font-weight-bold" id="judul"></h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container custom">
+                            <div class="row">
+                                <div class="col-md-5">
+                                    <img src="" style="border-radius : 14px" id='cover' class="img-fluid" alt="">
+                                </div>
+                                <div class="col-md-7">
+                                    <p id="konten"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <Footer/>        
     </div>
 </template>
@@ -49,13 +75,35 @@ export default {
             promo : []
         }
     },
+    watch: {
+        $route(){
+            this.getData()
+        }
+    },
     mounted() {
-        this.axios
-        .get(this.$serverURL+'api/get-promo')
-        .then(res => {
-            this.promo = res.data.promo.data
-        })
-        .catch(err => console.log(err))
+        this.getData()
+        const keyword = typeof this.$route.query.key !== 'undefined' ? this.$route.query.key : ''
+        document.getElementById('key').value = keyword
+    },
+    methods: {
+        searchHandler(){
+            this.$router.push('/promo?key='+this.$refs.key.value)
+        },
+        getData(){
+            const isKeyword = typeof this.$route.query.key !== 'undefined' ? "?keyword="+this.$route.query.key : ''
+            this.axios
+            .get(this.$serverURL+'api/get-promo'+isKeyword)
+            .then(res => {
+                this.promo = res.data.promo.data
+            })
+            .catch(err => console.log(err))
+        },
+        getDetail(index){
+            const data = this.promo[index]
+            document.getElementById('judul').innerHTML = data.judulFull
+            document.getElementById('cover').src = data.cover
+            document.getElementById('konten').innerHTML = data.konten
+        }
     },
 
 }
