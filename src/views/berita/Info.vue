@@ -1,0 +1,41 @@
+<template>
+    <div>
+        <Header class-nav="transparent-black"/>
+        <section class="mt-navbar pb-5">
+            <div class="container custom">
+                <div class="row justify-content-center">
+                    <div class="col-md-8">
+                        <h1 class="font-weight-bold mt-5 text-center">{{this.info.judul_info_terkini}}</h1>
+                        <div class="box-white mt-4">
+                            {{this.info.konten_info_terkini}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <Footer/>        
+    </div>
+</template>
+
+<script>
+import Header from '@/components/common/Header';
+import Footer from '@/components/common/Footer'
+
+export default {
+    name : "Info",
+    components:{Header,Footer},
+    data() {
+        return {
+            info : []
+        }
+    },
+    mounted() {
+        this.axios
+        .get(this.$serverURL+'api/get-tips-info')
+        .then(res => {
+            this.info = res.data.data
+        })
+        .catch(err => console.log(err))
+    },
+}
+</script>

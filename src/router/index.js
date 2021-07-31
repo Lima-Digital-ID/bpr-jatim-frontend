@@ -11,6 +11,10 @@ import Berita from '@/views/berita/Berita'
 import DetailBerita from '@/views/berita/DetailBerita'
 import Profile from '@/views/tentang/Profile'
 import Transparansi from '@/views/tentang/Transparansi'
+import PetaCabang from '@/views/berita/PetaCabang'
+import Karier from '@/views/berita/Karier'
+import Tips from '@/views/berita/Tips'
+import Info from '@/views/berita/Info'
 
 // auth
 import Login from '../views/auth/Login.vue';
@@ -83,6 +87,26 @@ const routes = [
     path: '/berita/:slug',
     name: 'DetailBerita',
     component: DetailBerita
+  },
+  {
+    path: '/peta-cabang',
+    name: 'PetaCabang',
+    component: PetaCabang
+  },
+  {
+    path: '/karier',
+    name: 'Karier',
+    component: Karier
+  },
+  {
+    path: '/tips',
+    name: 'Tips',
+    component: Tips
+  },
+  {
+    path: '/info',
+    name: 'Info',
+    component: Info
   },
   {
     path: '/about',

@@ -17,6 +17,13 @@
                             <span class="fa fa-search"></span>
                              </form>
                         </div>
+                        <div class="mt-3">
+                             <a href="" class="btn-sm btn btn-circle-secondary mr-2 px-3">Kategori 1</a>
+                             <a href="" class="btn-sm btn btn-circle-secondary mr-2 px-3">Kategori 2</a>
+                             <a href="" class="btn-sm btn btn-circle-secondary mr-2 px-3">Kategori 3</a>
+                             <a href="" class="btn-sm btn btn-circle-secondary mr-2 px-3">Kategori 4</a>
+                             <a href="" class="btn-sm btn btn-circle-secondary mr-2 px-3">Kategori 5</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -122,3 +129,11 @@ export default {
     }, 
 }
 </script>
+<style scoped>
+    .btn-circle-secondary{
+        background: #d6dde9;
+        border-color: #d6dde9;
+        color : var(--darkBlue);
+        border-radius: 50px;
+    }
+</style>

@@ -114,25 +114,45 @@
                                         </router-link>
                                         <router-link to="/promo" class="megamenu-link">
                                             <h6>Promo <span class="fa fa-chevron-right fa-sm ml-1"></span></h6>
-                                            <p class="color-softGrey2 font-weight-light">Bank UMKM menyediakan berbagai promo menarik untuk pelaku bisnis di Jawa Timur</p>
+                                            <p class="color-softGrey2 font-weight-light">Ada banyak promo menarik untuk pelaku bisnis di Jawa Timur</p>
                                         </router-link>
                                         <router-link to="/epaper" class="megamenu-link">
                                             <h6>ePaper UMKM <span class="fa fa-chevron-right fa-sm ml-1"></span></h6>
-                                            <p class="color-softGrey2 font-weight-light">E-Paper Bank UMKM dibuat untuk memberikan ilmu dan pengetuhuan lebih kepada pelaku bisnis</p>
+                                            <p class="color-softGrey2 font-weight-light">Baca E-Paper gratis dari Bank UMKM disini</p>
                                         </router-link>
-                                    </div>
-                                    <div class="col-md-6">
                                         <router-link to="/penghargaan" class="megamenu-link">
                                             <h6>Penghargaan <span class="fa fa-chevron-right fa-sm ml-1"></span></h6>
                                             <p class="color-softGrey2 font-weight-light">Berbagai penghargaan yang diraih oleh Bank UMKM.</p>
                                         </router-link>
-                                        <a href="#" class="megamenu-link">
+                                        <router-link to="/karier" class="megamenu-link">
                                             <h6>Karier <span class="fa fa-chevron-right fa-sm ml-1"></span></h6>
-                                            <p class="color-softGrey2 font-weight-light">Cek disini untuk mengetahui informasi terkait jenjang karier di Bank UMKM</p>
-                                        </a>
+                                            <p class="color-softGrey2 font-weight-light">Raih kesempatan berkarir di Bank UMKM Jawa Timur</p>
+                                        </router-link>
+                                    </div>
+                                    <div class="col-md-6">
                                         <router-link to="/pengaduan" class="megamenu-link">
                                             <h6>Form Pengaduan Nasabah <span class="fa fa-chevron-right fa-sm ml-1"></span></h6>
-                                            <p class="color-softGrey2 font-weight-light">Anda memiliki kritik dan saran? Ajukan sekarang sebagai bahan evaluasi kami</p>
+                                            <p class="color-softGrey2 font-weight-light">Keluhan nasabah akan kami tampung untuk meningkatkan pelanyanan</p>
+                                        </router-link>
+                                        <router-link to="/peta-cabang" class="megamenu-link">
+                                            <h6>Peta Cabang <span class="fa fa-chevron-right fa-sm ml-1"></span></h6>
+                                            <p class="color-softGrey2 font-weight-light">Temukan kami melalui peta digital</p>
+                                        </router-link>
+                                        <router-link to="/tips" class="megamenu-link">
+                                            <h6>Tips Keamanan<span class="fa fa-chevron-right fa-sm ml-1"></span></h6>
+                                            <p class="color-softGrey2 font-weight-light">Tips keamanan dari Bank UMKM dapat diakses disini</p>
+                                        </router-link>
+                                        <router-link to="/info" class="megamenu-link">
+                                            <h6>Info Terkini<span class="fa fa-chevron-right fa-sm ml-1"></span></h6>
+                                            <p class="color-softGrey2 font-weight-light">Info terkini dari Bank UMKM Jawa Timur</p>
+                                        </router-link>
+                                        <router-link to="/pengaduan" class="megamenu-link">
+                                            <h6>Jaringan Cabang dan Kantor Kas <span class="fa fa-chevron-right fa-sm ml-1"></span></h6>
+                                            <p class="color-softGrey2 font-weight-light">Daftar Kantor Cabang dan Kantor Kas Bank UMKM</p>
+                                        </router-link>
+                                        <router-link to="/pengaduan" class="megamenu-link">
+                                            <h6>Pengumuman Lelang Jaminan <span class="fa fa-chevron-right fa-sm ml-1"></span></h6>
+                                            <p class="color-softGrey2 font-weight-light">Informasi tentang lelang jaminan dapat anda akses disini</p>
                                         </router-link>
 
                                     </div>
