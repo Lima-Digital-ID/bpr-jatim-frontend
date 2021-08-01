@@ -2,7 +2,7 @@
     <div class="berita-style-2 mb-3">
         <div class="top">
             <img :src="data.cover" alt="">
-            <span class="label-blue-rgb px-3 font-13">Kategori</span>
+            <span class="label-blue-rgb px-3 font-13">{{data.kategori}}</span>
         </div>
         <div class="bottom mt-3">
             <h6 class="font-weight-bold">{{data.judul}}</h6>

@@ -15,6 +15,9 @@ import PetaCabang from '@/views/berita/PetaCabang'
 import Karier from '@/views/berita/Karier'
 import Tips from '@/views/berita/Tips'
 import Info from '@/views/berita/Info'
+import Lelang from '@/views/berita/Lelang'
+import Kantor from '@/views/berita/Kantor'
+import Pengaduan from '@/views/berita/Pengaduan'
 
 // auth
 import Login from '../views/auth/Login.vue';
@@ -94,9 +97,24 @@ const routes = [
     component: PetaCabang
   },
   {
+    path: '/kantor',
+    name: 'Kantor',
+    component: Kantor
+  },
+  {
+    path: '/pengaduan',
+    name: 'Pengaduan',
+    component: Pengaduan
+  },
+  {
     path: '/karier',
     name: 'Karier',
     component: Karier
+  },
+  {
+    path: '/lelang',
+    name: 'Lelang',
+    component: Lelang
   },
   {
     path: '/tips',

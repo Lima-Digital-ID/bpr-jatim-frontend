@@ -6,7 +6,7 @@
                 <div class="row justify-content-center">
                     <div class="col-md-8">
                         <h1 class="font-weight-bold mt-5">{{this.detail.judul}}</h1>
-                        <span class="label-blue-rgb px-3 py-1 font-13">Bisnis</span>
+                        <span class="label-blue-rgb px-3 py-1 font-13">{{this.detail.kategori.kategori}}</span>
                         <div class="mt-3 d-flex font-14 justify-content-between">
                             <p class="color-red">{{this.detail.tgl}}</p>
                             <div class="d-flex">
@@ -14,7 +14,7 @@
                                     <span class="fa fa-user"></span> Admin
                                 </p>
                                 <p>
-                                    <span class="fa fa-eye"></span> 100x
+                                    <span class="fa fa-eye"></span> {{this.detail.telah_dilihat}}x
                                 </p>
                             </div>
                         </div>

@@ -5,9 +5,9 @@
             <div class="container custom">
                 <div class="row justify-content-center">
                     <div class="col-md-8">
-                        <h1 class="font-weight-bold mt-5 text-center">{{this.karier.judul}}</h1>
+                        <h1 class="font-weight-bold mt-5 text-center">{{this.lelang.judul}}</h1>
                         <div class="box-white mt-4">
-                            {{this.karier.konten}}
+                            {{this.lelang.konten}}
                         </div>
                     </div>
                 </div>
@@ -22,18 +22,18 @@ import Header from '@/components/common/Header';
 import Footer from '@/components/common/Footer'
 
 export default {
-    name : "Karier",
+    name : "Lelang",
     components:{Header,Footer},
     data() {
         return {
-            karier : []
+            lelang : []
         }
     },
     mounted() {
         this.axios
-        .get(this.$serverURL+'api/get-karier')
+        .get(this.$serverURL+'api/get-pengumuman-lelang-jaminan')
         .then(res => {
-            this.karier = res.data.data
+            this.lelang = res.data.data
         })
         .catch(err => console.log(err))
     },

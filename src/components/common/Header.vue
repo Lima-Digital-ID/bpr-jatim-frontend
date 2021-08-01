@@ -98,12 +98,12 @@
                         <router-link class="nav-link" :class="checkActiveMenu(['umkm'])" to="/umkm">UMKM Binaan</router-link>
                     </li>
                     <li class="nav-item megamenu-nav dropdown">
-                        <router-link class="nav-link dropdown-toggle" :class="checkActiveMenu(['berita','promo','epaper','penghargaan','karier','pengaduan'])" data-toggle="dropdown" to="">Berita</router-link>
+                        <router-link class="nav-link dropdown-toggle" :class="checkActiveMenu(['berita','promo','epaper','penghargaan','karier','pengaduan'])" data-toggle="dropdown" to="">Info & Berita</router-link>
                         <div class="megamenu dropdown-menu py-5" id="megaMenuProdukLayanan">
                             <div class="container custom">
                             <div class="row">
                                 <div class="col-auto">
-                                    <h4 class="text-border blue color-blue">Berita</h4>
+                                    <h4 class="text-border blue color-blue">Info & Berita</h4>
                                 </div>
                             </div>
                                 <div class="row mt-5">
@@ -146,11 +146,11 @@
                                             <h6>Info Terkini<span class="fa fa-chevron-right fa-sm ml-1"></span></h6>
                                             <p class="color-softGrey2 font-weight-light">Info terkini dari Bank UMKM Jawa Timur</p>
                                         </router-link>
-                                        <router-link to="/pengaduan" class="megamenu-link">
+                                        <router-link to="/kantor" class="megamenu-link">
                                             <h6>Jaringan Cabang dan Kantor Kas <span class="fa fa-chevron-right fa-sm ml-1"></span></h6>
                                             <p class="color-softGrey2 font-weight-light">Daftar Kantor Cabang dan Kantor Kas Bank UMKM</p>
                                         </router-link>
-                                        <router-link to="/pengaduan" class="megamenu-link">
+                                        <router-link to="/lelang" class="megamenu-link">
                                             <h6>Pengumuman Lelang Jaminan <span class="fa fa-chevron-right fa-sm ml-1"></span></h6>
                                             <p class="color-softGrey2 font-weight-light">Informasi tentang lelang jaminan dapat anda akses disini</p>
                                         </router-link>

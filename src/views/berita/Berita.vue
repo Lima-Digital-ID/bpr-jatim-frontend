@@ -18,11 +18,7 @@
                              </form>
                         </div>
                         <div class="mt-3">
-                             <a href="" class="btn-sm btn btn-circle-secondary mr-2 px-3">Kategori 1</a>
-                             <a href="" class="btn-sm btn btn-circle-secondary mr-2 px-3">Kategori 2</a>
-                             <a href="" class="btn-sm btn btn-circle-secondary mr-2 px-3">Kategori 3</a>
-                             <a href="" class="btn-sm btn btn-circle-secondary mr-2 px-3">Kategori 4</a>
-                             <a href="" class="btn-sm btn btn-circle-secondary mr-2 px-3">Kategori 5</a>
+                             <router-link :to="'?kategori='+data.id" class="btn-sm btn btn-circle-secondary mr-2 px-3" :class="checkActiveKategori(data.id)" v-for="data in kategori" :key="data.id">{{data.kategori}}</router-link>
                         </div>
                     </div>
                 </div>
@@ -31,7 +27,7 @@
 
         <section id="berita" class="pt-3 pb-5">
             <div class="container custom">
-                <div class="row">
+                <div class="row" >
                     <div class="col-md-6">
                       <div v-if="beritaSlide.length>0">
                             <carousel class="owl-berita" :nav="false" :loop="true" :margin="10" :dots="true" :items="1">
@@ -50,7 +46,7 @@
                                     <div class="col-4">
                                         <div class="img">
                                             <div class="layer"></div>
-                                            <span class="label-blue-rgb font-13 px-3">Info</span>
+                                            <span class="label-blue-rgb font-13 px-3">{{data.kategori}}</span>
                                             <img :src="data.cover" alt="" class="img-fluid">
                                         </div>
                                     </div>
@@ -92,6 +88,8 @@ export default {
             beritaSlide : [],
             beritaRight : [],
             beritaBox : [],
+            kategori : [],
+            filter : false,
             search : typeof this.$route.query.key !== 'undefined' && this.$route.query.key != '' ? true : false
         }
     },
@@ -112,11 +110,15 @@ export default {
         },
         getData(){
             const isKeyword = typeof this.$route.query.key !== 'undefined' && this.$route.query.key != '' ? "?keyword="+this.$route.query.key : ''
+            const isKategori = typeof this.$route.query.kategori !== 'undefined' && this.$route.query.kategori != '' ? "?kategori="+this.$route.query.kategori : ''
             this.axios
-                .get(this.$serverURL+'api/get-berita'+isKeyword)
+                .get(this.$serverURL+'api/get-berita'+isKategori+isKeyword)
                 .then(res => {
-                    if(isKeyword!=''){
+                    this.kategori = res.data.kategori
+                    if(isKeyword!='' || isKategori!=''){
                         this.beritaBox = res.data.berita['box']
+                        this.beritaSlide = []
+                        this.beritaRight = []
                     }
                     else{
                         this.beritaSlide = res.data.berita['slide']
@@ -125,15 +127,19 @@ export default {
                     }
                 })
                 .catch(err => console.log(err))
+        },
+        checkActiveKategori(id){
+            const activeClass = typeof this.$route.query.kategori !== 'undefined' && this.$route.query.kategori==id ? 'active' : ''
+
+            return activeClass
+            
         }
     }, 
 }
 </script>
 <style scoped>
-    .btn-circle-secondary{
-        background: #d6dde9;
-        border-color: #d6dde9;
-        color : var(--darkBlue);
-        border-radius: 50px;
+    .btn-circle-secondary.active{
+        background: var(--blue);
+        color : white;
     }
 </style>
