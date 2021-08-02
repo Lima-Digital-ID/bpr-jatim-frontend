@@ -6,8 +6,7 @@
                 <div class="row justify-content-center">
                     <div class="col-md-8">
                         <h1 class="font-weight-bold mt-5 text-center">{{this.karier.judul}}</h1>
-                        <div class="box-white mt-4">
-                            {{this.karier.konten}}
+                        <div class="box-white mt-4" v-html="this.karier.konten">
                         </div>
                     </div>
                 </div>

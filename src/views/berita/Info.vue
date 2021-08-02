@@ -6,8 +6,7 @@
                 <div class="row justify-content-center">
                     <div class="col-md-8">
                         <h1 class="font-weight-bold mt-5 text-center">{{this.info.judul_info_terkini}}</h1>
-                        <div class="box-white mt-4">
-                            {{this.info.konten_info_terkini}}
+                        <div class="box-white mt-4" v-html="this.info.konten_info_terkini">
                         </div>
                     </div>
                 </div>
