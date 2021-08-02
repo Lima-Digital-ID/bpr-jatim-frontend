@@ -82,7 +82,7 @@ body{
 .navbar-top .navbar-nav li a:hover, .navbar-nav li a.active{
     color : var(--blue) !important;
 }
-#myVideo{
+.video-container iframe{
     position: absolute;
     right: 0;
     bottom :0;

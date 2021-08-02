@@ -142,4 +142,7 @@ export default {
         background: var(--blue);
         color : white;
     }
+    .btn-circle-secondary{
+        background: #d6dde9;
+    }    
 </style>

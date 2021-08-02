@@ -3,7 +3,7 @@
         <div class="video-container" :class="{focus : heroFocus}">
             <Header :nav-transition="navTransition" class-nav="transparent-white"/>
             <div class="close-focus" @click="toggleHeroFocus"><span class="fa fa-times-circle"></span></div>
-            <iframe width="100%" id="myVideo" height="100%" src="https://www.youtube.com/embed/AcbP83N5RzY?controls=0&autoplay=1&mute=1&loop=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <div v-html="this.video.vidio_url"></div>
             <div class="layer"></div>
             <div class="hero d-flex align-items-center">
                 <div class="container custom pl-4">
@@ -91,6 +91,7 @@ export default {
                 ],
             bunga : '',
             tenor : [],
+            video : []
         }
     },
     mounted() {
@@ -107,6 +108,13 @@ export default {
         this.axios
         .get(this.$serverURL+'api/get-tenor-home')
         .then(res => (this.tenor = res.data.data))
+        .catch(err => console.log(err))
+
+        this.axios
+        .get(this.$serverURL+'api/get-video-home')
+        .then(res => {
+            this.video = res.data.data
+        })
         .catch(err => console.log(err))
     },
     methods: {
