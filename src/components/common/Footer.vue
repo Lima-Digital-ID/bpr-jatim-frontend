@@ -33,13 +33,13 @@
                     </div>
                     <div class="col-md-2">
                         <h5 class="font-weight-bold color-blue mb-3">Follow Kami</h5>
-                        <a href="" class="mr-2">
+                        <a :href="this.profil.facebook" target="_blank" class="mr-2">
                             <img src="@/assets/images/common/fb.png" alt="" height="40px">
                         </a>
-                        <a href="" class="mr-2">
+                        <a :href="this.profil.instagram" target="_blank" class="mr-2">
                             <img src="@/assets/images/common/ig.png" alt="" height="40px">
                         </a>
-                        <a href="">
+                        <a :href="this.profil.youtube" target="_blank">
                             <img src="@/assets/images/common/yt.png" alt="" height="40px">
                         </a>
                         <br>
@@ -75,6 +75,20 @@ export default {
         scrollTo(target){
             myFunction.scrollTo(target)
         },
-    }
+    },
+    data(){
+        return{
+            profil : []
+        }
+    },
+    mounted() {
+        this.axios
+        .get(this.$serverURL+'api/get-profil-home')
+        .then(res => {
+            this.profil = res.data.data
+        })
+        .catch(err => console.log(err))
+    },
+
 }
 </script>
