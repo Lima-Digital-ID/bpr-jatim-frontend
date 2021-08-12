@@ -144,8 +144,8 @@ export default {
             const tenor = document.getElementById('tenor').value
             if(nominal!='' && tenor!=''){
                 const perBulan = nominal / (tenor * 12)
-                const riba = nominal * this.bunga / 100
-                const ttlPerBulan = perBulan + riba
+                const _bunga = nominal * this.bunga / 100
+                const ttlPerBulan = perBulan + _bunga
                 console.log(ttlPerBulan)
                 document.getElementById('estimasi').innerHTML = myFunction.rupiah(ttlPerBulan.toFixed(2))
             }
