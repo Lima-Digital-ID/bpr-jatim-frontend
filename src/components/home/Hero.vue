@@ -44,7 +44,7 @@
                                     <h4 class="mt-3 text-center font-weight-bold">Estimasi Angsuran Perbulan <br> Rp. <span id="estimasi">0</span></h4>
                                     <div class="row mt-5">
                                         <div class="col text-center">
-                                        <a href="#">
+                                        <a href="http://bpr-app.herokuapp.com/" target="_blank">
                                             <button class="btn btn-primary px-4 py-2">Ajukan Pinjaman</button>
                                         </a>
                                         </div>
