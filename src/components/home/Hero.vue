@@ -35,13 +35,20 @@
                                     <p class="text-center color-white mb-0">{{$t('bunga')}} {{bunga}}%</p>
                                 </div>
                                 <div class="bottom p-4">
-                                    <input type="text" id="nominalPinjaman" @keyup="getEstimasi" class="form-control" placeholder="Nominal">
+                                    <input type="text" id="nominalPinjaman" @keyup="getEstimasi"  @change="toRupiah" class="form-control" placeholder="Nominal">
                                     <br>
                                     <select name="" id="tenor" @change="getEstimasi" class="form-control">
                                         <option value="">---Tenor---</option>
                                         <option :value="data.tenor" v-for="data in tenor" :key="data.id">{{data.tenor}} {{$t('tahun')}}</option>
                                     </select>
                                     <h4 class="mt-3 text-center font-weight-bold">{{$t('estimasi')}} <br> Rp. <span id="estimasi">0</span></h4>
+                                    <div class="row mt-5">
+                                        <div class="col text-center">
+                                        <a href="http://bpr-app.herokuapp.com/" target="_blank">
+                                            <button class="btn btn-primary px-4 py-2">Ajukan Pinjaman</button>
+                                        </a>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -129,13 +136,16 @@ export default {
             this.clickedPromo = false
             this.navTransition= true
         },
+        toRupiah() {
+            document.getElementById('nominal').value = myFunction.rupiah(parseFloat(document.getElementById('nominal').value))
+        },
         getEstimasi(){
-            const nominal = document.getElementById('nominalPinjaman').value
+            const nominal = document.getElementById('nominalPinjaman').value.replace(".", "")
             const tenor = document.getElementById('tenor').value
             if(nominal!='' && tenor!=''){
                 const perBulan = nominal / (tenor * 12)
-                const riba = nominal * this.bunga / 100
-                const ttlPerBulan = perBulan + riba
+                const _bunga = nominal * this.bunga / 100
+                const ttlPerBulan = perBulan + _bunga
                 console.log(ttlPerBulan)
                 document.getElementById('estimasi').innerHTML = myFunction.rupiah(ttlPerBulan.toFixed(2))
             }
