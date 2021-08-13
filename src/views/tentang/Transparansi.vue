@@ -10,7 +10,7 @@
                                 <br>
                                 <span class="color-blue">Jawa Timur</span>
                             </h1>
-                            <p class="color-dark2">Bank BPR Jatim Bank UMKM Jawa Timur sebagai perusahaan terbuka memiliki kewajiban untuk melakukan keterbukaan dan transparansi informasi laporan kinerja kepada pihak investor, masyarakat pasar modal, dan pemegang saham.</p>
+                            <p class="color-dark2">{{$t('transparansi')}}</p>
                             <br>
                             <a href="#" @click="scrollTo('#saham')"><span class="scroll-bottom fa fa-arrow-down"></span></a>
                         </div>
