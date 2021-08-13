@@ -5,17 +5,17 @@
             <div class="container custom">
                 <div class="row justify-content-center">
                     <div class="col-md-7 text-center">
-                        <h1 class="font-weight-bold">UMKM Binaan <span class="color-blue">Bank UMKM</span></h1>
-                        <p>Bank UMKM Jawa Timur memiliki komitmen untuk senantiasa membantu mengembangkan potensi-potensi UMKM di Jawa Timur</p>
+                        <h1 class="font-weight-bold">{{$t('nav.umkm')}} <span class="color-blue">Bank UMKM</span></h1>
+                        <p>{{$t('descUmkm')}}</p>
                     </div>
                 </div>
                 <div class="row mt-3 justify-content-center">
                     <div class="col-md-8">
                         <div class="search-hero with-select p-0">
                             <form v-on:submit.prevent="searchHandler()" style="width:100%">
-                                <input type="text" class="pl-3 search-hero" placeholder="Cari UMKM Disini..." autofocus="true" id="key" ref="key">
+                                <input type="text" class="pl-3 search-hero" :placeholder="$t('cari')+' UMKM '+$t('disini')+'...'" autofocus="true" id="key" ref="key">
                                 <select name="" v-model="selected" id="id_kota" ref="id_kota">
-                                    <option value="">Semua Kota</option>
+                                    <option value="">{{$t('semuaKota')}}</option>
                                     <option :value="data.id" v-for="data in cabang" :key="data.id">{{data.nama_kota}}</option>
                                 </select>
                                 <button type="submit">
@@ -23,8 +23,8 @@
                                 </button>
                             </form>
                         </div>
-                        <div class="text-center mt-3">
-                            <router-link to="/umkm" class="color-darkBlue font-14 mx-2" @click.native="setValueNull()">Semua Kota</router-link>
+                        <div class="text-center list-kota mt-3">
+                            <router-link to="/umkm" class="color-darkBlue font-14 mx-2" @click.native="setValueNull()">{{$t('semuaKota')}}</router-link>
                             <router-link @click.native="setValueNull()" :to="'/umkm/'+data.id" class="color-red font-14 mx-2" v-for="data in cabang" :key="data.id">{{data.nama_kota}}</router-link>
                         </div>
                     </div>
@@ -63,15 +63,15 @@
                                     <img src="" style="border-radius : 14px" id='fotoUsaha' class="img-fluid" alt="">
                                 </div>
                                 <div class="col-md-7">
-                                    <p class="font-weight-bold color-red mb-1">Deskripsi</p>
+                                    <p class="font-weight-bold color-red mb-1">{{$t('deskripsi')}}</p>
                                     <p id="deskripsi"></p>
-                                    <p class="font-weight-bold color-red mb-1">Pemilik</p>
+                                    <p class="font-weight-bold color-red mb-1">{{$t('pemilik')}}</p>
                                     <p id="pemilik"></p>
-                                    <p class="font-weight-bold color-red mb-1">Kota</p>
+                                    <p class="font-weight-bold color-red mb-1">{{$t('kota')}}</p>
                                     <p id="kota"></p>
-                                    <p class="font-weight-bold color-red mb-1">Alamat</p>
+                                    <p class="font-weight-bold color-red mb-1">{{$t('alamat')}}</p>
                                     <p id="alamat"></p>
-                                    <p class="font-weight-bold color-red mb-1">No. Telp</p>
+                                    <p class="font-weight-bold color-red mb-1">{{$t('noTelp')}}</p>
                                     <p id="noHp"></p>
                                 </div>
                             </div>
@@ -168,5 +168,8 @@ export default {
         .modal-lg, .modal-xl {
             max-width: 1000px;
         }
-    }    
+    }   
+    .list-kota a{
+        display: inline-block;
+    } 
 </style>

@@ -2,10 +2,9 @@
     <section id="ajukan">
         <div class="left">
             <div class="content">
-                <h2 class="font-weight-bold">Ajukan Pinjaman Anda Sekarang</h2>
-                <p class="font-16">Kami siap membantu anda kapanpun dan dimanapun.
-                    <br> Ajukan pinjaman anda dengan mudah.</p>
-                    <a href="" class="btn btn-white-blue color-blue font-weight-bold">Ajukan Sekarang</a>
+                <h2 class="font-weight-bold">{{$t('bannerPinjaman.judul')}}</h2>
+                <p class="font-16" v-html="$t('bannerPinjaman.desc')"></p>
+                    <a href="" class="btn btn-white-blue color-blue font-weight-bold">{{$t('bannerPinjaman.btn')}}</a>
                 </div>
             </div>
             <div class="right text-center">

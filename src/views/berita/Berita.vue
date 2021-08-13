@@ -5,15 +5,15 @@
             <div class="container custom">
                 <div class="row">
                     <div class="col">
-                        <h1 class="font-weight-bold">Berita <span class="color-blue">Bank UMKM</span></h1>
-                        <p>Dapatkan berita terbaru dari Bank UMKM Jawa Timur</p>
+                        <h1 class="font-weight-bold">{{$t('nav.berita')}} <span class="color-blue">Bank UMKM</span></h1>
+                        <p>{{$t('nav.textBerita')}}</p>
                     </div>
                 </div>
                 <div class="row mt-3">
                     <div class="col-md-8">
                         <div class="search-hero p-0">
                             <form v-on:submit.prevent="searchHandler()">
-                            <input type="text" class="pl-3 search-hero" placeholder="Cari Berita Disini..." autofocus="true" id="key" ref="key">
+                            <input type="text" class="pl-3 search-hero" :placeholder="$t('cari')+' '+$t('nav.berita')+' '+$t('disini')+'...'" autofocus="true" id="key" ref="key">
                             <span class="fa fa-search"></span>
                              </form>
                         </div>

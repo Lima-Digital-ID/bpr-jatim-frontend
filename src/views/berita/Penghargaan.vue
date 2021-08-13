@@ -5,8 +5,8 @@
             <div class="container custom">
                 <div class="row">
                     <div class="col">
-                        <h1 class="font-weight-bold">Penghargaan <span class="color-blue">Bank UMKM</span></h1>
-                        <p>Penghargaan yang diperoleh Bank UMKM Jawa Timur</p>
+                        <h1 class="font-weight-bold">{{$t('nav.penghargaan')}} <span class="color-blue">Bank UMKM</span></h1>
+                        <p>{{$t('nav.textPenghargaan')}}</p>
                     </div>
                 </div>
             </div>
