@@ -7,7 +7,7 @@
                 <div class="bottom">
                     <p class="my-1 color-red font-13">{{data.tgl}}</p>
                     <h5 class="font-weight-bold  mb-1">{{data.judul}}</h5>
-                    <p class="font-13 font-weight-light">{{data.konten}} ...</p>
+                    <p class="font-13 font-weight-light" v-html="data.konten+'...'"></p>
                 </div>
             </div>
         </div>

@@ -53,7 +53,7 @@
                                     <div class="col-8 pl-1">
                                         <h6 class="mb-0 font-weight-bold color-darkBlue">{{data.judul}}</h6>
                                         <p class="my-1 color-red font-13">{{data.tgl}}</p>
-                                        <p class="font-13 mt-1 color-darkBlue">{{data.konten}}...</p>
+                                        <p class="font-13 mt-1 color-darkBlue" v-html="data.konten+'...'"></p>
                                     </div>
                                 </div>
                             </router-link>

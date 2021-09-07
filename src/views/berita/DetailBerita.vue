@@ -20,7 +20,7 @@
                         </div>
                         <div class="box-white no-hover">
                             <img :src="this.detail.cover" class="img-fluid mb-4" alt="">
-                            <p class="color-dark2">{{this.detail.konten}}</p>
+                            <p class="color-dark2" v-html="this.detail.konten"></p>
                         </div>
                     </div>
                 </div>

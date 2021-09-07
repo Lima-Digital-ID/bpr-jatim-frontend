@@ -66,11 +66,7 @@
                                                     <h6>{{$t('nav.bisnis')}} <span class="fa fa-chevron-right fa-sm ml-1"></span></h6>
                                                     <p class="color-softGrey2 font-weight-light">{{$t('nav.textBisnis')}}</p>
                                                 </a>
-                                                <a href="#" class="megamenu-link" @click="showProdukLayanan(3,$event)">
-                                                    <h6>{{$t('nav.layanan')}} <span class="fa fa-chevron-right fa-sm ml-1"></span></h6>
-                                                    <p class="color-softGrey2 font-weight-light">{{$t('nav.textLayanan')}}</p>
-                                                </a>
-                                            </div>
+                                           </div>
                                         </div>
                                     </div>
                                     <div class="col-md-6 text-center">
@@ -89,6 +85,46 @@
                                             </div>
                                         </div>
                                         <img v-else src="@/assets/images/common/app.png" width="80%" alt="" srcset="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item megamenu-nav dropdown">
+                        <router-link class="nav-link dropdown-toggle" :class="checkActiveMenu(['produk-layanan'])" data-toggle="dropdown" to="" >{{$t('nav.layanan')}}</router-link>
+                        <div class="megamenu dropdown-menu py-5" id="megaMenuProdukLayanan">
+                            <div class="container custom">
+                            <div class="row">
+                                <div class="col-auto">
+                                    <h4 class="text-border blue color-blue">{{$t('nav.produkLayanan')}}</h4>
+                                </div>
+                            </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="row mt-5">
+                                            <div class="col-auto">
+                                                <a href="#" class="megamenu-link">
+                                                    <h6>{{$t('nav.layanan')}} <span class="fa fa-chevron-right fa-sm ml-1"></span></h6>
+                                                    <p class="color-softGrey2 font-weight-light">{{$t('nav.textLayanan')}}</p>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 text-center">
+                                        <div class="row">
+                                            <div class="col-md-4 mb-3" v-for="item in this.layanan" :key="item.id">
+                                                <router-link @click.native="hideDropdown" :to="'/produk-layanan/'+item.slug">
+                                                    <div class="berita-style-1 small-style">
+                                                        <img :src="item.cover" alt="">
+                                                        <div class="layer">
+                                                            <div class="content d-flex align-items-center justify-content-center">
+                                                                    <p class="mb-0">{{item.judul}}</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </router-link>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -181,6 +217,7 @@
         data() {
             return {
                 loopLayanan : [],
+                layanan : [],
                 logo : this.classNav!=="transparent-white" ? 'logo-dark.png' : 'logo.png',
                 srcLogo : "",
                 activeLangImg : this.imgLang(this.$i18n.locale)
@@ -198,6 +235,7 @@
 
             this.scroll();
             document.addEventListener('scroll', this.scroll)
+            this.showProdukLayanan(3)
         },
         methods: {
             setLocale(locale,event){
@@ -228,12 +266,19 @@
                 }
             },
             showProdukLayanan(tipe,event){
-                event.preventDefault();
+                if(typeof event !=="undefined"){
+                    event.preventDefault();
+                }
 
                 this.axios
                 .get(this.$serverURL+'api/get-nav-item-produk-layanan/'+tipe)
                 .then(res => {
-                    this.loopLayanan = res.data.data
+                    if(typeof event !=="undefined"){
+                        this.loopLayanan = res.data.data
+                    }
+                    else{
+                        this.layanan = res.data.data
+                    }
                 })
                 .catch(err => console.log(err))
 
