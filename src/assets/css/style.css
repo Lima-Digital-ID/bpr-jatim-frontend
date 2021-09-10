@@ -15,7 +15,7 @@ a{
 }
 a:hover{
     text-decoration: none;
-    color : inherit;
+    color : var(--red);
 }
 body{
     /* font-family: 'Catamaran', sans-serif;     */
@@ -34,7 +34,7 @@ body{
     color : var(--blue);
 }
 .color-darkBlue{
-    color : var(--darkBlue);
+    color : var(--darkBlue) !important;
 }
 .color-dark2{
     color : var(--darkBlue2);    

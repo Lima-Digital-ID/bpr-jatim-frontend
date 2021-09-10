@@ -7,7 +7,7 @@
         <div class="bottom mt-3">
             <h6 class="font-weight-bold">{{data.judul}}</h6>
             <p class="my-1 color-red font-13">{{data.tgl}}</p>
-            <p class="font-14 color-darkBlue">{{data.konten}}</p>
+            <p class="font-14 color-darkBlue" v-html="data.konten"></p>
         </div>
     </div>
 </template>

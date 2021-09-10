@@ -6,14 +6,14 @@
                 <div class="row">
                     <div class="col">
                         <h1 class="font-weight-bold">Promo <span class="color-blue">Bank UMKM</span></h1>
-                        <p>Dapatkan promo menarik dari Bank UMKM Jawa Timur</p>
+                        <p>{{$t('nav.textPromo')}}</p>
                     </div>
                 </div>
                 <div class="row mt-3">
                     <div class="col-md-8">
                         <div class="search-hero p-0">
                             <form v-on:submit.prevent="searchHandler()">
-                                <input type="text" class="pl-3 search-hero" placeholder="Cari Promo Disini..." autofocus="true" id="key" ref="key">
+                                <input type="text" class="pl-3 search-hero" :placeholder="$t('cari')+' Promo '+$t('disini')+'...'" autofocus="true" id="key" ref="key">
                                 <span class="fa fa-search"></span>
                             </form>
                         </div>

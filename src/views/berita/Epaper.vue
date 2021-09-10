@@ -6,14 +6,14 @@
                 <div class="row">
                     <div class="col">
                         <h1 class="font-weight-bold">E-Paper <span class="color-blue">Bank UMKM</span></h1>
-                        <p>Dapatkan e-paper menarik dari Bank UMKM Jawa Timur</p>
+                        <p>{{$t('nav.textEpaper')}}</p>
                     </div>
                 </div>
                 <div class="row mt-3">
                     <div class="col-md-8">
                         <div class="search-hero p-0">
                             <form v-on:submit.prevent="searchHandler()">
-                                <input type="text" class="pl-3 search-hero" placeholder="Cari E-Paper Disini..." autofocus="true" id="key" ref="key">
+                                <input type="text" class="pl-3 search-hero" :placeholder="$t('cari')+' E-Paper '+$t('disini')+'...'" autofocus="true" id="key" ref="key">
                                 <span class="fa fa-search"></span>
                             </form>
                         </div>

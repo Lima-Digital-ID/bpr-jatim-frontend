@@ -6,9 +6,8 @@
         <div class="container custom">
             <div class="row">
                 <div class="col-md-6">
-                    <h3 class="font-weight-bold">Berita Terbaru</h3>
-                    <p>Kumpulan informasi berita terbaru seputar Bank BPR Jatim dalam semangatnya
-                        mengembangkan UMKM di Jawa Timur</p>
+                    <h3 class="font-weight-bold">{{$t('beritaTerbaru')}}</h3>
+                    <p>{{$t('textBeritaTerbaru')}}</p>
                 </div>
             </div>
             <div class="row mt-3">
@@ -33,7 +32,7 @@
             </div>
             <div class="row mt-5">
                 <div class="col text-center">
-                    <router-link to="/berita" class="btn btn-primary px-4 py-2">Lebih Banyak Berita</router-link>
+                    <router-link to="/berita" class="btn btn-primary px-4 py-2">{{$t('btnLebihBanyakBerita')}}</router-link>
                 </div>
             </div>
         </div>

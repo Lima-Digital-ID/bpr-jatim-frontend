@@ -7,13 +7,13 @@
                         <img src="@/assets/images/common/logo.png" width="250px" alt="">
                     </div>
                     <div class="col text-right">
-                        <a href="#" class="color-blue font-weight-bold btn btn-white-blue px-3 btn-sm" @click="scrollTo('#berita-section')" data-target="body">Kembali Ke Atas <span class="ml-2 fa fa-chevron-up"></span> </a>
+                        <a href="#" class="color-blue font-weight-bold btn btn-white-blue px-3 btn-sm" @click="scrollTo('#berita-section')" data-target="body">{{$t('footer.kembaliKeatas')}} <span class="ml-2 fa fa-chevron-up"></span> </a>
                     </div>
                 </div>
                 <hr class="hr-soft">
                 <div class="row mt-5">
                     <div class="col-md-4">
-                        <h5 class="color-blue font-weight-bold mb-3">Kantor Pusat</h5>
+                        <h5 class="color-blue font-weight-bold mb-3">{{$t('footer.kantorPusat')}}</h5>
                         <div class="row color-white">
                             <div class="col-6">
                                 <p>Jl. Ciliwung Nomor 11
@@ -32,7 +32,7 @@
                         </div>
                     </div>
                     <div class="col-md-2">
-                        <h5 class="font-weight-bold color-blue mb-3">Follow Kami</h5>
+                        <h5 class="font-weight-bold color-blue mb-3">{{$t('footer.followKami')}}</h5>
                         <a :href="this.profil.facebook" target="_blank" class="mr-2">
                             <img src="@/assets/images/common/fb.png" alt="" height="40px">
                         </a>
@@ -46,7 +46,7 @@
                         <p class="mt-3 color-white">info@bprjatim.co.id</p>
                     </div>
                     <div class="col-md-5">
-                        <h5 class="font-weight-bold color-blue mb-3">Terdaftar dan Diawasi</h5>
+                        <h5 class="font-weight-bold color-blue mb-3">{{$t('footer.terdaftar')}}</h5>
                         <img src="@/assets/images/common/lembaga.png" width="300px" alt="">
                     </div>
                 </div>
@@ -56,11 +56,11 @@
             <div class="container custom">
                 <div class="row">
                     <div class="col-md-6">
-                        <p class="color-white mb-0">Copyright 2021 - Bank UMKM Jawa Timur</p>
+                        <p class="color-white mb-0">Copyright {{new Date().getFullYear()}} - Bank UMKM Jawa Timur</p>
                     </div>
                     <div class="col-md-6 text-left text-sm-right">
-                        <a href="" class="mr-2">Kebijakan Privasi</a>
-                        <a href="">Syarat dan Ketentuan</a>
+                        <a href="" class="mr-2">{{$t('footer.kebijakanPrivasi')}}</a>
+                        <a href="">{{$t('footer.syaratDanKetentuan')}}</a>
                     </div>
                 </div>
             </div>

@@ -6,12 +6,12 @@
                     <div class="row align-items-center">
                         <div class="col">
                             <div class="nav nav-tabs custom-nav-tabs" id="nav-tab" role="tablist">
-                                <a class="nav-item nav-link active" id="nav-kurs-tab" data-toggle="tab" href="#nav-kurs" role="tab" aria-controls="nav-kurs" aria-selected="true"> <span class="fa fa-coins mr-2"></span> Kurs Bank UMKM</a>
-                                <a class="nav-item nav-link" id="nav-kalkulator-tab" data-toggle="tab" href="#nav-kalkulator" role="tab" aria-controls="nav-kalkulator" aria-selected="false"><span class="fa fa-calculator mr-2"></span> Kalkulator</a>
+                                <a class="nav-item nav-link active" id="nav-kurs-tab" data-toggle="tab" href="#nav-kurs" role="tab" aria-controls="nav-kurs" aria-selected="true"> <span class="fa fa-coins mr-2"></span> {{$t('kursBankUmkm')}}</a>
+                                <a class="nav-item nav-link" id="nav-kalkulator-tab" data-toggle="tab" href="#nav-kalkulator" role="tab" aria-controls="nav-kalkulator" aria-selected="false"><span class="fa fa-calculator mr-2"></span> {{$t('kalkulator')}}</a>
                             </div>
                         </div>
                         <div class="d-none d-lg-block col text-right">
-                            <p>Update Terakhir {{this.lastUpdate}}</p>
+                            <p>{{$t('updateTerakhir')}} {{this.lastUpdate}}</p>
                         </div>
                     </div>
                     <div class="tab-content custom-tab-content" id="nav-tabContent">
@@ -22,11 +22,11 @@
                                 <h5 class="font-weight-bold color-blue">{{data.nama}}</h5>
                                 <hr class="my-3">
                                 <div class="kurs-info mb-2">
-                                    <div class="font-weight-bold">Jual</div>
+                                    <div class="font-weight-bold">{{$t('jual')}}</div>
                                     <div>{{rupiah(data.harga_jual)}} <span class="ml-2 fa" :class="infoKurs('jual',index)"></span> </div>
                                 </div>
                                 <div class="kurs-info">
-                                    <div class=" font-weight-bold">Beli</div>
+                                    <div class=" font-weight-bold">{{$t('beli')}}</div>
                                     <div>{{rupiah(data.harga_beli)}} <span class="ml-2 fa" :class="infoKurs('beli',index)"></span> </div>
                                 </div>
                             </div>
@@ -38,16 +38,16 @@
                         <div class="p-4">
                             <div class="row">
                                 <div class="col-md-3">
-                                    <label for="" class="font-weight-bold">Jenis Kurs</label>
+                                    <label for="" class="font-weight-bold">{{$t('jenisKurs')}}</label>
                                     <select name="" id="jenis-kurs" class="form-control" @change="setMataUangNull">
-                                        <option value="jual">Jual</option>
-                                        <option value="beli">Beli</option>
+                                        <option value="jual">{{$t('jual')}}</option>
+                                        <option value="beli">{{$t('beli')}}</option>
                                     </select>
                                 </div>
                                 <div class="col-md-3">
-                                    <label for="" class="font-weight-bold">Mata Uang</label>
+                                    <label for="" class="font-weight-bold">{{$t('mataUang')}}</label>
                                     <select name="" v-model="selected" id="mata-uang" class="form-control" @change="setNominalNull">
-                                        <option value="">--Pilih Mata Uang--</option>
+                                        <option value="">--{{$t('pilihMataUang')}}--</option>
                                         <option :data-jual="data.harga_jual" :data-beli="data.harga_beli"  v-for="data in kurs" :key="data.nama" :value="data.id">{{data.nama}}</option>
                                     </select>
                                 </div>
@@ -64,7 +64,7 @@
                     </div>
                     </div>
                     <div class="d-sm-block d-lg-none mt-3 font-13 font-weight-bold">
-                        <p>*Update Terakhir {{this.lastUpdate}}</p>
+                        <p>*{{$t('updateTerakhir')}} {{this.lastUpdate}}</p>
                     </div>
                 </div>
             </div>

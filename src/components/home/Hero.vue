@@ -11,7 +11,7 @@
                         <div class="col-md-7" id="hero-text">
                             <div class="row my-5">
                                 <div class="col-md-12">
-                                    <h1 class="font-weight-bold"> <span class="color-blue">SELAMAT DATANG DI</span> <br> <span class="color-white">BANK UMKM JAWA TIMUR</span></h1>
+                                    <h1 class="font-weight-bold"> <span class="color-blue">{{$t('welcomeMsg')}}</span> <br> <span class="color-white">BANK UMKM JAWA TIMUR</span></h1>
                                     <a href="#" @click="toggleHeroFocus"><span class="playVideo fa fa-play color-blue mt-4"></span> </a>
                                 </div>
                             </div>
@@ -19,11 +19,11 @@
                                 <div class="col">
                                     <a href="#" class="font-weight-light" @click="togglePromo">
                                         <span class="color-blue fa fa-newspaper fa-lg mr-2"></span> 
-                                        <span class="color-white">Promo Terbaru</span>
+                                        <span class="color-white">{{$t('promoTerbaru')}}</span>
                                     </a>
                                     <a href="#" class="ml-4 font-weight-light" @click="scrollTo('#kurs-section')" data-target="#kurs-section">
                                         <span class="color-blue fa fa-coins fa-lg mr-2"></span> 
-                                        <span class="color-white">Kurs Bank UMKM</span>
+                                        <span class="color-white">{{$t('kursBankUmkm')}}</span>
                                     </a>
                                 </div>
                             </div>
@@ -31,17 +31,24 @@
                         <div class="col-md-5 d-sm-block d-none" id="hero-simulasi">
                             <div class="simulasi">
                                 <div class="top p-4">
-                                    <h4 class="text-center color-white font-weight-bold">Simulasi Angsuran Pinjaman</h4>
-                                    <p class="text-center color-white mb-0">Dengan Bunga {{bunga}}%</p>
+                                    <h4 class="text-center color-white font-weight-bold">{{$t('simulasi')}}</h4>
+                                    <p class="text-center color-white mb-0">{{$t('bunga')}} {{bunga}}%</p>
                                 </div>
                                 <div class="bottom p-4">
-                                    <input type="text" id="nominal" @keyup="getEstimasi" class="form-control" placeholder="Nominal">
+                                    <input type="text" id="nominalPinjaman" @keyup="getEstimasi"  @change="toRupiah" class="form-control" placeholder="Nominal">
                                     <br>
                                     <select name="" id="tenor" @change="getEstimasi" class="form-control">
                                         <option value="">---Tenor---</option>
-                                        <option :value="data.tenor" v-for="data in tenor" :key="data.id">{{data.tenor}} Tahun</option>
+                                        <option :value="data.tenor" v-for="data in tenor" :key="data.id">{{data.tenor}} {{$t('tahun')}}</option>
                                     </select>
-                                    <h4 class="mt-3 text-center font-weight-bold">Estimasi Angsuran Perbulan <br> Rp. <span id="estimasi">0</span></h4>
+                                    <h4 class="mt-3 text-center font-weight-bold">{{$t('estimasi')}} <br> Rp. <span id="estimasi">0</span></h4>
+                                    <div class="row mt-5">
+                                        <div class="col text-center">
+                                        <a href="http://bpr-app.herokuapp.com/" target="_blank">
+                                            <button class="btn btn-primary px-4 py-2">Ajukan Pinjaman</button>
+                                        </a>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -129,13 +136,16 @@ export default {
             this.clickedPromo = false
             this.navTransition= true
         },
+        toRupiah() {
+            document.getElementById('nominal').value = myFunction.rupiah(parseFloat(document.getElementById('nominal').value))
+        },
         getEstimasi(){
-            const nominal = document.getElementById('nominal').value
+            const nominal = document.getElementById('nominalPinjaman').value.replace(".", "")
             const tenor = document.getElementById('tenor').value
             if(nominal!='' && tenor!=''){
                 const perBulan = nominal / (tenor * 12)
-                const riba = nominal * this.bunga / 100
-                const ttlPerBulan = perBulan + riba
+                const _bunga = nominal * this.bunga / 100
+                const ttlPerBulan = perBulan + _bunga
                 console.log(ttlPerBulan)
                 document.getElementById('estimasi').innerHTML = myFunction.rupiah(ttlPerBulan.toFixed(2))
             }

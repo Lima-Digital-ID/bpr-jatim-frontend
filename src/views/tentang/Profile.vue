@@ -6,9 +6,9 @@
                 <div class="row align-items-center">
                     <div class="col-md-7">
                         <h1 class="font-weight-bold mb-4 color-white">Profil Bank UMKM <br> <span class="color-blue">Jawa Timur</span></h1>
-                        <p class="font-weight-light mb-4 color-white">Melalui perjalanan panjang sejarah yang telah dilalui, Bank BPR Jatim Bank UMKM Jawa Timur selalu berkomitmen memberikan kontribusi terbaik guna membangun masyarakat Jawa Timur melalui berbagai produk layanan terbaik.</p>
-                        <a href="#" @click="scrollTo('#sejarah')" class="btn btn-circle-primary px-4 py-2">Selengkapnya</a>
-                        <a href="" class="color-white ml-4"><span class="fa fa-play"></span> Tonton Video</a>
+                        <p class="font-weight-light mb-4 color-white">{{$t('profil')}}</p>
+                        <a href="#" @click="scrollTo('#sejarah')" class="btn btn-circle-primary px-4 py-2">{{$t('selengkapnya')}}</a>
+                        <a href="" class="color-white ml-4"><span class="fa fa-play"></span> {{$t('tontonVideo')}}</a>
                     </div>
                 </div>
             </div>
@@ -17,8 +17,8 @@
             <div class="container custom">
                 <div class="row mt-5 mb-4">
                     <div class="col-md-6">
-                        <h3 class="font-weight-bold color-blue">Sejarah Bank UMKM</h3>
-                        <p>Sejarah Bank UMKM dari mulai terbentuk sampai sekarang menjadi mitra dari binis atau UMKM di Jawa Timur</p>
+                        <h3 class="font-weight-bold color-blue">{{$t('sejarah')}} Bank UMKM</h3>
+                        <p>{{$t('textSejarah')}}</p>
                     </div>
                 </div>
                 <div class="row align-items-center">
@@ -28,19 +28,19 @@
                     <div class="col-md-7 font-weight-light col-sejarah">
                         <p class="color-dark2">
                             <span class="info">1</span>
-                            Berawal saat Pemerintah Jawa Timur mengeluarkan kebijakan di bidang perkreditan guna mendorong pengembangan usaha kecil, dengan membentuk Kredit Pedesaan yang disebut Kredit Usaha Rakyat Kecil (KURK). Pilot project yang semula hanya dilaksanakan di wilayah Madura pada tahun 1984/1985 diperluas ke seluruh Jawa Timur dengan SK No. 197 tahun 1984 <a href="">Lebih Banyak</a>
+                            {{$t('sejarah1')}} <a href="">Lebih Banyak</a>
                         </p>
                         <p class="color-dark2">
                             <span class="info">2</span>
-                            Dengan berlakunya undang-undang No.7 tahun 1992 maka sesuai ketentuan pasal 58 bahwa Lembaga Kredit Usaha Rakyat Kecil (KURK), diberikan status sebagai Bank Perkreditan Rakyat dengan memenuhi persyaratan tata cara yang ditetapkan dengan peraturan Pemerintah.
+                            {{$t('sejarah2')}}
                         </p>
                         <p class="color-dark2">
                             <span class="info">3</span>
-                            Diantara 222 unit Lembaga Kredit Usaha Rakyat Kecil Jawa Timur (LKURK)setelah melalui beberapa penyaringan dan penelitian oleh Bank Indoensia dikukuhkan menjadi 66 unit PD. BPR KURK JATIM dengan Perda No. 16 tahun 1994.
+                            {{$t('sejarah3')}}
                         </p>
                         <p class="color-dark2">
                             <span class="info">4</span>
-                            Sesuai surat keputusan Bank Indonesia Nomor : 32/52/Kep/Dir tanggal 14 Mei 1999 tentang persyaratan dan tata cara merger, konsolidasi, dan akuisisi Bank Perkreditan Rakyat, dan sekaligus untuk menumbuhkan brand image masyarakat maka terhadap 66 unit PR. <a href="">Lebih Banyak</a>
+                            {{$t('sejarah4')}} <a href="">Lebih Banyak</a>
                         </p>
                     </div>
                 </div>
@@ -50,8 +50,8 @@
             <div class="container custom">
                 <div class="row">
                     <div class="col-md-6">
-                        <h3 class="font-weight-bold color-blue">Visi Misi Bank UMKM</h3>
-                        <p>Komitmen untuk membantu masyarakat dalam meningkatkan usaha atau bisnis yang digeluti
+                        <h3 class="font-weight-bold color-blue">{{$t('visiMisi')}} Bank UMKM</h3>
+                        <p>{{$t('textVisiMisi')}}
                         </p>
                     </div>
                 </div>
@@ -63,12 +63,9 @@
                                     <span class="fa fa-university fa-3x"></span>
                                 </div>
                                 <div class="col-10">
-                                    <h5 class="font-weight-bold mb-1">Visi</h5>
+                                    <h5 class="font-weight-bold mb-1">{{$t('visi')}}</h5>
                                     <p class="mb-0 font-weight-light">
-                                        Menjadi Bank yang sehat
-                                        dan berkembang secara wajar, didukung oleh SDM
-                                        yang profesional dan berintegritas tinggi
-                                        serta fokus di UMKMK.
+                                    {{$t('textVisi')}}
                                     </p>
                                 </div>
                             </div>
@@ -79,12 +76,9 @@
                                     <span class="fa fa-store fa-3x"></span>
                                 </div>
                                 <div class="col-10">
-                                    <h5 class="font-weight-bold mb-1">Misi</h5>
+                                    <h5 class="font-weight-bold mb-1">{{$t('misi')}}</h5>
                                     <p class="mb-0 font-weight-light">
-Ikut berperan dalam perekonomian Jawa Timur
-melalui pengembangan UMKMK
-(Usaha Mikro, Kecil, Menengah, Koperasi)
-utamanya Sektor Pertanian dan Sektor Perekonomian lainnya serta meningkatkan layanan berbasis digital.
+                                    {{$t('textMisi')}}
                                     </p>
                                 </div>
                             </div>
@@ -97,8 +91,7 @@ utamanya Sektor Pertanian dan Sektor Perekonomian lainnya serta meningkatkan lay
                                 <div class="col-10">
                                     <h5 class="font-weight-bold mb-1">Moto</h5>
                                     <p class="mb-0 font-weight-light">
-Mitra UMKM
-terpercaya.
+                                    {{$t('textMoto')}}
                                     </p>
                                 </div>
                             </div>
@@ -123,9 +116,7 @@ terpercaya.
                         <div class="peranan p-4">
                             <span class="color-blue fa-3x fa fa-people-carry"></span>
                             <h4 class="mt-3 font-weight-bold">PRO POOR</h4>
-                            <p class="font-weight-light">Mendukung pengentasan kemiskinan
-yang harus dilakukan oleh Pemerintah
-Provinsi Kabupaten/kota.</p>
+                            <p class="font-weight-light">{{$t('textPeranan1')}}</p>
                         </div>
                     </div>
 
@@ -133,9 +124,7 @@ Provinsi Kabupaten/kota.</p>
                         <div class="peranan p-4">
                             <span class="color-blue fa-3x fa fa-hands-helping"></span>
                             <h4 class="mt-3 font-weight-bold">PRO JOB</h4>
-                            <p class="font-weight-light">Mendukung penciptaan lapangan
-kerja sehingga mengurangi
-pengangguran.
+                            <p class="font-weight-light">{{$t('textPeranan2')}}
 </p>
                         </div>
                     </div>
@@ -143,8 +132,7 @@ pengangguran.
                         <div class="peranan p-4">
                             <span class="color-blue fa-3x fa fa-object-group"></span>
                             <h4 class="mt-3 font-weight-bold">PRO GROWTH</h4>
-                            <p class="font-weight-light">Mendukung pertumbuhan
-ekonomi daerah.</p>
+                            <p class="font-weight-light">{{$t('textPeranan3')}}</p>
                         </div>
                     </div>
                     <div class="col">
@@ -152,18 +140,14 @@ ekonomi daerah.</p>
                             <span class="color-blue fa-3x fa fa-restroom"></span>
                             <h4 class="mt-3 font-weight-bold">PRO GENDER
 </h4>
-                            <p class="font-weight-light">Mendukung kesetaraan gender
-(Peran serta kaum wanita) dalam
-mengeloa usaha (produktif).</p>
+                            <p class="font-weight-light">{{$t('textPeranan4')}}</p>
                         </div>
                     </div>
                     <div class="col">
                         <div class="peranan p-4">
                             <span class="color-blue fa-3x fa fa-signature"></span>
                             <h4 class="mt-3 font-weight-bold">PRO BUSINESS</h4>
-                            <p class="font-weight-light">Mendukung kegiatan usaha Dalam peranan sebagai
-lembaga intermediasi dan mendukung program
-pemerintah Bank UMKM Jawa Timur</p>
+                            <p class="font-weight-light">{{$t('textPeranan5')}}</p>
                         </div>
                     </div>
                 </div>
@@ -173,7 +157,7 @@ pemerintah Bank UMKM Jawa Timur</p>
             <div class="container custom">
                 <div class="row justify-content-center">
                     <div class="col-md-6 text-center">
-                        <h4 class="font-weight-bold color-blue">Struktur Organisasi</h4>
+                        <h4 class="font-weight-bold color-blue">{{$t('strukturOrganisasi')}}</h4>
                     </div>
                 </div>
                 <div class="row mt-5 justify-content-center">
