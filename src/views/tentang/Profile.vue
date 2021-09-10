@@ -265,7 +265,7 @@
                     </div>
                     <div class="col-md-4 col-6 mb-3 text-center">
                         <div class="border">
-                            <div class="count-kantor">3</div>
+                            <div class="count-kantor">4</div>
                             <h6 class="font-weight-bold color-white"> Payment Point</h6>
                         </div>
                     </div>
