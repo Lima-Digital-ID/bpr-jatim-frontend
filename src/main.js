@@ -6,7 +6,7 @@ import VueAxios from 'vue-axios'
 
 Vue.config.productionTip = false
 Vue.use(VueAxios,axios);
-Vue.prototype.$serverURL = "http://127.0.0.1:8000/"
+Vue.prototype.$serverURL = "https://backoffice.bankumkm.id/"
 new Vue({
   router,
   render: h => h(App)
