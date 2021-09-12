@@ -32,6 +32,7 @@ export default {
         this.axios
         .get(this.$serverURL+'api/get-tips-info')
         .then(res => {
+            // console.log(res);
             this.tips = res.data.data
         })
         .catch(err => console.log(err))

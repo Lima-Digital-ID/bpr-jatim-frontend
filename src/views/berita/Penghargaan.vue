@@ -14,7 +14,7 @@
         <section class="pb-5">
             <div class="container custom">
                 <div class="row">
-                    <div class="col-md-3" v-for="(data,index) in penghargaan" :key="data.id">
+                    <div class="col-md-3 mt-4" v-for="(data,index) in penghargaan" :key="data.id">
                         <a href="" data-toggle="modal" @click="getDetail(index)" data-target="#modal-detail">
                             <div class="box-white">
                                 <img :src="data.cover" class="img-cover" alt="" srcset="">

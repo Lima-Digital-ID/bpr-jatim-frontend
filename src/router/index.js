@@ -11,6 +11,8 @@ import Berita from '@/views/berita/Berita'
 import DetailBerita from '@/views/berita/DetailBerita'
 import Profile from '@/views/tentang/Profile'
 import Transparansi from '@/views/tentang/Transparansi'
+import Governance from '@/views/tentang/Governance'
+import SocialResponsibility from '@/views/tentang/SocialResponsibility'
 import PetaCabang from '@/views/berita/PetaCabang'
 import Karier from '@/views/berita/Karier'
 import Tips from '@/views/berita/Tips'
@@ -19,19 +21,10 @@ import Lelang from '@/views/berita/Lelang'
 import Kantor from '@/views/berita/Kantor'
 import Pengaduan from '@/views/berita/Pengaduan'
 
+
 // auth
 import Login from '../views/auth/Login.vue';
 import Register from '../views/auth/Register.vue';
-// Data diri & scoring
-import PersonalData from '../views/verifikasiAndScoring/Personal-data.vue';
-import Scoring from '../views/verifikasiAndScoring/Scoring.vue';
-// Syarat Pinjaman cepat, modal, dana umroh
-import SyaratPinjamanCepat from '../views/SyaratPinjaman/SyaratPinjamanCepat.vue';
-import SyaratPinjamanModal from '../views/SyaratPinjaman/SyaratPinjamanModal.vue';
-import SyaratDanaUmroh from '../views/SyaratPinjaman/SyaratDanaUmroh.vue';
-// Pinjaman modal & dana umroh
-import PinjamanModal from '../views/FormPinjaman/PinjamanModal.vue';
-import PinjamanDanaUmroh from '../views/FormPinjaman/PinjamanDanaUmroh.vue';
 
 Vue.use(VueRouter)
 
@@ -55,6 +48,16 @@ const routes = [
     path: '/transparansi',
     name: 'Transparansi',
     component: Transparansi
+  },
+  {
+    path: '/governance',
+    name: '/Governance',
+    component: Governance
+  },
+  {
+    path: '/socialresponsibility',
+    name: '/SocialResponsibility',
+    component: SocialResponsibility
   },
   {
     path: '/promo',
@@ -139,34 +142,7 @@ const routes = [
     path: '/register',
     component: Register,
   },
-  {
-    path: '/data-diri',
-    component: PersonalData,
-  },
-  {
-    path: '/scoring',
-    component: Scoring,
-  },
-  {
-    path: '/syarat-pinjaman-cepat',
-    component: SyaratPinjamanCepat,
-  },
-  {
-    path: '/syarat-pinjaman-modal',
-    component: SyaratPinjamanModal,
-  },
-  {
-    path: '/syarat-dana-umrah',
-    component: SyaratDanaUmroh,
-  },
-  {
-    path: '/pinjaman-modal',
-    component: PinjamanModal,
-  },
-  {
-    path: '/pinjaman-dana-umroh',
-    component: PinjamanDanaUmroh,
-  },
+
 ]
 
 const router = new VueRouter({

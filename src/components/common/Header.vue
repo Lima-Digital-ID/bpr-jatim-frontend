@@ -33,6 +33,14 @@
                                                     <h6>{{$t('nav.transparansi')}} <span class="fa fa-chevron-right fa-sm ml-1"></span></h6>
                                                     <p class="color-softGrey2 font-weight-light">{{$t('nav.textTransparansi')}}</p>
                                                 </router-link>
+                                                <router-link to="/governance" class="megamenu-link">
+                                                    <h6>{{$t('nav.governance')}} <span class="fa fa-chevron-right fa-sm ml-1"></span></h6>
+                                                    <p class="color-softGrey2 font-weight-light">{{$t('nav.textGovernance')}}</p>
+                                                </router-link>
+                                                <router-link to="/socialresponsibility" class="megamenu-link">
+                                                    <h6>{{$t('nav.socialresponsibility')}} <span class="fa fa-chevron-right fa-sm ml-1"></span></h6>
+                                                    <p class="color-softGrey2 font-weight-light">{{$t('nav.textSocialResponsibility')}}</p>
+                                                </router-link>
                                             </div>
                                         </div>
                                     </div>
@@ -156,7 +164,7 @@
                                             <h6>ePaper UMKM <span class="fa fa-chevron-right fa-sm ml-1"></span></h6>
                                             <p class="color-softGrey2 font-weight-light">{{$t('nav.textEpaper')}}</p>
                                         </router-link>
-                                        <router-link to="/penghargaan" class="megamenu-link">
+                                        <router-link to="/" class="megamenu-link">
                                             <h6>{{$t('nav.penghargaan')}} <span class="fa fa-chevron-right fa-sm ml-1"></span></h6>
                                             <p class="color-softGrey2 font-weight-light">{{$t('nav.textPenghargaan')}} </p>
                                         </router-link>
