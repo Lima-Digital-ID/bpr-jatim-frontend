@@ -29,11 +29,49 @@
                                     <div class=" font-weight-bold">{{$t('beli')}}</div>
                                     <div>{{rupiah(data.harga_beli)}} <span class="ml-2 fa" :class="infoKurs('beli',index)"></span> </div>
                                 </div>
+                                <div class="kurs-info">
+                                    <button class="btn btn-primary btn-sm mt-2 btn-block" data-toggle="modal" @click="getDetail(index)" data-target="#modal-detail">Cek</button>
+                                </div>
                             </div>
-
                         </div>
-                
                     </div>
+
+                    <!-- modal -->
+                    <div class="modal fade" id="modal-detail" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                        <div class="modal-dialog modal-lg" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title font-weight-bold" id="namaUsaha"></h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="container custom">
+                                        <div class="row">
+                                            <div class="col-md-5">
+                                                <img src="" style="border-radius : 14px" id='fotoUsaha' class="img-fluid" alt="">
+                                            </div>
+                                            <div class="col-md-7">
+                                                <!-- <p class="font-weight-bold color-red mb-1">{{$t('deskripsi')}}</p>
+                                                <p id="deskripsi"></p>
+                                                <p class="font-weight-bold color-red mb-1">{{$t('pemilik')}}</p>
+                                                <p id="pemilik"></p>
+                                                <p class="font-weight-bold color-red mb-1">{{$t('kota')}}</p>
+                                                <p id="kota"></p>
+                                                <p class="font-weight-bold color-red mb-1">{{$t('alamat')}}</p>
+                                                <p id="alamat"></p>
+                                                <p class="font-weight-bold color-red mb-1">{{$t('noTelp')}}</p>
+                                                <p id="noHp"></p> -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> 
+
+                    <!-- /modal -->
                     <div class="tab-pane fade" id="nav-kalkulator" role="tabpanel" aria-labelledby="nav-kalkulator-tab">
                         <div class="p-4">
                             <div class="row">

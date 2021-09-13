@@ -2,6 +2,7 @@
   <div>
     <Hero/>
     <Kurs/>
+    <line-chart :data="chartData"></line-chart>
     <section id="berita-section" class="pb-5">
         <div class="container custom">
             <div class="row">
@@ -61,9 +62,10 @@ export default {
   data() {
     return {
       beritaSlide : [],
-      beritaBox : []
+      beritaBox : [],
     }
   },
+  
   mounted() {
       this.axios
       .get(this.$serverURL+'api/get-berita-home')

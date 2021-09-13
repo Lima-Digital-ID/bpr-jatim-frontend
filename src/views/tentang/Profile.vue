@@ -168,7 +168,7 @@
                     </div>
                 </div>
                 <div class="row mt-4">
-                    <div class="col-md-3 col-6 text-center">
+                    <div class="col-md-3 col-6 text-center" data-toggle="modal" data-target="#exampleModal">
                         <div class="img-manajemen mb-2">
                             <img src="http://www.bprjatim.co.id/img/mnj/Dr.%20Suprianto,%20SH,%20MH_2019-02-13_17:38:43.jpg" class="img-fluid border p-1" alt="">
                             <div class="title">Komisaris Utama</div>
@@ -176,7 +176,63 @@
                         <p class="font-14 color-grey mb-1"><i>President Commissioner</i></p>
                         <h6 class="font-weight-bold"> Dr. Suprianto, SH, MH</h6>                        
                     </div>
-                    <div class="col-md-3 col-6 text-center">
+
+                <!-- Modal 1 -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg modal-dialog-scrollable" role="document">
+                    <div class="modal-content">
+                    <div class="modal-header">
+                        <!-- <h5 class="modal-title" id="exampleModalLabel">Modal title</h5> -->
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <img src="http://www.bprjatim.co.id/img/mnj/Dr.%20Suprianto,%20SH,%20MH_2019-02-13_17:38:43.jpg" class="img-fluid border p-1" alt="">
+                            </div>
+                            <div class="col-md-8">
+                                <h4>Riwayat Pendidikan</h4>
+                                    <ul>
+                                        <li>
+                                            S1 Hukum (Hukum Tata Negara) 
+                                        </li>
+                                        <li>
+                                            UNTAG Surabaya
+                                        </li>
+                                        <li>
+                                            S2 Ilmu Hukum (Hukum Tata Negara)  
+                                        </li>
+                                        <li>
+                                            Univ. Bhayangkara Surabaya
+                                        </li>
+                                        <li>
+                                            S3 Fakultas Hukum (Ilmu Hukum)  
+                                        </li>
+                                        <li>
+                                            Univ. Brawijaya Malang
+                                        </li>
+                                    </ul>         
+                                <h4>Riwayat Pekerjaan</h4>
+                                    <ul>
+                                        <li> Pj. Bupati Bojonegoro (2018) </li>
+                                        <li> Asisten Pemerintahan dan Kessos (2018) </li>
+                                        <li> Kepala Bakorwil Madiun (2017) </li>
+                                        <li> Pj. Walikota Blitar (2014)</li>
+                                        <li> Kepala Biro Pemerintahan Setda Prov. Jatim (2014) </li>
+                                        <li> Kepala Biro Hukum Setda Prov. Jatim (2008) </li>
+                                        <li> Pj. Kepala Bagian Bantuan Biro Hukum Pemprov Jawa Timur (2001) </li>
+                                        <li> Kasubbag Bantuan/ Pertimbangan Hukum pada Bagian Tata Hukum Biro Hukum Setda Tk.I Jawa Timur (1988) </li>
+                                    </ul>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                </div>
+
+                    <div class="col-md-3 col-6 text-center" data-toggle="modal" data-target="#exampleModal2">
                         <div class="img-manajemen mb-2">
                             <img src="http://www.bprjatim.co.id/img/mnj/Karsali,%20SH_2019-02-13_17:39:06.jpg" class="img-fluid border p-1" alt="">
                             <div class="title">Komisaris</div>
@@ -184,7 +240,47 @@
                         <p class="font-14 color-grey mb-1"><i>Commissioner</i></p>
                         <h6 class="font-weight-bold">Karsali, SH</h6>                        
                     </div>
-                    <div class="col-md-3 col-6 text-center">
+
+                <!-- Modal 2 -->
+                <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg modal-dialog-scrollable" role="document">
+                    <div class="modal-content">
+                    <div class="modal-header">
+                        <!-- <h5 class="modal-title" id="exampleModalLabel">Modal title</h5> -->
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <img src="http://www.bprjatim.co.id/img/mnj/Karsali,%20SH_2019-02-13_17:39:06.jpg" class="img-fluid border p-1" alt="">
+                            </div>
+                            <div class="col-md-8">
+                                <h4>Riwayat Pendidikan</h4>
+                                    <ul>
+                                        <li>
+                                           S1 Hukum - STIH Sunan Giri 
+                                        </li>
+                                    </ul>         
+                                <h4>Riwayat Pekerjaan</h4>
+                                    <ul>
+                                        <li>Sekretaris Pribadi Gubernur Jawa Timur</li>
+                                        <li>Pemprov Jatim (Februari 2009 - 2018)</li>
+                                        <li>Kakanminvet-cad / 32 - Babinminvet caddam V / Brawijaya (Oktober 2005)</li>
+                                        <li>Ka Staltamil - Pomdam V / Brawijaya (Mei 2004) </li>
+                                        <li>Kaurlog Tuud - Pomdam V / Brawijaya(November 2003)</li>
+                                        <li>Pasihartib Denpom V / 4 - Pomdam V / Brawijaya (April 2000) </li>
+                                        <li>Adc. Gubernur Jatim - Pemprov Jatim (Agustus 1998 - 2008)</li>
+                                    </ul>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                </div>
+
+                    <div class="col-md-3 col-6 text-center" data-toggle="modal" data-target="#exampleModal3">
                         <div class="img-manajemen mb-2">
                             <img src="http://www.bprjatim.co.id/img/mnj/Drs.%20Yudhi%20Wahyu%20Maharani,%20Ak,%20MM_2019-02-13_17:39:23.jpg" class="img-fluid border p-1" alt="">
                             <div class="title">Direktur Utama</div>
@@ -192,7 +288,54 @@
                         <p class="font-14 color-grey mb-1"><i>President Director</i></p>
                         <h6 class="font-weight-bold">Drs. Yudhi Wahyu Maharani, Ak, MM</h6>                        
                     </div>
-                    <div class="col-md-3 col-6 text-center">
+
+                <!-- Modal 3 -->
+                <div class="modal fade" id="exampleModal3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg modal-dialog-scrollable" role="document">
+                    <div class="modal-content">
+                    <div class="modal-header">
+                        <!-- <h5 class="modal-title" id="exampleModalLabel">Modal title</h5> -->
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <img src="http://www.bprjatim.co.id/img/mnj/Drs.%20Yudhi%20Wahyu%20Maharani,%20Ak,%20MM_2019-02-13_17:39:23.jpg" class="img-fluid border p-1" alt="">
+                            </div>
+                            <div class="col-md-8">
+                                <h4>Riwayat Pendidikan</h4>
+                                    <ul>
+                                        <li>S1 Ekonomi - Universitas Airlangga Surabaya</li>
+                                        <li>S2 Manajemen - Universitas Airlangga Surabaya</li>
+                                    </ul>         
+                                <h4>Riwayat Pekerjaan</h4>
+                                    <ul>
+                                        <li>Pemimpin Divisi Perencanaan Strategis dan Manajemen Kinerja - PT Bank Jatim (Oktober 2017 - Agustus 2018)</li>
+                                        <li>Pengawas Yayasan Kesejahteraan Pegawai Bank Jatim - Yayasan Kesejahteraan Pegawai Bank Jatim (2016 - Agustus 2018)</li>
+                                        <li>Pemimpin Divisi Audit Internal - PT Bank Jatim (November 2014 - Oktober 2017)</li>
+                                        <li>Pgs. Pemimpin Divisi Audit Internal - PT Bank Jatim (Februari 2014 - November 2014) </li>
+                                        <li>Pemimpin Sub Divisi Special & Assurance Audit - PT Bank Jatim (2013 - Februari 2014)</li>
+                                        <li>Pemimpin Sub Divisi Operasional & Finance Audit - PT Bank Jatim (2012 - 2013) </li>
+                                        <li>Anggota Senior Komite Pemantau Risiko - PT Bank Jatim (2011 - 2012)
+Anggota Senior Komite Audit - PT Bank Jatim (2007 - 2011)</li>
+                                        <li>Anggota Komite Audit - PT Bank Jatim (2004 - 2007)</li>
+                                        <li>Staf Ahli Dewan Komisaris - PT Bank Jatim (1999 - 2009)</li>
+                                        <li>Dosen Fakultas Ekonomi - Univesitas 45 Surabaya (1998 - 2000)</li>
+                                        <li>Anggota Dewan Audit - PT Bank Jatim (1998 - 1999)</li>
+                                        <li>Pelaksana Harian Tim Likuidasi cab. Manyar K. Surabaya - PT Sejahtera Bank Umum (1997 - 1998)</li>
+                                        <li>Officer Auditor Biro Audit .. Kontrol - PT Sejahtera Bank Umum(1992 - 1997)</li>
+                                        <li>Yunior Auditor - Kantor Akuntan Publik Drs. S.Supoyo & Rekan Surabaya (1990 - 1991)</li>
+                                    </ul>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                </div>
+
+                    <div class="col-md-3 col-6 text-center" data-toggle="modal" data-target="#exampleModal4">
                         <div class="img-manajemen mb-2">
                             <img src="http://www.bprjatim.co.id/img/mnj/Bambang%20Rushadi,%20SE,%20MM_2018-10-25_04_31_22.jpg" class="img-fluid border p-1" alt="">
                             <div class="title">Direktur Pemasaran</div>
@@ -200,6 +343,49 @@
                         <p class="font-14 color-grey mb-1"><i>Marketing Director</i></p>
                         <h6 class="font-weight-bold"> Bambang Rushadi, SE, MM</h6>                        
                     </div>
+
+                <!-- Modal 4 -->
+                <div class="modal fade" id="exampleModal4" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg modal-dialog-scrollable" role="document">
+                    <div class="modal-content">
+                    <div class="modal-header">
+                        <!-- <h5 class="modal-title" id="exampleModalLabel">Modal title</h5> -->
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <img src="http://www.bprjatim.co.id/img/mnj/Bambang%20Rushadi,%20SE,%20MM_2018-10-25_04_31_22.jpg" class="img-fluid border p-1" alt="">
+                            </div>
+                            <div class="col-md-8">
+                                <h4>Riwayat Pendidikan</h4>
+                                    <ul>
+                                        <li>S1 Ekonomi - Universitas 17 Agustus 1945 (Untag) Surabaya </li>
+                                        <li>S2 Ilmu Management - Universitas 17 Agustus 1945 (Untag) Surabaya</li>
+                                    </ul>         
+                                <h4>Riwayat Pekerjaan</h4>
+                                    <ul>
+                                        <li>Direktur Pemasaran - PT BPR Jatim (2015 - Sekarang)</li>
+                                        <li>Pemimpin Divisi Corporate Secretary - PT Bank Jatim (2014 - 2015)</li>
+                                        <li>PPemimpin Divisi Perencanaan Strategis - PT Bank Jatim (2011 - 2014)</li>
+                                        <li>Pemimpin Divisi Kepatuhan - PT Bank Jatim (2010 - 2011) </li>
+                                        <li>Pemimpin Divisi Satuan Kerja Audit Intern (SKAI) - PT Bank Jatim (2008 - 2010)</li>
+                                        <li>Pemimpin Divisi Unit Usaha Syariah (UUS) - PT Bank Jatim (2007 - 2008)</li>
+                                        <li>Pemimpin Sub Divisi Perencanaan Strategis - PT Bank Jatim (2003 - 2007)
+Pemimpin Cabang Lumajang - PT Bank Jatim (1999 - 2003)</li>
+                                        <li>Pemimpin Kelompok ALMA - PT Bank Jatim (1998 - 1999)</li>
+                                        <li>Pemimpin Cabang Gresik - PT Bank Jatim (1994 - 1998)</li>
+                                        <li>Staf Cabang Malang - PT Bank Jatim (1980)</li>
+                                    </ul>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                </div>
+
                 </div>
 
             </div>
