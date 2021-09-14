@@ -11,18 +11,19 @@
                                     <div class="col-md-4 p-top">
                                         <img src="@/assets/images/tips/tipsATM.png" alt="" class="clip-path-tes">
                                         <br> <br> <br>
-                                        <img src="@/assets/images/tips/tipspengamananpinATM.png" alt="" class="clip-path-tes ">
+                                        
+                                        <img src="@/assets/images/tips/Wishtleblower.png" alt="" class="clip-path-tes ">
                                     </div>
                                 
                                     <div class="col-md-4">
-                                        <img src="@/assets/images/tips/virus.png" alt="" class="clip-path-tes ">
+                                        <img src="@/assets/images/tips/phising.png" alt="" class="clip-path-tes ">
                                         <br> <br>
-                                        <img src="@/assets/images/tips/phising.png" style="margin-top:20px;" alt="" class="clip-path-tes">
+                                        <img src="@/assets/images/tips/virus.png" style="margin-top:20px;" alt="" class="clip-path-tes">
                                     </div>
                                     <div class="col-md-4 p-top">
-                                        <img src="@/assets/images/tips/tipslain.png" alt="" class="clip-path-tes">
+                                        <img src="@/assets/images/tips/tipspengamananpinATM.png" alt="" class="clip-path-tes ">
                                         <br> <br> <br>
-                                        <img src="@/assets/images/tips/Wishtleblower.png" alt="" class="clip-path-tes ">
+                                        <img src="@/assets/images/tips/tipslain.png" alt="" class="clip-path-tes">
                                     </div>
                             </div>
                         </div>
