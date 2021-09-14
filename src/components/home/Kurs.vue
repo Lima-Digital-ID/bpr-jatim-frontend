@@ -50,11 +50,7 @@
                                     <div class="container custom">
                                         <div class="row">
                                             <div class="col-md-12">
-                                            <line-chart       
-                                                :chart-data="recentDonations"
-                                                :options="chartOptions"
-                                                label="Positive"
-                                            ></line-chart>
+                                            <line-chart></line-chart>
                                                 <!-- <p class="font-weight-bold color-red mb-1">{{$t('deskripsi')}}</p>
                                                 <p id="deskripsi"></p>
                                                 <p class="font-weight-bold color-red mb-1">{{$t('pemilik')}}</p>

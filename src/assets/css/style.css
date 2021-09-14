@@ -685,9 +685,12 @@ body{
     -webkit-transition: all .5s ease;
     -o-transition: all .5s ease;
     -moz-transition: all .5s ease;
+
 }
 .box-white img{
+    position: relative;
     border-radius: 10px;
+    
 }
 #berita-section{
     min-height: 40vh;
@@ -696,4 +699,18 @@ body{
 .btn-circle-secondary{
     background: var(--softGrey);
     border-radius: 50px;
+}
+
+div.polaroid {
+   
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.clip-path-tes{
+    width: 100%;
+    clip-path: polygon(17% 0, 84% 0, 100% 50%, 83% 100%, 17% 100%, 0% 50%);
+}
+
+.p-top {
+    margin-top: 200px;
 }
