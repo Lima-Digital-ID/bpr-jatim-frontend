@@ -30,7 +30,7 @@
                                     <div>{{rupiah(data.harga_beli)}} <span class="ml-2 fa" :class="infoKurs('beli',index)"></span> </div>
                                 </div>
                                 <div class="kurs-info">
-                                    <button class="btn btn-primary btn-sm mt-2 btn-block" data-toggle="modal" @click="getDetail(index)" data-target="#modal-detail">Cek</button>
+                                    <button class="btn btn-primary btn-sm mt-2 btn-block" data-toggle="modal" @click="getDetail(index)" data-target="#modal-detail">Lihat</button>
                                 </div>
                             </div>
                         </div>
@@ -49,10 +49,12 @@
                                 <div class="modal-body">
                                     <div class="container custom">
                                         <div class="row">
-                                            <div class="col-md-5">
-                                                <img src="" style="border-radius : 14px" id='fotoUsaha' class="img-fluid" alt="">
-                                            </div>
-                                            <div class="col-md-7">
+                                            <div class="col-md-12">
+                                            <line-chart       
+                                                :chart-data="recentDonations"
+                                                :options="chartOptions"
+                                                label="Positive"
+                                            ></line-chart>
                                                 <!-- <p class="font-weight-bold color-red mb-1">{{$t('deskripsi')}}</p>
                                                 <p id="deskripsi"></p>
                                                 <p class="font-weight-bold color-red mb-1">{{$t('pemilik')}}</p>
