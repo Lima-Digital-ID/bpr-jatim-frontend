@@ -30,7 +30,11 @@
                                     <div>{{rupiah(data.harga_beli)}} <span class="ml-2 fa" :class="infoKurs('beli',index)"></span> </div>
                                 </div>
                                 <div class="kurs-info">
-                                    <button class="btn btn-primary btn-sm mt-2 btn-block" data-toggle="modal" @click="getDetail(index)" data-target="#modal-detail">Lihat</button>
+                                    <button class="btn btn-primary btn-sm mt-2 btn-block" 
+                                            data-toggle="modal" 
+                                            @click="getDetailKurs(data.nama)" 
+                                            data-target="#modal-detail"
+                                            >Lihat</button>
                                 </div>
                             </div>
                         </div>
@@ -50,17 +54,7 @@
                                     <div class="container custom">
                                         <div class="row">
                                             <div class="col-md-12">
-                                            <line-chart></line-chart>
-                                                <!-- <p class="font-weight-bold color-red mb-1">{{$t('deskripsi')}}</p>
-                                                <p id="deskripsi"></p>
-                                                <p class="font-weight-bold color-red mb-1">{{$t('pemilik')}}</p>
-                                                <p id="pemilik"></p>
-                                                <p class="font-weight-bold color-red mb-1">{{$t('kota')}}</p>
-                                                <p id="kota"></p>
-                                                <p class="font-weight-bold color-red mb-1">{{$t('alamat')}}</p>
-                                                <p id="alamat"></p>
-                                                <p class="font-weight-bold color-red mb-1">{{$t('noTelp')}}</p>
-                                                <p id="noHp"></p> -->
+                                                <highcharts :options="chartOptions"></highcharts>
                                             </div>
                                         </div>
                                     </div>
@@ -115,15 +109,53 @@
 </style>
 
 <script>
+
 import {myFunction} from '@/helper/myFunction'
+import {Chart} from 'highcharts-vue'
 
 export default {
     name : 'Kurs',
+    components: {Highcharts:Chart},
     data(){
         return{
             kurs : [],
             lastUpdate : '',
-            selected : ''
+            selected : '',
+            kursDetail: [],
+            chartOptions: {
+            chart: {
+                plotBackgroundColor: null,
+                plotBorderWidth: null,
+                plotShadow: false,
+                type: 'areaspline'
+            },
+            yAxis: {
+                title: {
+                    text: "Rupiah"
+                }
+            },
+            title: {
+                text: 'Kurs Transaksi (Exchange Rates on Transaction) - {series.name}'
+            },
+            tooltip: {
+                pointFormat: '{series.name}: <b>Rp.{point.y}</b>'
+            },
+            plotOptions: {
+                pie: {
+                    allowPointSelect: true,
+                    cursor: 'pointer',
+                    dataLabels: {
+                        enabled: true,
+                        format: '<b>{point.name}</b>: {point.percentage:.1f} %'
+                    }
+                }
+            },
+            series: [{
+                name: 'Nominal',
+                colorByPoint: true,
+                data: []
+            }]
+        },
         }
     },
     mounted() {
@@ -136,6 +168,21 @@ export default {
         .catch(err => console.log(err))
     },
     methods: {
+        getDetailKurs: function (nama) {
+            this.axios
+            .get(this.$serverURL+"api/get-grafik-kurs-home/"+nama)
+            .then(res => {
+                const dataPush = []
+                res.data.data.forEach(function(d){
+                    let dataDetail = {}
+                    dataDetail["name"] = d.nama
+                    dataDetail["y"] = d.harga_jual
+                    dataPush.push(dataDetail)
+                });
+                this.chartOptions.series[0].data = dataPush
+            })
+            .catch(err => console.log(err))
+        },
         rupiah(nominal){
             return myFunction.rupiah(nominal)
         },

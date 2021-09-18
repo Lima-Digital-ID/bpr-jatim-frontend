@@ -7,7 +7,8 @@ import {i18n} from './plugins/i18n'
 
 Vue.config.productionTip = false
 Vue.use(VueAxios,axios);
-Vue.prototype.$serverURL = "https://backoffice.bankumkm.id/"
+// Vue.prototype.$serverURL = "https://backoffice.bankumkm.id/"
+Vue.prototype.$serverURL = "http://127.0.0.1:8080/"
 new Vue({
   i18n,
   router,

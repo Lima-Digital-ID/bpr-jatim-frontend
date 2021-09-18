@@ -37,7 +37,7 @@
                                     </router-link>
                                 </div>
                             </carousel>
-                        </div>
+                        </div>  
                     </div>
                     <div class="col-md-6">
                         <div class="img-berita-style-3 mb-3" v-for="data in beritaRight" :key="data.id">
