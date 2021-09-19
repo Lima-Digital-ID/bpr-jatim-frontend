@@ -4,7 +4,7 @@
         <section class="mt-navbar py-5">
             <div class="container custom">
                 <div class="row justify-content-center">
-                    <div class="col-md-8">
+                    <div class="col-md-12">
                         <h1 class="font-weight-bold text-center">Pengaduan <span class="color-blue">Nasabah</span></h1>
                         <div class="box-white p-4 mt-4">
                             <form id="formPengaduan"  v-on:submit.prevent="submitPengaduan()">
