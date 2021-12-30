@@ -6,7 +6,7 @@
                 <div class="row justify-content-center">
 
                     <div class="col-md-8">
-                        <h1 class="font-weight-bold text-center">Laporan Keuangan Bank <span class="color-blue">BPR</span> Jawa Timur </h1>
+                        <h1 class="font-weight-bold text-center">Laporan Keuangan  <span class="color-blue">Bank BPR Jawa Timur</span></h1>
                         <div class="box-white p-4 mt-4">
                             <section v-if="errored">
                             <p>Maaf, kami tidak dapat mengambil informasi ini saat ini, silakan coba lagi nanti</p>
@@ -22,7 +22,7 @@
                                         <div class="card-body">
                                             <b>{{datas.tahun}}</b>
                                             <br>
-                                            <a href="#" download="true"><i class="far fa-file-pdf"></i> {{datas.file}}</a>
+                                            <a :href="$serverURL+datas.file" download="true"><i class="far fa-file-pdf"></i> {{datas.file}}</a>
                                         </div>
                                     </div>
                                 </div>

@@ -4,7 +4,7 @@
             <div class="content">
                 <h2 class="font-weight-bold">{{$t('bannerPinjaman.judul')}}</h2>
                 <p class="font-16" v-html="$t('bannerPinjaman.desc')"></p>
-                    <a href="http://bpr-app.herokuapp.com/" target="_blank" class="btn btn-white-blue color-blue font-weight-bold">{{$t('bannerPinjaman.btn')}}</a>
+                    <a href="https://pinjaman.bankumkm.id/" target="_blank" class="btn btn-white-blue color-blue font-weight-bold">{{$t('bannerPinjaman.btn')}}</a>
                 </div>
             </div>
             <div class="right text-center">
