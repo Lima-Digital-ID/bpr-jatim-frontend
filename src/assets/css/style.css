@@ -31,7 +31,7 @@ body{
     color : var(--grey);
 }
 .color-blue{
-    color : var(--blue);
+    color : var(--blue) !important;
 }
 .color-darkBlue{
     color : var(--darkBlue) !important;
@@ -399,6 +399,16 @@ body{
     color : var(--blue);
 }
 .btn-primary{
+    background: var(--blue) !important;
+}
+.btn-circle-b-primary{
+    border-radius: 50px;
+    color :var(--blue);
+    border : 2px solid var(--blue); 
+    background:  transparent !important;
+}
+.btn-circle-b-primary:hover{
+    color :white;
     background: var(--blue) !important;
 }
 .btn-circle-primary{

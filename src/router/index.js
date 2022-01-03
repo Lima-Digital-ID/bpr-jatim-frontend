@@ -60,6 +60,16 @@ const routes = [
     component: SocialResponsibility
   },
   {
+    path: '/socialresponsibility/:tahun',
+    name: '/SocialResponsibilityByTahun',
+    component: SocialResponsibility
+  },
+  {
+    path: '/socialresponsibility/:tahun/:id',
+    name: '/SocialResponsibilityById',
+    component: SocialResponsibility
+  },
+  {
     path: '/promo',
     name: 'Promo',
     component: Promo
