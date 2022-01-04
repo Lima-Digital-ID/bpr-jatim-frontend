@@ -1,5 +1,5 @@
 <template>
-    <div class="berita-style-2 mb-3">
+    <div class="berita-style-2 mb-3" style="min-height:100%">
         <div class="top">
             <img :src="data.cover" alt="">
             <span class="label-blue-rgb px-3 font-13">{{data.kategori}}</span>

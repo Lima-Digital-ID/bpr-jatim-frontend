@@ -23,10 +23,10 @@
                                 </button>
                             </form>
                         </div>
-                        <div class="text-center list-kota mt-3">
+                        <!-- <div class="text-center list-kota mt-3">
                             <router-link to="/umkm" class="color-darkBlue font-14 mx-2" @click.native="setValueNull()">{{$t('semuaKota')}}</router-link>
                             <router-link @click.native="setValueNull()" :to="'/umkm/'+data.id" class="color-red font-14 mx-2" v-for="data in cabang" :key="data.id">{{data.nama_kota}}</router-link>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>

@@ -6,6 +6,9 @@
                 <div class="row justify-content-center">
                     <div class="col-md-8">
                         <h1 class="font-weight-bold text-center">Tanggung Jawab  <span class="color-blue">Perusahaan</span></h1>
+                        <br>
+                        <img :src="$serverURL+konten.file" class="img-fluid mb-4" alt="" srcset="">
+
                         <!-- <div class="box-white p-4 mt-4">
                             <section v-if="errored">
                             <p>Maaf, kami tidak dapat mengambil informasi ini saat ini, silakan coba lagi nanti</p>
@@ -44,7 +47,6 @@
                         <div class="box-white mt-3">
                             <h5 class="font-weight-bold">{{konten.title}} <small class="font-weight-bold  color-red float-right">{{konten.tahun}}</small></h5>
                             <div v-html="konten.artikel"></div>
-                            <a style="word-wrap:break-word" :href="$serverURL+konten.file" download="true"><i class="far fa-file-pdf"></i> {{konten.file}}</a>
                         </div>
                     </div>
                 </div>
