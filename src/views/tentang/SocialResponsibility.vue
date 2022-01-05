@@ -106,7 +106,7 @@ export default {
         },
         getTahun(){
             this.axios
-            .get(this.$serverURL+'api/get-tahun-tanggung-jawab-perusahaan/')
+            .get(this.$serverURL+'api/get-tahun-tanggung-jawab-perusahaan')
             .then(res => {
                 this.tahun = res.data.data
             })
