@@ -195,7 +195,7 @@
                             <div class="col-md-8">
                                 <h4>Biodata</h4>
                                     <ul>
-                                        <li>Lahir pada tanggal 31 Maret 1967 di Magetan. Menjabat Direktur Utama Bank BPR Jatim sejak September 2018. Sebelumnya, berkari di PT. Bank Jatim Tbk, sejak 1998 sampai dengan 2018 dan jabatan terakhir sebagai Pemimpin Divisi Perencanaan Strategis dan Manajemen Kinerja</li>
+                                        <li>Lahir pada tanggal 31 Maret 1967 di Magetan. Menjabat Direktur Utama Bank BPR Jatim sejak September 2018. Sebelumnya, berkarir di PT. Bank Jatim Tbk, sejak 1998 sampai dengan 2018 dan jabatan terakhir sebagai Pemimpin Divisi Perencanaan Strategis dan Manajemen Kinerja</li>
                                     </ul>
                                 <!-- <h4>Riwayat Pendidikan</h4>
                                     <ul>
