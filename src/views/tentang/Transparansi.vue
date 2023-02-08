@@ -95,8 +95,8 @@
                                                 </tr>
                                                 <tr>
                                                     <td>Pemerintah Kabupaten Blitar</td>
-                                                    <td>500</td>
-                                                    <td>50.000</td>
+                                                    <td>15.000</td>
+                                                    <td>1.500.000</td>
                                                 </tr>
                                                 <tr>
                                                     <td>Dana Pensiun Pegawai Bank Jatim</td>
@@ -120,8 +120,8 @@
                                                 </tr>
                                                 <tr>
                                                     <td>Pemerintah Kabupaten Nganjuk</td>
-                                                    <td>8.649</td>
-                                                    <td>864.900</td>
+                                                    <td>10.649</td>
+                                                    <td>1.064.900</td>
                                                 </tr>
                                                 <tr>
                                                     <td>Pemerintah Kabupaten Tulungagung</td>
@@ -219,8 +219,8 @@ export default {
                     selected: true,
                     color : '#0770cd'
                 }, {
-                    name: 'Pemerintah Kabupaten/Kota Jatim (501.510 Lembar)',
-                    y: 50151000,
+                    name: 'Pemerintah Kabupaten/Kota Jatim (585.664 Lembar)',
+                    y: 58566442,
                     color : '#2f3b55'
                 }, {
                     name: 'DPD Bank Jatim (11.510 Lembar)',
