@@ -400,13 +400,13 @@ Anggota Senior Komite Audit - PT Bank Jatim (2007 - 2011)</li>
                     </div>
                     <div class="col-md-4 col-6 mb-3 text-center">
                         <div class="border">
-                            <div class="count-kantor">31</div>
+                            <div class="count-kantor">32</div>
                             <h6 class="font-weight-bold color-white"> Kantor Cabang</h6>
                         </div>
                     </div>
                     <div class="col-md-4 col-6 mb-3 text-center">
                         <div class="border">
-                            <div class="count-kantor">111</div>
+                            <div class="count-kantor">119</div>
                             <h6 class="font-weight-bold color-white"> Kantor Kas</h6>
                         </div>
                     </div>
