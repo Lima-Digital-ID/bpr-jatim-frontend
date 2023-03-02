@@ -57,7 +57,14 @@ import carousel from 'vue-owl-carousel'
 export default {
   name: 'Home',
   components: {
-    Hero,Footer,Kurs,BeritaStyle1,BeritaStyle2,BannerApp,BannerPinjaman,carousel
+    Hero,
+    Footer,
+    Kurs,
+    BeritaStyle1,
+    BeritaStyle2,
+    BannerApp,
+    BannerPinjaman,
+    carousel
   },
   data() {
     return {

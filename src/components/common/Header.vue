@@ -164,7 +164,7 @@
                                             <h6>ePaper UMKM <span class="fa fa-chevron-right fa-sm ml-1"></span></h6>
                                             <p class="color-softGrey2 font-weight-light">{{$t('nav.textEpaper')}}</p>
                                         </router-link>
-                                        <router-link to="/" class="megamenu-link">
+                                        <router-link to="/penghargaan" class="megamenu-link">
                                             <h6>{{$t('nav.penghargaan')}} <span class="fa fa-chevron-right fa-sm ml-1"></span></h6>
                                             <p class="color-softGrey2 font-weight-light">{{$t('nav.textPenghargaan')}} </p>
                                         </router-link>
