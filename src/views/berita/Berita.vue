@@ -61,7 +61,7 @@
                     </div>
                 </div>
                 <div class="row mt-3">
-                    <div class="col-md-3" v-for="data in beritaBox" :key="data.id">
+                    <div class="col-md-3 mb-3" v-for="data in beritaBox" :key="data.id">
                         <router-link :to="'/berita/'+data.slug">
                             <BeritaStyle2 :data="data"/>
                         </router-link>
