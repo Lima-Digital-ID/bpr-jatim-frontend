@@ -3,8 +3,23 @@
         <Header class-nav="transparent-black"/>        
         <section id="section-layanan" class="mt-navbar py-5">
             <div class="container custom">
-                <div class="row justify-content-center">
-
+                <div class="row">
+                    <div class="col">
+                        <h1 class="font-weight-bold">{{$t('nav.governance')}} <span class="color-blue">Bank BPR Jawa Timur</span></h1> 
+                        <p>{{$t('nav.textGovernance')}}</p>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-md-8">
+                        <div class="search-hero p-0">
+                            <form v-on:submit.prevent="searchhandler()">
+                                <input type="text" class="pl-3 search-hero" :placeholder="$t('cari') + ' ' + $t('nav.governance') + ' ' + $t('disini')+ '...'" autofocus="true" id="key" ref="key">
+                                <span class="fa fa-search"></span>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="row justify-content-center">
                     <div class="col-md-8">
                         <h1 class="font-weight-bold text-center">Laporan Keuangan <span class="color-blue">Bank BPR Jawa Timur</span></h1>
                         <div class="box-white p-4 mt-4">
@@ -27,6 +42,20 @@
                                     </div>
                                 </div>
                             </section>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+        </section>
+        <section class="pb-5">
+            <div class="container custom">
+                <div class="row">
+                    <div class="col-md-3" >
+                        <div class="box-white">
+                            <img src="@/assets/images/tips/tipsATM.png" class="img-cover" alt="" srcset="">
+                            <p class="mt-3 mb-1 font-14 color-red">Gatau</p>
+                            <h5 class="font-weight-bold color-darkBlue">Gatau</h5>
+                            <a href="" target="_blank" class="btn btn-circle-secondary btn-block mt-3">Lihat Laporan</a>
                         </div>
                     </div>
                 </div>
@@ -57,21 +86,22 @@ export default {
     components : {Header,Footer},
     data() {
         return {
-            detail : [],
-            sideMenu : [],
-            data: null,
-            loading: true,
-            errored: false
+            // detail : [],
+            // sideMenu : [],
+            // data: null,
+            // loading: true,
+            // errored: false
+            laporan : []
         }
-    },
-    mounted() {
-        this.getApi()
     },
     watch: {
         $route(){
             this.getApi()
             // window.scrollTo(0,0)
         }
+    },
+    mounted() {
+        this.getApi()
     },
     methods: {
         getApi(){
@@ -95,7 +125,18 @@ export default {
         border-top-left-radius: 50px;
         border-bottom-right-radius: 50px;
     }
-    .link-content{
+
+    .img-cover {
+        height: 316px !important;
+    }
+
+    .btn-circle-secondary {
+        padding-top: 0.8rem;
+        padding-bottom: 0.8rem;
+        background: #eaeefb;
+    }
+
+    /* .link-content{
         list-style-type: none;
         display: flex;
         flex-direction: column;
@@ -113,5 +154,5 @@ export default {
     }
     .link-content li a:hover, .link-content li.active a{
         color : var(--blue);
-    }
+    } */
 </style>
