@@ -1,5 +1,6 @@
 <template>
   <div>
+    <Popup/>
     <Hero/>
     <Kurs/>
     <line-chart :data="chartData"></line-chart>
@@ -53,6 +54,7 @@ import BannerApp from '@/components/app/BannerApp'
 import BannerPinjaman from '@/components/app/BannerPinjaman'
 import Footer from '@/components/common/Footer'
 import carousel from 'vue-owl-carousel'
+import Popup from '@/components/popup/Popup'
 
 export default {
   name: 'Home',
@@ -64,8 +66,9 @@ export default {
     BeritaStyle2,
     BannerApp,
     BannerPinjaman,
-    carousel
-  },
+    carousel,
+    Popup
+},
   data() {
     return {
       beritaSlide : [],

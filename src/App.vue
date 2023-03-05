@@ -1,3 +1,6 @@
+
+import Popup from './components/popup/Popup.vue';
+
 <template>
   <div id="app">
     <router-view/>

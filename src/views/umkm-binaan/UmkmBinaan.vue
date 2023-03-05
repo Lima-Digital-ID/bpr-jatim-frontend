@@ -39,7 +39,7 @@
                             <div class="box-white">
                                 <img :src="data.foto" class="img-cover" alt="">
                                 <p class="color-darkBlue mt-3 font-weight-bold">{{data.jenis_usaha}}</p>
-                                <p class="font-13 color-red mb-1"><span class="fa fa-user-astronaut mr-2"></span>  {{data.nama}}</p>
+                                <p class="font-13 color-red mb-1"><span class="fa fa-user-astronaut mr-2"></span>{{data.nama}}</p>
                                 <p class="font-13 color-red mb-0"><span class="fa fa-map-marker-alt mr-2"></span>{{data.nama_kota}}</p>
                             </div>
                         </a>
