@@ -1,5 +1,5 @@
 <template>
-    <section id="heroImage" style="height: 100%;">
+    <section id="heroImage">
         <div id="myCarousel" class="carousel slide" data-ride="carousel">
             <Header :nav-transition="navTransition" class-nav=""/>
             <div class="carousel-inner">

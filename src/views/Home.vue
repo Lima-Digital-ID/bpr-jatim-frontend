@@ -2,6 +2,7 @@
   <div>
     <!-- <Popup/> -->
     <Heroimage/>
+    <Carditem/>
     <Hero/>
     <Kurs/>
     <line-chart :data="chartData"></line-chart>
@@ -56,6 +57,7 @@ import BannerPinjaman from '@/components/app/BannerPinjaman'
 import Footer from '@/components/common/Footer'
 import carousel from 'vue-owl-carousel'
 import Heroimage from '@/components/home/Heroimage'
+import Carditem from '@/components/home/Carditem'
 // import Popup from '@/components/popup/Popup'
 
 export default {
@@ -69,7 +71,8 @@ export default {
     BannerApp,
     BannerPinjaman,
     carousel,
-    Heroimage
+    Heroimage,
+    Carditem
 },
   data() {
     return {

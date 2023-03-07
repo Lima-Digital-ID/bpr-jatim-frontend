@@ -1,5 +1,5 @@
 <template>
-    <section id="hero" style="height: 100vh;">
+    <section id="hero" style="height: 100vh">
         <div class="video-container" :class="{focus : heroFocus}">
             <!-- <Header :nav-transition="navTransition" class-nav="transparent-white"/> -->
             <div class="close-focus" @click="toggleHeroFocus"><span class="fa fa-times-circle"></span></div>
@@ -54,10 +54,10 @@
                         </div>
                     </div>
                 </div>
-                <div class="promo-on-hero py-3" :class="{show : clickedPromo}">
-                    <div class="container custom">
+                <div class="promo-on-hero" :class="{show : clickedPromo}">
+                    <div class="container custom mb-2">
                         <div class="text-right font-13 hide-promo c-pointer color-white"  @click="togglePromo">
-                            <span class="fa fa-chevron-down mr-2"></span> Sembunyikan Promo 
+                            <span class="fa fa-chevron-down mr-2 mt-3"></span> Sembunyikan Promo 
                         </div>
                         <div v-if="promo.length>0">
                             <carousel class="mt-3 owl-promo" :nav="true" :loop="true" :margin="20" :dots="false" :responsive="{0:{items:3},600:{items:4},1000:{items:6}}" :navText="customNav">
