@@ -50,12 +50,12 @@
         <section class="pb-5">
             <div class="container custom">
                 <div class="row">
-                    <div class="col-md-3" >
+                    <div class="col-md-3" v-for="data in laporan" :key="data.id">
                         <div class="box-white">
-                            <img src="@/assets/images/tips/tipsATM.png" class="img-cover" alt="" srcset="">
-                            <p class="mt-3 mb-1 font-14 color-red">Gatau</p>
-                            <h5 class="font-weight-bold color-darkBlue">Gatau</h5>
-                            <a href="" target="_blank" class="btn btn-circle-secondary btn-block mt-3">Lihat Laporan</a>
+                            <img :src="data.cover" class="img-cover" alt="" srcset="">
+                            <p class="mt-3 mb-1 font-14 color-red">{{data.tgl}}</p>
+                            <h5 class="font-weight-bold color-darkBlue">{{data.judul}}</h5>
+                            <a :href="data.konten" target="_blank" class="btn btn-circle-secondary btn-block mt-3">Lihat Laporan</a>
                         </div>
                     </div>
                 </div>
@@ -96,30 +96,33 @@ export default {
     },
     watch: {
         $route(){
-            this.getApi()
-            // window.scrollTo(0,0)
+            this.getApi();
         }
     },
     mounted() {
-        this.getApi()
+        this.getApi();
+        const keyword = typeof this.$route.query.key !== 'undefined' ? this.$route.query.key : ''
+        document.getElementById('key').value = keyword;
     },
     methods: {
-        getApi(){
+        searchHandler() {
+            this.$router.push('/governance?key=' + this.$refs.key.value)
+        },
+        getApi() {
+            const isKeyword = typeof this.$route.query.key !== 'undefined' ? '?keyword=' + this.$route.query.key : ''
+
             this.axios
-            .get(this.$serverURL+'api/get-laporan-keuangan')
+            .get(this.$serverURL+'api/get-laporan-keuangan' + isKeyword)
             .then(res => {
-                this.data = res.data.data
-                // console.log(res.data.data);
+                this.epaper = res.data.laporan.data
+                console.log(this.epaper);
             })
-            .catch(err => {
-                console.log(err)
-                this.errored =true
-            })
-            .finally(() => this.loading = false)
+            .catch(err => console.log(err));
         },
     },
 }
 </script>
+
 <style scoped>
     #section-layanan img{
         border-top-left-radius: 50px;

@@ -1,7 +1,7 @@
 <template>
     <section id="hero" style="height: 100vh;">
         <div class="video-container" :class="{focus : heroFocus}">
-            <Header :nav-transition="navTransition" class-nav="transparent-white"/>
+            <!-- <Header :nav-transition="navTransition" class-nav="transparent-white"/> -->
             <div class="close-focus" @click="toggleHeroFocus"><span class="fa fa-times-circle"></span></div>
             <div v-html="this.video.vidio_url"></div>
             <div class="layer"></div>
@@ -12,16 +12,16 @@
                             <div class="row my-5">
                                 <div class="col-md-12">
                                     <h1 class="font-weight-bold"> <span class="color-blue">{{$t('welcomeMsg')}}</span> <br> <span class="color-white">BANK UMKM JAWA TIMUR</span></h1>
-                                    <a href="#" @click="toggleHeroFocus"><span class="playVideo fa fa-play color-blue mt-4"></span> </a>
+                                    <a @click="toggleHeroFocus"><span class="playVideo fa fa-play color-blue mt-4"></span> </a>
                                 </div>
                             </div>
                             <div class="row mt-5">
                                 <div class="col">
-                                    <a href="#" class="font-weight-light" @click="togglePromo">
+                                    <a class="font-weight-light" @click="togglePromo">
                                         <span class="color-blue fa fa-newspaper fa-lg mr-2"></span> 
                                         <span class="color-white">{{$t('promoTerbaru')}}</span>
                                     </a>
-                                    <a href="#" class="ml-4 font-weight-light" @click="scrollTo('#kurs-section')" data-target="#kurs-section">
+                                    <a class="ml-4 font-weight-light" @click="scrollTo('#kurs-section')" data-target="#kurs-section">
                                         <span class="color-blue fa fa-coins fa-lg mr-2"></span> 
                                         <span class="color-white">{{$t('kursBankUmkm')}}</span>
                                     </a>
@@ -75,15 +75,16 @@
         </div>
     </section>
 </template>
+
 <script>
-import Header from '@/components/common/Header';
+// import Header from '@/components/common/Header';
 import carousel from 'vue-owl-carousel'
 import {myFunction} from '@/helper/myFunction'
 
 export default {
     name : 'Hero',
     components : {
-        Header,
+        // Header,
         carousel,
     },
     data(){
@@ -172,5 +173,9 @@ export default {
     .simulasi .bottom input::placeholder{
         color : #495057;
         font-weight : normal;
+    }
+
+    a:hover {
+        cursor: pointer;
     }
 </style>

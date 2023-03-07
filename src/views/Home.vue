@@ -1,6 +1,7 @@
 <template>
   <div>
-    <Popup/>
+    <!-- <Popup/> -->
+    <Heroimage/>
     <Hero/>
     <Kurs/>
     <line-chart :data="chartData"></line-chart>
@@ -54,7 +55,8 @@ import BannerApp from '@/components/app/BannerApp'
 import BannerPinjaman from '@/components/app/BannerPinjaman'
 import Footer from '@/components/common/Footer'
 import carousel from 'vue-owl-carousel'
-import Popup from '@/components/popup/Popup'
+import Heroimage from '@/components/home/Heroimage'
+// import Popup from '@/components/popup/Popup'
 
 export default {
   name: 'Home',
@@ -67,7 +69,7 @@ export default {
     BannerApp,
     BannerPinjaman,
     carousel,
-    Popup
+    Heroimage
 },
   data() {
     return {
