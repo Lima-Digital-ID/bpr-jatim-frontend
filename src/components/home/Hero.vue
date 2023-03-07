@@ -4,14 +4,14 @@
             <!-- <Header :nav-transition="navTransition" class-nav="transparent-white"/> -->
             <div class="close-focus" @click="toggleHeroFocus"><span class="fa fa-times-circle"></span></div>
             <!-- <div v-html="this.video.vidio_url"></div> -->
-            <div class="layer"></div>
+            <!-- <div class="layer"></div> -->
             <div class="hero d-flex align-items-center">
                 <div class="container custom pl-4">
                     <div class="row">
                         <div class="col-md-7" id="hero-text">
                             <div class="row my-5">
                                 <div class="col-md-12">
-                                    <h1 class="font-weight-bold"> <span class="color-blue">{{$t('welcomeMsg')}}</span> <br> <span class="color-white">BANK UMKM JAWA TIMUR</span></h1>
+                                    <h1 class="font-weight-bold"> <span class="color-blue">{{$t('welcomeMsg')}}</span> <br> <span class="">BANK UMKM JAWA TIMUR</span></h1>
                                     <!-- <a @click="toggleHeroFocus"><span class="playVideo fa fa-play color-blue mt-4"></span> </a> -->
                                 </div>
                             </div>
@@ -19,11 +19,11 @@
                                 <div class="col">
                                     <a class="font-weight-light" @click="togglePromo">
                                         <span class="color-blue fa fa-newspaper fa-lg mr-2"></span> 
-                                        <span class="color-white">{{$t('promoTerbaru')}}</span>
+                                        <span class="color-darkBlue">{{$t('promoTerbaru')}}</span>
                                     </a>
                                     <a class="ml-4 font-weight-light" @click="scrollTo('#kurs-section')" data-target="#kurs-section">
                                         <span class="color-blue fa fa-coins fa-lg mr-2"></span> 
-                                        <span class="color-white">{{$t('kursBankUmkm')}}</span>
+                                        <span class="color-darkBlue">{{$t('kursBankUmkm')}}</span>
                                     </a>
                                 </div>
                             </div>
