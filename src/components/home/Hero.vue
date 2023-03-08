@@ -1,5 +1,5 @@
 <template>
-    <section id="hero" style="height: 100vh">
+    <section id="hero" style="height: 90vh; margin-top: -2%;">
         <div class="video-container" :class="{focus : heroFocus}">
             <!-- <Header :nav-transition="navTransition" class-nav="transparent-white"/> -->
             <div class="close-focus" @click="toggleHeroFocus"><span class="fa fa-times-circle"></span></div>
@@ -54,7 +54,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="promo-on-hero" :class="{show : clickedPromo}">
+                <!-- <div class="promo-on-hero" :class="{show : clickedPromo}">
                     <div class="container custom mb-2">
                         <div class="text-right font-13 hide-promo c-pointer color-white"  @click="togglePromo">
                             <span class="fa fa-chevron-down mr-2 mt-3"></span> Sembunyikan Promo 
@@ -70,7 +70,7 @@
                             </carousel>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
     </section>
@@ -78,14 +78,14 @@
 
 <script>
 // import Header from '@/components/common/Header';
-import carousel from 'vue-owl-carousel'
+// import carousel from 'vue-owl-carousel'
 import {myFunction} from '@/helper/myFunction'
 
 export default {
     name : 'Hero',
     components : {
         // Header,
-        carousel,
+        // carousel,
     },
     data(){
         return{
