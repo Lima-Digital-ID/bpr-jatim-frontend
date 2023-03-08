@@ -2,7 +2,7 @@
     <section id="kurs-section" class="py-3">
         <div class="container custom">
             <div class="row">
-                <div class="col">
+                <div class="col" style="padding-top: 5%">
                     <div class="row align-items-center">
                         <div class="col">
                             <div class="nav nav-tabs custom-nav-tabs" id="nav-tab" role="tablist">
