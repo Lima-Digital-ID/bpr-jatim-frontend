@@ -4,7 +4,7 @@
         <div class="row" id="row-container">    
             <div class="col-md-4">
                 <a href="https://play.google.com/store/apps/details?id=id.aiyo.umkmgo&hl=en" target="_blank">
-                    <div class="text-left" style="border-right: 1px solid white;">
+                    <div class="text-left" id="line">
                         <div class="row align-items-center" id="container-card">
                             <div class="col-md-2">
                                 <img src="https://backoffice.bankumkm.id/public/upload/umkm.png" class="img-content" alt="">
@@ -19,7 +19,7 @@
             </div>
             <div class="col-md-4">
                 <a href="https://play.google.com/store/apps/details?id=id.aiyo.lazisnu&hl=en" target="_blank">  
-                    <div class=" text-left" style="border-right: 1px solid white;">
+                    <div class="text-left" id="line">
                         <div class="row align-items-center" id="container-card">
                             <div class="col-md-2">
                                 <img src="https://backoffice.bankumkm.id/public/upload/gozis.png" class="img-content" alt="">
@@ -34,7 +34,7 @@
             </div>
             <div class="col-md-4">
                 <router-link to="/pengaduan" class="megamenu-link">
-                    <div class=" text-left">
+                    <div class="text-left">
                         <div class="row align-items-center" id="container-card">
                             <div class="col-md-2">
                                 <img src="https://backoffice.bankumkm.id/public/upload/phone.png" class="img-content" alt="">
@@ -62,6 +62,10 @@ export default {
     margin-top: -15px;
 }
 
+#line {
+    border-right: 1px solid white;
+}
+
 #container {
     margin: 0 auto; 
     padding: 0 450px;
@@ -82,7 +86,7 @@ p, h6 {
 }
 
 .img-content {
-    height: 50px;
+    height: 45px;
     width: 45px;
     margin-top: -20px;
     border-radius: 8px;
@@ -90,22 +94,40 @@ p, h6 {
 
 @media (max-width: 768px) {
     #container {
-        margin: 0 auto; 
-        padding: 0px;
+        padding: 35px;
         background: #2469a5;
-        height: 390px;
+        height: auto;
         overflow: hidden;
     }
 
     #container-card {
-        margin-top: 20px;
+        margin-top: 28px;
+        text-align: center;
+    }
+
+    #line {
+        border-right: none;
     }
 
     .img-content {    
-        height: 50px;
-        margin-top: -20px;
+        height: 45px;
+        margin-top: -10px;
         margin-bottom: 7px;
         border-radius: 8px;
+    }
+
+    @media (min-width: 768px) {
+        p {
+            width: 140px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            margin-left: 15px;
+        }
+
+        #line {
+            border-right: 1px solid white;
+        }
     }
 }
 </style>

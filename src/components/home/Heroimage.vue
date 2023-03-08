@@ -61,4 +61,12 @@ export default {
     .img-cover {
         height: 732px !important;
     }
+
+    @media (max-width: 768px) {
+        .img-cover {
+            width: 100%;
+            height: auto !important;
+            object-fit: cover;
+        }
+    }
 </style>
