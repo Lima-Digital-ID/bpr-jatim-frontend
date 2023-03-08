@@ -59,6 +59,6 @@ export default {
     }
 
     .img-cover {
-        height: 720px !important;
+        height: 732px !important;
     }
 </style>

@@ -4,7 +4,6 @@
     <Heroimage/>
     <Carditem/>
     <!-- <Hero/> -->
-    <Kurs/>
     <line-chart :data="chartData"></line-chart>
     <section id="berita-section" class="pb-5">
         <div class="container custom">
@@ -35,14 +34,15 @@
               </div>
             </div>
             <div class="row mt-5">
-                <div class="col text-center">
+                <div class="col text-right">
                     <router-link to="/berita" class="btn btn-primary px-4 py-2">{{$t('btnLebihBanyakBerita')}}</router-link>
                 </div>
             </div>
         </div>
     </section>
-    <BannerApp/>
-    <BannerPinjaman/>
+    <!-- <BannerApp/>
+    <BannerPinjaman/> -->
+    <Kurs/>
     <Footer/>
   </div>
 </template>
@@ -52,8 +52,8 @@
 import Kurs from '@/components/home/Kurs'
 import BeritaStyle1 from '@/components/berita/BeritaStyle1'
 import BeritaStyle2 from '@/components/berita/BeritaStyle2'
-import BannerApp from '@/components/app/BannerApp'
-import BannerPinjaman from '@/components/app/BannerPinjaman'
+// import BannerApp from '@/components/app/BannerApp'
+// import BannerPinjaman from '@/components/app/BannerPinjaman'
 import Footer from '@/components/common/Footer'
 import carousel from 'vue-owl-carousel'
 import Heroimage from '@/components/home/Heroimage'
@@ -68,8 +68,8 @@ export default {
     Kurs,
     BeritaStyle1,
     BeritaStyle2,
-    BannerApp,
-    BannerPinjaman,
+    // BannerApp,
+    // BannerPinjaman,
     carousel,
     Heroimage,
     Carditem
