@@ -6,7 +6,7 @@
     <!-- <Hero/> -->
     <line-chart :data="chartData"></line-chart>
     <section id="berita-section" class="pb-5">
-        <div class="container custom">
+        <div class="container custom" style="margin-top: 30px;">
             <div class="row">
                 <div class="col-md-6">
                     <h3 class="font-weight-bold">{{$t('beritaTerbaru')}}</h3>

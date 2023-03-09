@@ -1,17 +1,17 @@
 @@ -0,0 +1,76 @@
 <template>
-    <section class="py-sm-5" id="container">
+    <section class="py-sm-1" id="container">
         <div class="row" id="row-container">    
             <div class="col-md-4" id="column-content">
                 <a href="https://play.google.com/store/apps/details?id=id.aiyo.umkmgo&hl=en" target="_blank">
-                    <div class="text-left" id="line">
+                    <div class="text-left">
                         <div class="row align-items-center" id="container-card">
-                            <div class="col-md-2">
+                            <div class="col-xs-6 col-sm-2 text-center">
                                 <img src="https://backoffice.bankumkm.id/public/upload/umkm.png" class="img-content" alt="">
+                                <h6>UMKM Go</h6>
                             </div>
-                            <div class="col-md-10">
-                                <h6>UMKM GO</h6>
-                                <p>Solusi Digital bagi UMKM dan Komunitas anda.</p>
+                            <div class="col-xs-6 col-sm-10">
+                                <p style="margin-top: 10px;">Solusi Digital bagi UMKM dan Komunitas anda</p>
                             </div>
                         </div>
                     </div>
@@ -19,14 +19,14 @@
             </div>
             <div class="col-md-4" id="column-content">
                 <a href="https://play.google.com/store/apps/details?id=id.aiyo.lazisnu&hl=en" target="_blank">  
-                    <div class="text-left" id="line">
+                    <div class="text-left">
                         <div class="row align-items-center" id="container-card">
-                            <div class="col-md-2">
+                            <div class="col-xs-6 col-sm-2">
                                 <img src="https://backoffice.bankumkm.id/public/upload/gozis.png" class="img-content" alt="">
                             </div>
-                            <div class="col-md-10">
-                                <h6>GoZIS</h6>
-                                <p>Aplikasi Online untuk Pembayaran Zakat,Infaq dan Sodaqoh.</p>
+                            <div class="col-xs-6 col-sm-10">
+                                <!-- <h6>GoZIS</h6> -->
+                                <p style="margin-top: 10px;">Aplikasi Online untuk Pembayaran Zakat,Infaq dan Sodaqoh</p>
                             </div>
                         </div>
                     </div>
@@ -36,12 +36,12 @@
                 <router-link to="/pengaduan" class="megamenu-link">
                     <div class="text-left">
                         <div class="row align-items-center" id="container-card">
-                            <div class="col-md-2">
+                            <div class="col-xs-6 col-sm-2">
                                 <img src="https://backoffice.bankumkm.id/public/upload/phone.png" class="img-content" alt="">
                             </div>
-                            <div class="col-md-10">
-                                <h6>Konsumen</h6>
-                                <p>Perlindungan dan Pengaduan Konsumen untuk Nasabah Bank UMKM Jatim.</p>
+                            <div class="col-xs-6 col-sm-10">
+                                <!-- <h6>Konsumen</h6> -->
+                                <p style="margin-top: 10px;">Layanan Pengaduan Nasabah</p>
                             </div>
                         </div>
                     </div>
@@ -59,7 +59,20 @@ export default {
   
 <style>
 #row-container {
-    margin-top: -15px;
+    /* justify-content: center; */
+    /* margin-top: 20px; */
+    /* height: 10px; */
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#row-container > [class*='col-'] {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 #line {
@@ -68,28 +81,20 @@ export default {
 
 #container {
     margin: 0 auto; 
-    padding: 0 450px;
+    padding: 0 180px;
     background: #2469a5;
-    height: 140px;
-    margin-bottom: -30px;
+    height: auto;
+    margin-bottom: -60px;
     overflow: hidden;
-}
-
-p {
-    color: white;
-    font-size: 12px;
-}
-
-p, h6 {
-    color: white;
-    cursor: pointer;
 }
 
 .img-content {
     height: 45px;
     width: 45px;
-    margin-top: -20px;
+    margin-top: 0px;
     border-radius: 8px;
+    /* margin-left: 8px; */
+    /* align-items: center; */
 }
 
 @media (max-width: 768px) {
@@ -161,6 +166,20 @@ p, h6 {
             border-radius: 8px;
         }
     }
+}
+</style>
+<style scoped>
+p {
+    color: white;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+h6 {
+    color: white;
+    cursor: pointer;
+    font-size: 10px;    
+    text-align: center;
 }
 </style>
   
