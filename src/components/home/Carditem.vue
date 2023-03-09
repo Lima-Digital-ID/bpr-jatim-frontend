@@ -2,7 +2,7 @@
 <template>
     <section class="py-sm-5" id="container">
         <div class="row" id="row-container">    
-            <div class="col-md-4">
+            <div class="col-md-4" id="column-content">
                 <a href="https://play.google.com/store/apps/details?id=id.aiyo.umkmgo&hl=en" target="_blank">
                     <div class="text-left" id="line">
                         <div class="row align-items-center" id="container-card">
@@ -17,7 +17,7 @@
                     </div>
                 </a>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4" id="column-content">
                 <a href="https://play.google.com/store/apps/details?id=id.aiyo.lazisnu&hl=en" target="_blank">  
                     <div class="text-left" id="line">
                         <div class="row align-items-center" id="container-card">
@@ -32,7 +32,7 @@
                     </div>
                 </a>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4" id="column-content">
                 <router-link to="/pengaduan" class="megamenu-link">
                     <div class="text-left">
                         <div class="row align-items-center" id="container-card">
@@ -93,20 +93,36 @@ p, h6 {
 }
 
 @media (max-width: 768px) {
+    #row-container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+
     #container {
-        padding: 35px;
+        padding: 35px 15px 35px 15px;
         background: #2469a5;
         height: auto;
         overflow: hidden;
     }
 
+    #column-content {
+        margin-left: -45px;
+        margin-right: -45px;
+    }
+
     #container-card {
         margin-top: 28px;
         text-align: center;
+        padding: 0px 40px 0 40px;
     }
 
     #line {
         border-right: none;
+    }
+
+    h6 {
+        font-size: 12px;
     }
 
     .img-content {    
@@ -116,17 +132,33 @@ p, h6 {
         border-radius: 8px;
     }
 
-    @media (min-width: 768px) {
+    @media (width: 768px) {
         p {
             width: 140px;
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
-            margin-left: 15px;
+        }
+
+        #column-content {
+            margin-left: 0px;
+            margin-right: 0px;
         }
 
         #line {
             border-right: 1px solid white;
+        }
+
+        h6 {
+            margin-left: 10px;
+        }
+
+        .img-content {    
+            height: 45px;
+            margin-top: -10px;
+            margin-bottom: 7px;
+            margin-left: 40px;
+            border-radius: 8px;
         }
     }
 }
