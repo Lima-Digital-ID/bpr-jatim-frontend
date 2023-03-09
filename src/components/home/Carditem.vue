@@ -4,11 +4,10 @@
         <div class="row" id="row-container">    
             <div class="col-md-4" id="column-content">
                 <a href="https://play.google.com/store/apps/details?id=id.aiyo.umkmgo&hl=en" target="_blank">
-                    <div class="text-left">
+                    <div class="text-left" id="line">
                         <div class="row align-items-center" id="container-card">
                             <div class="col-xs-6 col-sm-2 text-center">
                                 <img src="https://backoffice.bankumkm.id/public/upload/umkm.png" class="img-content" alt="">
-                                <h6>UMKM Go</h6>
                             </div>
                             <div class="col-xs-6 col-sm-10">
                                 <p style="margin-top: 10px;">Solusi Digital bagi UMKM dan Komunitas anda</p>
@@ -19,7 +18,7 @@
             </div>
             <div class="col-md-4" id="column-content">
                 <a href="https://play.google.com/store/apps/details?id=id.aiyo.lazisnu&hl=en" target="_blank">  
-                    <div class="text-left">
+                    <div class="text-left" id="line">
                         <div class="row align-items-center" id="container-card">
                             <div class="col-xs-6 col-sm-2">
                                 <img src="https://backoffice.bankumkm.id/public/upload/gozis.png" class="img-content" alt="">
@@ -59,9 +58,6 @@ export default {
   
 <style>
 #row-container {
-    /* justify-content: center; */
-    /* margin-top: 20px; */
-    /* height: 10px; */
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -84,7 +80,7 @@ export default {
     padding: 0 180px;
     background: #2469a5;
     height: auto;
-    margin-bottom: -60px;
+    margin-bottom: -55px;
     overflow: hidden;
 }
 
@@ -99,6 +95,9 @@ export default {
 
 @media (max-width: 768px) {
     #row-container {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
         display: flex;
         flex-direction: row;
         flex-wrap: nowrap;
