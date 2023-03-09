@@ -10,7 +10,7 @@
                                 <img src="https://backoffice.bankumkm.id/public/upload/umkm.png" class="img-content" alt="">
                             </div>
                             <div class="col-xs-6 col-sm-10">
-                                <p style="margin-top: 10px;">Solusi Digital bagi UMKM dan Komunitas anda</p>
+                                <p>Solusi Digital bagi UMKM dan Komunitas anda</p>
                             </div>
                         </div>
                     </div>
@@ -25,7 +25,7 @@
                             </div>
                             <div class="col-xs-6 col-sm-10">
                                 <!-- <h6>GoZIS</h6> -->
-                                <p style="margin-top: 10px;">Aplikasi Online untuk Pembayaran Zakat,Infaq dan Sodaqoh</p>
+                                <p>Aplikasi Online untuk Pembayaran Zakat,Infaq dan Sodaqoh</p>
                             </div>
                         </div>
                     </div>
@@ -40,7 +40,7 @@
                             </div>
                             <div class="col-xs-6 col-sm-10">
                                 <!-- <h6>Konsumen</h6> -->
-                                <p style="margin-top: 10px;">Layanan Pengaduan Nasabah</p>
+                                <p>Layanan Pengaduan Nasabah</p>
                             </div>
                         </div>
                     </div>
@@ -113,6 +113,7 @@ export default {
     #column-content {
         margin-left: -45px;
         margin-right: -45px;
+        margin-bottom: -40px;
     }
 
     #container-card {
@@ -129,9 +130,14 @@ export default {
         font-size: 12px;
     }
 
+    p, col-sm-10 {
+        margin-top: 10px;
+        height: 115px;
+    }
+
     .img-content {    
         height: 45px;
-        margin-top: -10px;
+        margin-top: -30px;
         margin-bottom: 7px;
         border-radius: 8px;
     }
@@ -168,17 +174,17 @@ export default {
 }
 </style>
 <style scoped>
-p {
-    color: white;
-    font-size: 12px;
-    cursor: pointer;
-}
+    p {
+        color: white;
+        font-size: 12px;
+        cursor: pointer;
+    }
 
-h6 {
-    color: white;
-    cursor: pointer;
-    font-size: 10px;    
-    text-align: center;
-}
+    h6 {
+        color: white;
+        cursor: pointer;
+        font-size: 10px;    
+        text-align: center;
+    }
 </style>
   
