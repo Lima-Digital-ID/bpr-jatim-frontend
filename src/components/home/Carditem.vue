@@ -141,35 +141,35 @@ export default {
         margin-bottom: 7px;
         border-radius: 8px;
     }
+}
 
-    @media (width: 768px) {
-        p {
-            width: 140px;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-        }
+@media (width: 768px) {
+    p {
+        width: 140px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
 
-        #column-content {
-            margin-left: 0px;
-            margin-right: 0px;
-        }
+    #column-content {
+        margin-left: 0px;
+        margin-right: 0px;
+    }
 
-        #line {
-            border-right: 1px solid white;
-        }
+    #line {
+        border-right: 1px solid white;
+    }
 
-        h6 {
-            margin-left: 10px;
-        }
+    h6 {
+        margin-left: 10px;
+    }
 
-        .img-content {    
-            height: 45px;
-            margin-top: -10px;
-            margin-bottom: 7px;
-            margin-left: 40px;
-            border-radius: 8px;
-        }
+    .img-content {    
+        height: 45px;
+        margin-top: -10px;
+        margin-bottom: 7px;
+        margin-left: 40px;
+        border-radius: 8px;
     }
 }
 </style>
@@ -178,6 +178,7 @@ export default {
         color: white;
         font-size: 12px;
         cursor: pointer;
+        margin-top: 20px;
     }
 
     h6 {
