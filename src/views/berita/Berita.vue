@@ -39,7 +39,7 @@
                             </carousel>
                         </div>  
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-6" id="beritaNotSlide">
                         <div class="img-berita-style-3 mb-3" v-for="data in beritaRight" :key="data.id">
                             <router-link :to="'/berita/'+data.slug">
                                 <div class="row">
@@ -145,4 +145,18 @@ export default {
     .btn-circle-secondary{
         background: #d6dde9;
     }    
+</style>
+<style scoped>
+@media (max-width: 768px) {
+    /* #beritaNotSlide {
+    display: none;
+    } */
+    p{
+        height: auto;
+    }
+
+    .col-8 >>> p p {
+        height: auto;
+    }
+}
 </style>

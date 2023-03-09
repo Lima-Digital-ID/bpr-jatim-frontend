@@ -56,7 +56,7 @@ export default {
 }
 </script>
   
-<style>
+<style scoped>
 #row-container {
     display: -webkit-box;
     display: -webkit-flex;

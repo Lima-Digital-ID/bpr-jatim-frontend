@@ -1,9 +1,9 @@
 <template>
     <nav class="navbar navbar-expand-lg navbar-top fixed-top py-3" :class="classNav">
         <div class="container custom">
-            <a class="navbar-brand" href="#">
+            <router-link class="navbar-brand" :class="checkActiveMenu([''])" to="/">
                 <img :src="this.srcLogo" width="250" alt="" srcset="">
-            </a>
+            </router-link>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon fa fa-bars mt-2 color-darkBlue"></span>
             </button>
