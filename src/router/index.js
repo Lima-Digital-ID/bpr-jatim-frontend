@@ -51,7 +51,7 @@ const routes = [
   },
   {
     path: '/governance',
-    name: '/Governance',
+    name: 'Governance',
     component: Governance
   },
   {
