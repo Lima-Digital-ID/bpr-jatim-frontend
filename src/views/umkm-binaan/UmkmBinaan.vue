@@ -33,7 +33,7 @@
         </section>
         <section id="promo" class="pb-5">
             <div class="container custom">
-                <div class="row">
+                <div class="row" v-if="umkm && umkm.length">
                     <div class="col-md-3" v-for="(data,index) in umkm" :key="data.id">
                         <a href="" data-toggle="modal" @click="getDetail(index)" data-target="#modal-detail">
                             <div class="box-white">
@@ -43,6 +43,13 @@
                                 <p class="font-13 color-red mb-0"><span class="fa fa-map-marker-alt mr-2"></span>{{data.nama_kota}}</p>
                             </div>
                         </a>
+                    </div>
+                </div>
+                <div class="row justify-content-center" v-else>
+                    <div class="col-md-5">
+                        <div class="box-white p-5 mt-5 mb-5">
+                            <h5 class="text-center mt-3">Maaf, kami tidak dapat menemukan informasi</h5>
+                        </div>
                     </div>
                 </div>
             </div>

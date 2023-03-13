@@ -23,8 +23,8 @@
         </section>
         <section id="promo" class="pb-5">
             <div class="container custom">
-                <div class="row">
-                    <div class="col-md-3" v-for="(data, index) in promo" :key="data.id">
+                <div class="row" v-if="promo && promo.length">
+                    <div class="col-md-3 mt-3" v-for="(data, index) in promo" :key="data.id">
                         <a href="" data-toggle="modal" @click="getDetail(index)" data-target="#modal-detail">
                             <div class="box-white">
                                 <img :src="data.cover" class="img-cover" alt="">
@@ -32,6 +32,13 @@
                                 <p class="mb-0 font-14 color-dark2 font-weight-light">{{data.konten}} ...</p>
                             </div>
                         </a>
+                    </div>
+                </div>
+                <div class="row justify-content-center" v-else>
+                    <div class="col-md-5">
+                        <div class="box-white p-5 mt-5 mb-5">
+                            <h5 class="text-center mt-3">Maaf, kami tidak dapat menemukan informasi</h5>
+                        </div>
                     </div>
                 </div>
             </div>

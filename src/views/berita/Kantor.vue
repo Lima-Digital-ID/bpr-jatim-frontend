@@ -5,7 +5,7 @@
             <div class="container custom">
                 <div class="row">
                     <div class="col-md-12">
-                        <h1 class="font-weight-bold" v-html="this.textTitle($t('nav.kantor'))"></h1>
+                    <h1 class="font-weight-bold">{{$t('nav.kantor')}} <span class="color-blue">Bank UMKM</span></h1>
                         <p>{{$t('nav.textKantor')}}</p>
                         <div class="mt-4 nav nav-tabs custom-nav-tabs" id="nav-tab" role="tablist">
                             <a class="nav-item nav-link active" id="nav-cabang-tab" data-toggle="tab" href="#nav-cabang" role="tab" aria-controls="nav-cabang" aria-selected="true"> <span class="fa fa-building mr-2"></span>{{$t('kantorCabang')}}</a>

@@ -138,11 +138,22 @@
                             </div>
                         </div>
                     </li>
-                    <li class="nav-item">
-                        <router-link class="nav-link" :class="checkActiveMenu(['umkm'])" to="/umkm">{{$t('nav.umkm')}}</router-link>
-                    </li>
                     <li class="nav-item megamenu-nav dropdown">
-                        <router-link class="nav-link dropdown-toggle" :class="checkActiveMenu(['berita','promo','epaper','penghargaan','karier','pengaduan'])" data-toggle="dropdown" to="">{{$t('nav.info')}}</router-link>
+                        <router-link class="nav-link dropdown-toggle" :class="checkActiveMenu(
+                            ['berita',
+                             'promo',
+                             'epaper',
+                             'penghargaan',
+                             'karier',
+                             'umkm',
+                             'pengaduan',
+                             'peta-cabang',
+                             'tips',
+                             'info',
+                             'kantor',
+                             'lelang'
+                            ]
+                            )" data-toggle="dropdown" to="">{{$t('nav.info')}}</router-link>
                         <div class="megamenu dropdown-menu py-5" id="megaMenuProdukLayanan">
                             <div class="container custom">
                             <div class="row">
@@ -171,6 +182,10 @@
                                         <router-link to="/karier" class="megamenu-link">
                                             <h6>{{$t('nav.karier')}} <span class="fa fa-chevron-right fa-sm ml-1"></span></h6>
                                             <p class="color-softGrey2 font-weight-light">{{$t('nav.textKarier')}}</p>
+                                        </router-link>
+                                        <router-link to="/umkm" class="megamenu-link">
+                                            <h6>{{$t('nav.umkm')}} <span class="fa fa-chevron-right fa-sm ml-1"></span></h6>
+                                            <p class="color-softGrey2 font-weight-light">{{$t('nav.textUmkm')}}</p>
                                         </router-link>
                                     </div>
                                     <div class="col-md-6">
@@ -204,6 +219,9 @@
                             </div>
                         </div>
 
+                    </li>
+                    <li class="nav-item">
+                        <router-link class="nav-link" :class="checkActiveMenu([''])" to="">{{$t('nav.bantuan')}}</router-link>
                     </li>
                     <li class="nav-item dropdown">
                         <a href="" class="nav-link dropdown-toggle" data-toggle="dropdown"><img :src="this.activeLangImg"></a>

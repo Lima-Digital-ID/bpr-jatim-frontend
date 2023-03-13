@@ -17,6 +17,7 @@
         "layanan" : "Layanan",
         "textLayanan" : "Bank BPR Jatim Bank UMKM Jawa Timur menyediakan berbagai layanan yang bisa Anda nikmati di setiap kantor cabang kami.",
         "umkm" : "UMKM Binaan",
+        "textUmkm" : "Daftar UMKM Binaan Kami",
         "info" : "Info & Berita",
         "berita" : "Berita",
         "textBerita" : "Lihat berita dan informasi terbaru dari Bank UMKM",
@@ -37,7 +38,8 @@
         "kantor" : "Jaringan Cabang dan Kantor Kas",
         "textKantor" : "Daftar Kantor Cabang dan Kantor Kas Bank UMKM",
         "lelang" : "Pengumuman Lelang Jaminan",
-        "textLelang" : "Informasi tentang lelang jaminan dapat anda akses disini"
+        "textLelang" : "Informasi tentang lelang jaminan dapat anda akses disini",
+        "bantuan" : "Bantuan & FAQ"
     },
     "welcomeMsg" : "SELAMAT DATANG DI",
     "promoTerbaru" : "Promo Terbaru",
