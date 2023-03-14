@@ -20,6 +20,7 @@ import Info from '@/views/berita/Info'
 import Lelang from '@/views/berita/Lelang'
 import Kantor from '@/views/berita/Kantor'
 import Pengaduan from '@/views/berita/Pengaduan'
+import Bantuan from '@/views/bantuan-faq/Bantuan'
 
 
 // auth
@@ -138,6 +139,11 @@ const routes = [
     path: '/info',
     name: 'Info',
     component: Info
+  },
+  {
+    path: '/bantuan',
+    name: 'Bantuan',
+    component: Bantuan
   },
   {
     path: '/about',

@@ -39,7 +39,8 @@
         "textKantor" : "List of Bank UMKM Branch Offices and Cash Offices",
         "lelang" : "Guarantee Auction Announcement",
         "textLelang" : "Information about the guarantee auction can be accessed here",
-        "bantuan" : "Help & FAQ"
+        "bantuan" : "Help & FAQ",
+        "textBantuan" : "We are ready to serve and answer your questions"
     },
     "welcomeMsg" : "WELCOME TO",
     "promoTerbaru" : "Latest Promo",

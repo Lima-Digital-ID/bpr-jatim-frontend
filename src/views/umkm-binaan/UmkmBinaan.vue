@@ -47,7 +47,7 @@
                 </div>
                 <div class="row justify-content-center" v-else>
                     <div class="col-md-5">
-                        <div class="box-white p-5 mt-5 mb-5">
+                        <div class="p-5 mt-5 mb-5">
                             <h5 class="text-center mt-3">Maaf, kami tidak dapat menemukan informasi</h5>
                         </div>
                     </div>

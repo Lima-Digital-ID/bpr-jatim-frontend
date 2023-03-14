@@ -39,7 +39,8 @@
         "textKantor" : "Daftar Kantor Cabang dan Kantor Kas Bank UMKM",
         "lelang" : "Pengumuman Lelang Jaminan",
         "textLelang" : "Informasi tentang lelang jaminan dapat anda akses disini",
-        "bantuan" : "Bantuan & FAQ"
+        "bantuan" : "Bantuan & FAQ",
+        "textBantuan" : "Kami siap untuk melayani dan menjawab pertanyaan Anda"
     },
     "welcomeMsg" : "SELAMAT DATANG DI",
     "promoTerbaru" : "Promo Terbaru",

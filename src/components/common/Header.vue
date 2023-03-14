@@ -221,7 +221,7 @@
 
                     </li>
                     <li class="nav-item">
-                        <router-link class="nav-link" :class="checkActiveMenu([''])" to="">{{$t('nav.bantuan')}}</router-link>
+                        <router-link class="nav-link" :class="checkActiveMenu(['bantuan'])" to="/bantuan">{{$t('nav.bantuan')}}</router-link>
                     </li>
                     <li class="nav-item dropdown">
                         <a href="" class="nav-link dropdown-toggle" data-toggle="dropdown"><img :src="this.activeLangImg"></a>

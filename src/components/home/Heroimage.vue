@@ -3,8 +3,8 @@
         <div id="myCarousel" class="carousel slide" data-ride="carousel">
             <Header :nav-transition="navTransition" class-nav=""/>
             <div class="carousel-inner">
-                <div class="carousel-item" v-for="(data, index) in promo" :key="data.id" :class="{'active': index === 0}">
-                    <img class="d-block img-cover" :src="data.cover" srcset="">
+                <div class="carousel-item" v-for="(data, index) in jumbotron" :key="data.id" :class="{'active': index === 0}">
+                    <img class="d-block img-cover" :src="data.image" srcset="">
                 </div>
             </div>
             <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
@@ -20,7 +20,6 @@
 </template>
 
 <script>
-
 import Header from '@/components/common/Header';
 
 export default {
@@ -28,7 +27,7 @@ export default {
     components: { Header },
     data() {
         return {
-            promo: []
+            jumbotron: []
         };
     },
     watch: {
@@ -42,9 +41,9 @@ export default {
     methods: {
         getData() {
             this.axios
-                .get(this.$serverURL + "api/get-promo")
+                .get(this.$serverURL + "api/jumbotron")
                 .then(res => {
-                this.promo = res.data.promo.data;
+                this.jumbotron = res.data.data;
             })
                 .catch(err => console.log(err));
         },
@@ -59,7 +58,7 @@ export default {
     }
 
     .img-cover {
-        height: auto !important;
+        max-height: 720px !important;
         width: 100% !important;
     }
 
