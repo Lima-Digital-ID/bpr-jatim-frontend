@@ -40,7 +40,9 @@
         "lelang" : "Pengumuman Lelang Jaminan",
         "textLelang" : "Informasi tentang lelang jaminan dapat anda akses disini",
         "bantuan" : "Bantuan & FAQ",
-        "textBantuan" : "Kami siap untuk melayani dan menjawab pertanyaan Anda"
+        "textBantuan" : "Kami siap untuk melayani dan menjawab pertanyaan Anda",
+        "pengajuan" : "Pengajuan Kredit",
+        "textPengajuan" : "Kami siap membantu mengembangkan bisnis anda dalam memberikan fasilitas pinjaman"
     },
     "welcomeMsg" : "SELAMAT DATANG DI",
     "promoTerbaru" : "Promo Terbaru",

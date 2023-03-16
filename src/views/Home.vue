@@ -3,7 +3,7 @@
     <!-- <Popup/> -->
     <Heroimage/>
     <Carditem/>
-    <!-- <Hero/> -->
+    <Hero/>
     <line-chart :data="chartData"></line-chart>
     <section id="berita-section" class="pb-5">
         <div class="container custom" style="margin-top: 30px;">
@@ -48,7 +48,7 @@
 </template>
 
 <script>
-// import Hero from '@/components/home/Hero'
+import Hero from '@/components/home/Hero'
 import Kurs from '@/components/home/Kurs'
 import BeritaStyle1 from '@/components/berita/BeritaStyle1'
 import BeritaStyle2 from '@/components/berita/BeritaStyle2'
@@ -63,7 +63,7 @@ import Carditem from '@/components/home/Carditem'
 export default {
   name: 'Home',
   components: {
-    // Hero,
+    Hero,
     Footer,
     Kurs,
     BeritaStyle1,

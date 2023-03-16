@@ -115,6 +115,10 @@
                                                     <h6>{{$t('nav.layanan')}} <span class="fa fa-chevron-right fa-sm ml-1"></span></h6>
                                                     <p class="color-softGrey2 font-weight-light">{{$t('nav.textLayanan')}}</p>
                                                 </a>
+                                                <router-link to="/pengajuan" class="megamenu-link">
+                                                    <h6>{{$t('nav.pengajuan')}} <span class="fa fa-chevron-right fa-sm ml-1"></span></h6>
+                                                    <p class="color-softGrey2 font-weight-light">{{$t('nav.textPengajuan')}}</p>
+                                                </router-link>
                                             </div>
                                         </div>
                                     </div>
@@ -213,7 +217,6 @@
                                             <h6>{{$t('nav.lelang')}} <span class="fa fa-chevron-right fa-sm ml-1"></span></h6>
                                             <p class="color-softGrey2 font-weight-light">{{$t('nav.textLelang')}}</p>
                                         </router-link>
-
                                     </div>
                                 </div>
                             </div>

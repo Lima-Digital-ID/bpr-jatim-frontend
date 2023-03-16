@@ -21,6 +21,7 @@ import Lelang from '@/views/berita/Lelang'
 import Kantor from '@/views/berita/Kantor'
 import Pengaduan from '@/views/berita/Pengaduan'
 import Bantuan from '@/views/bantuan-faq/Bantuan'
+import PengajuanKredit from '@/views/produk-layanan/PengajuanKredit'
 
 
 // auth
@@ -144,6 +145,11 @@ const routes = [
     path: '/bantuan',
     name: 'Bantuan',
     component: Bantuan
+  },
+  {
+    path: '/pengajuan',
+    name: 'PengajuanKredit',
+    component: PengajuanKredit
   },
   {
     path: '/about',

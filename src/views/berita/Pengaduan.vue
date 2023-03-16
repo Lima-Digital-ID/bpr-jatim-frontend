@@ -191,7 +191,7 @@ export default {
             .post(this.$serverURL+'api/add-pengaduan-nasabah',this.fields)
             .then(res => {
                 this.isSubmit = true
-                if(res.data.message=='berhasil'){
+                if(res.data.status == 201){
                     this.messageSubmit = 'Pengaduan Berhasil';
                     Object.keys(this.fields).forEach(key => {
                         if(key!='jenis_kelamin' && key!='jenis_kelamin_perwakilan' && key!='jenis_rekening'){

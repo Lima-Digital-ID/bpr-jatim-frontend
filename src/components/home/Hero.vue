@@ -138,7 +138,7 @@ export default {
             this.navTransition= true
         },
         toRupiah() {
-            document.getElementById('nominal').value = myFunction.rupiah(parseFloat(document.getElementById('nominal').value))
+            document.getElementById('nominalPinjaman').value = myFunction.rupiah(parseFloat(document.getElementById('nominalPinjaman').value))
         },
         getEstimasi(){
             const nominal = document.getElementById('nominalPinjaman').value.replace(".", "")
