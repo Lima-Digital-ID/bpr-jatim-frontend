@@ -10,7 +10,7 @@
                             <form id="formPengaduan"  v-on:submit.prevent="submitPengajuan()">
                                 <div class="form-group">
                                     <label for="">Pinjaman</label>
-                                    <input type="text" v-model="fields.nominal" class="form-control" id="nominalPinjaman" @keyup="getEstimasi" @change="toRupiah" placeholder="Nominal">
+                                    <input type="text" class="form-control" id="nominalPinjaman" @keyup="getEstimasi" @change="toRupiah" placeholder="Nominal">
                                 </div>    
                                 <div class="row">
                                     <div class="col">
@@ -64,7 +64,7 @@
                                         </div> 
                                     </div>
                                 </div>
-                                <div v-if="messageSubmit!=''" class="alert font-weight-bold" :class="[successSubmit ? 'alert-success' : 'alert-danger']">{{messageSubmit}}</div>
+                                <!-- <div v-if="messageSubmit!=''" class="alert font-weight-bold" :class="[successSubmit ? 'alert-success' : 'alert-danger']">{{messageSubmit}}</div> -->
                                 <button type="reset" class="btn btn-secondary mr-3"><span class="fa fa-times"></span> Reset</button>
                                 <button type="submit" class="btn btn-primary"><span class="fa fa-save"></span> Submit</button>
                             </form>
@@ -80,6 +80,7 @@
 import Header from '@/components/common/Header';
 import Footer from '@/components/common/Footer';
 import {myFunction} from '@/helper/myFunction';
+import Swal from 'sweetalert2';
 
 export default {
     name : "PengajuanKredit",
@@ -90,6 +91,7 @@ export default {
             kota : [],
             bunga : '',
             isSubmit : false,
+            isSubmitting: false,
             successSubmit : false,
             messageSubmit : '',
             fields : {
@@ -100,8 +102,7 @@ export default {
                 email: '',
                 alamat: '',
                 kota: '',
-            }
-
+            },
         }
     },
     mounted() {
@@ -127,45 +128,53 @@ export default {
         .catch(err => console.log(err))
     },
     methods: {
-        submitPengajuan(){
-            this.axios
-            .post(this.$serverURL+'api/post-pengajuan-kredit',this.fields)
-            .then(res => {
-                this.isSubmit = true
-                if(res.data.message=='success.'){
-                    this.messageSubmit = 'Pengajuan Berhasil';
-                    this.successSubmit = true
-                }
-                else{
-                    this.successSubmit = false
-                    this.messageSubmit = 'Pengajuan Gagal';
-                }
-                console.log(this.messageSubmit)
-            })
-            .catch(err => {
-                    this.successSubmit = false
-                    this.messageSubmit = 'Pengajuan Gagal';
-                console.log(this.messageSubmit)
-                console.log(err)
-            })
+        async submitPengajuan(){
+            if (this.isSubmitting) {
+                return;
+            }
+            
+            this.isSubmitting = true;
+            this.isSubmit = true
+            
+            try {
+                await this.axios.post(this.$serverURL+'api/post-pengajuan-kredit',this.fields);
+                this.successSubmit = true
+
+                document.getElementById('nominalPinjaman').value = "";
+                document.getElementById("estimasi").value = "";
+                Object.keys(this.fields).forEach(key => {
+                    this.fields[key] = '';
+                });
+                
+                Swal.fire(
+                    'Pengajuan Anda Telah Terdata Di Sistem Kami',
+                    'Terima Kasih, pengajuan anda akan segera ditindak lanjuti dalam waktu 1 x 24 jam. Silahkan Menunggu Telfon dari petugas yang berwenang.',
+                    'success'
+                );
+            } catch (error) {
+                this.successSubmit = false;
+                Swal.fire(
+                    'Pengajuan Anda Gagal',
+                    'Mohon Hubungi Pihak Bank Terkait',
+                    'error'
+                );
+            } finally {
+                this.isSubmitting = false;
+            }
         },
         toRupiah() {
-            let input = document.getElementById("nominalPinjaman");
-            let value = input.value;
-
-            let numericValue = value.toString().replace(/[^0-9]/g, "");
-
-            let rupiah = new Intl.NumberFormat("id-ID", { style: "currency", currency: "IDR", minimumFractionDigits: 0, maximumFractionDigits: 0 }).format(numericValue);
-            input.value = rupiah;
-            this.fields.numericValue = numericValue;
+            const nominal = document.getElementById('nominalPinjaman').value;
+            document.getElementById('nominalPinjaman').value = myFunction.rupiah(nominal, 'Rp');
         },
         getEstimasi(){
-            const nominal = document.getElementById("nominalPinjaman").value.replace(/\D/g, '')
+            let nominalEl = document.getElementById("nominalPinjaman");
+            let nominal = parseInt(nominalEl.value.replace(/[^0-9,-]+/g, ''));
+            nominalEl.value = myFunction.rupiah(nominal, 'Rp'); 
             const tenor = document.getElementById('tenor').value
             
             if (nominal == 0 || tenor == '') {
                 let estimasi = document.getElementById('estimasi')
-                estimasi.value = "Rp" + 0
+                estimasi.value = "Rp " + 0
             } else if (nominal!='' && tenor!='') {
                 const perBulan = nominal / (tenor * 12)
                 const _bunga = nominal * this.bunga / 100
@@ -173,11 +182,12 @@ export default {
                 console.log(ttlPerBulan)
 
                 let estimasi = document.getElementById('estimasi');
-                estimasi.value = "Rp " + myFunction.rupiah(ttlPerBulan.toFixed(2))
+                estimasi.value = "Rp " + myFunction.rupiahEstimasi(ttlPerBulan.toFixed(2))
             }
-        }
-    }
 
+            this.fields.nominal = nominal; // Send data by id nominalPinjaman to fields nominal (with out v-model)
+        },
+    }
 }
 </script>
 <style scoped>
