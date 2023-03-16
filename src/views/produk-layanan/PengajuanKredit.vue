@@ -160,9 +160,13 @@ export default {
             this.fields.numericValue = numericValue;
         },
         getEstimasi(){
-            const nominal = this.fields.numericValue
+            const nominal = document.getElementById("nominalPinjaman").value.replace(/\D/g, '')
             const tenor = document.getElementById('tenor').value
-            if(nominal!='' && tenor!=''){
+            
+            if (nominal == 0 || tenor == '') {
+                let estimasi = document.getElementById('estimasi')
+                estimasi.value = "Rp" + 0
+            } else if (nominal!='' && tenor!='') {
                 const perBulan = nominal / (tenor * 12)
                 const _bunga = nominal * this.bunga / 100
                 const ttlPerBulan = perBulan + _bunga
