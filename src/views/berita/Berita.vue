@@ -27,7 +27,7 @@
 
         <section id="berita" class="pt-3 pb-5">
             <div class="container custom">
-                <div class="row" >
+                <div class="row" v-if="beritaSlide && beritaSlide.length">
                     <div class="col-md-6">
                       <div v-if="beritaSlide.length>0">
                             <carousel class="owl-berita" :nav="false" :loop="true" :margin="10" :dots="true" :items="1">
@@ -39,7 +39,7 @@
                             </carousel>
                         </div>  
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-6" id="beritaNotSlide">
                         <div class="img-berita-style-3 mb-3" v-for="data in beritaRight" :key="data.id">
                             <router-link :to="'/berita/'+data.slug">
                                 <div class="row">
@@ -60,11 +60,18 @@
                         </div>
                     </div>
                 </div>
-                <div class="row mt-3">
-                    <div class="col-md-3" v-for="data in beritaBox" :key="data.id">
+                <div class="row mt-3" v-if="beritaBox && beritaBox.length">
+                    <div class="col-md-3 mb-3" v-for="data in beritaBox" :key="data.id">
                         <router-link :to="'/berita/'+data.slug">
                             <BeritaStyle2 :data="data"/>
                         </router-link>
+                    </div>
+                </div>
+                <div class="row justify-content-center" v-else>
+                    <div class="col-md-5">
+                        <div class="p-5 mt-5 mb-5">
+                            <h5 class="text-center mt-3">Maaf, kami tidak dapat menemukan informasi</h5>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -145,4 +152,18 @@ export default {
     .btn-circle-secondary{
         background: #d6dde9;
     }    
+</style>
+<style scoped>
+@media (max-width: 768px) {
+    /* #beritaNotSlide {
+    display: none;
+    } */
+    p{
+        height: auto;
+    }
+
+    .col-8 >>> p p {
+        height: auto;
+    }
+}
 </style>

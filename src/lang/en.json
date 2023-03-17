@@ -17,6 +17,7 @@
         "layanan" : "Services",
         "textLayanan" : "Bank UMKM provides a variety of services that you can enjoy at each of our branch offices.",
         "umkm" : "UMKM Partner",
+        "textUmkm" : "Our List of Supported",
         "info" : "Info & News",
         "berita" : "News",
         "textBerita" : "See the latest news and information from Bank UMKM",
@@ -37,7 +38,11 @@
         "kantor" : "Branch Office and Cash Office",
         "textKantor" : "List of Bank UMKM Branch Offices and Cash Offices",
         "lelang" : "Guarantee Auction Announcement",
-        "textLelang" : "Information about the guarantee auction can be accessed here"
+        "textLelang" : "Information about the guarantee auction can be accessed here",
+        "bantuan" : "Help & FAQ",
+        "textBantuan" : "We are ready to serve and answer your questions",
+        "pengajuan" : "Loan Application",
+        "textPengajuan" : "We are ready to help grow your business by providing loan facilities"
     },
     "welcomeMsg" : "WELCOME TO",
     "promoTerbaru" : "Latest Promo",

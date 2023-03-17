@@ -19,3 +19,14 @@ export default {
     props : ['data','addClass'],
 }
 </script>
+<style scoped>
+@media (max-width: 768px) {
+    p{
+        height: auto;
+    }
+
+    .bottom >>> p p {
+        height: auto;
+    }
+}
+</style>

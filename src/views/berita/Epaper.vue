@@ -23,13 +23,20 @@
         </section>
         <section class="pb-5">
             <div class="container custom">
-                <div class="row">
+                <div class="row" v-if="epaper && epaper.length">
                     <div class="col-md-3" v-for="data in epaper" :key="data.id">
                         <div class="box-white">
                             <img :src="data.cover" class="img-cover" alt="" srcset="">
                             <p class="mt-3 mb-1 font-14 color-red">{{data.tgl}}</p>
                             <h5 class="font-weight-bold color-darkBlue">{{data.judul}}</h5>
                             <a :href="data.konten" target="_blank" class="btn btn-circle-secondary btn-block mt-3">Baca Sekarang</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-center" v-else>
+                    <div class="col-md-5">
+                        <div class="p-5 mt-5 mb-5">
+                            <h5 class="text-center mt-3">Maaf, kami tidak dapat menemukan informasi</h5>
                         </div>
                     </div>
                 </div>

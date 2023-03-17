@@ -20,6 +20,8 @@ import Info from '@/views/berita/Info'
 import Lelang from '@/views/berita/Lelang'
 import Kantor from '@/views/berita/Kantor'
 import Pengaduan from '@/views/berita/Pengaduan'
+import Bantuan from '@/views/bantuan-faq/Bantuan'
+import PengajuanKredit from '@/views/produk-layanan/PengajuanKredit'
 
 
 // auth
@@ -51,7 +53,7 @@ const routes = [
   },
   {
     path: '/governance',
-    name: '/Governance',
+    name: 'Governance',
     component: Governance
   },
   {
@@ -138,6 +140,16 @@ const routes = [
     path: '/info',
     name: 'Info',
     component: Info
+  },
+  {
+    path: '/bantuan',
+    name: 'Bantuan',
+    component: Bantuan
+  },
+  {
+    path: '/pengajuan',
+    name: 'PengajuanKredit',
+    component: PengajuanKredit
   },
   {
     path: '/about',

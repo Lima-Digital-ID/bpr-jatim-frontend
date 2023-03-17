@@ -6,8 +6,8 @@
         "textProfil" : "Profil Bank UMKM Jatim. Selalu berkomitmen memberikan kontribusi terbaik untuk masyarakat",
         "transparansi" : "Transparansi",
         "textTransparansi" : "Bank UMKM Jatim sebagai perusahaan terbuka memiliki kewajiban untuk melakukan transparansi",        
-        "governance":"Laporan Tata Kelola Perusahaan",
-        "textGovernance": "Tata Kelola Perusahaan Bank UMKM Jawa Timur",
+        "governance":"Laporan Keuangan",
+        "textGovernance": "Tata Laporan Keuangan Bank UMKM Jawa Timur",
         "socialresponsibility":"Tanggung Jawab Perusahaan",
         "textSocialResponsibility": "Tanggung Jawab Perusahaan Bank UMKM Jatim ",
         "produkLayanan" : "Produk",
@@ -17,6 +17,7 @@
         "layanan" : "Layanan",
         "textLayanan" : "Bank BPR Jatim Bank UMKM Jawa Timur menyediakan berbagai layanan yang bisa Anda nikmati di setiap kantor cabang kami.",
         "umkm" : "UMKM Binaan",
+        "textUmkm" : "Daftar UMKM Binaan Kami",
         "info" : "Info & Berita",
         "berita" : "Berita",
         "textBerita" : "Lihat berita dan informasi terbaru dari Bank UMKM",
@@ -37,7 +38,11 @@
         "kantor" : "Jaringan Cabang dan Kantor Kas",
         "textKantor" : "Daftar Kantor Cabang dan Kantor Kas Bank UMKM",
         "lelang" : "Pengumuman Lelang Jaminan",
-        "textLelang" : "Informasi tentang lelang jaminan dapat anda akses disini"
+        "textLelang" : "Informasi tentang lelang jaminan dapat anda akses disini",
+        "bantuan" : "Bantuan & FAQ",
+        "textBantuan" : "Kami siap untuk melayani dan menjawab pertanyaan Anda",
+        "pengajuan" : "Pengajuan Kredit",
+        "textPengajuan" : "Kami siap membantu mengembangkan bisnis anda dalam memberikan fasilitas pinjaman"
     },
     "welcomeMsg" : "SELAMAT DATANG DI",
     "promoTerbaru" : "Promo Terbaru",
@@ -111,5 +116,4 @@
     "textPeranan4" : "Mendukung kesetaraan gender (Peran serta kaum wanita) dalam mengeloa usaha (produktif).",
     "textPeranan5" : "Mendukung kegiatan usaha Dalam peranan sebagai lembaga intermediasi dan mendukung program pemerintah Bank UMKM Jawa Timur",
     "strukturOrganisasi" : "Struktur Organisasi"
-
 }

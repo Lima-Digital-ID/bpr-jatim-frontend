@@ -7,7 +7,7 @@ export const myFunction = {
             behavior: 'smooth'
         });        
     },
-    rupiah: function(number){
+    rupiahEstimasi: function(number){
         let bilangan = number;
                 
         let	reverse = bilangan.toString().split('').reverse().join('')
@@ -16,7 +16,23 @@ export const myFunction = {
 
         return ribuanReturn
     },
-     tglIndo: function(string) {
+    rupiah: function(number, prefix) {
+        var bilangan = number.toString().replace(/[^,\d]/g, "");
+        var split = bilangan.split(",");
+        var sisa = split[0].length % 3;
+        var rupiah = split[0].substr(0, sisa);
+        var ribuan = split[0].substr(sisa).match(/\d{3}/gi);
+        
+        if (ribuan) {
+            var separator = sisa ? "." : "";
+            rupiah += separator + ribuan.join(".");
+        }
+        
+        rupiah = split[1] != undefined ? rupiah + "," + split[1] : rupiah;
+        
+        return prefix == undefined ? rupiah : prefix + " " + rupiah;
+    },
+    tglIndo: function(string) {
         const bulanIndo = ['', 'Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli', 'Agustus', 'September' , 'Oktober', 'November', 'Desember'];
     
         const tanggal = string.split("-")[2];

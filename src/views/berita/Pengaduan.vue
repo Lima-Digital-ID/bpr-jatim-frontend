@@ -123,9 +123,9 @@
                                 <label for="">Detail Pengaduan</label>
                                 <textarea v-model="fields.detail_pengaduan" id="" class="form-control" rows="7"></textarea>
                                 <br>
-                                <div v-if="messageSubmit!=''" class="alert font-weight-bold" :class="[successSubmit ? 'alert-success' : 'alert-danger']">{{messageSubmit}}</div>
-                                <button type="submit" class="btn btn-primary mr-2"><span class="fa fa-save"></span> Submit</button>
-                                <button type="reset" class="btn btn-secondary"><span class="fa fa-times"></span> Reset</button>
+                                <!-- <div v-if="messageSubmit!=''" class="alert font-weight-bold" :class="[successSubmit ? 'alert-success' : 'alert-danger']">{{messageSubmit}}</div> -->
+                                <button type="reset" class="btn btn-secondary mr-3"><span class="fa fa-times"></span> Reset</button>
+                                <button type="submit" class="btn btn-primary" @click="submitPengaduan()"><span class="fa fa-save"></span> Submit</button>
                             </form>
                         </div>
                     </div>
@@ -135,17 +135,21 @@
         <Footer/>        
     </div>
 </template>
+
 <script>
 import Header from '@/components/common/Header';
-import Footer from '@/components/common/Footer'
+import Footer from '@/components/common/Footer';
+import Swal from 'sweetalert2';
 
 export default {
     name : "Kantor",
     components:{Header,Footer},
     data() {
         return {
+            showModal: false,
             cabang : [],
             isSubmit : false,
+            isSubmitting: false,
             successSubmit : false,
             messageSubmit : '',
             fields : {
@@ -173,7 +177,7 @@ export default {
                 no_fax_perwakilan: '',
                 jenis_rekening: 'Tabungan',
                 detail_pengaduan: '',
-            }
+            },
 
         }
     },
@@ -186,35 +190,45 @@ export default {
         .catch(err => console.log(err))
     },
     methods: {
-        submitPengaduan(){
-            this.axios
-            .post(this.$serverURL+'api/add-pengaduan-nasabah',this.fields)
-            .then(res => {
-                this.isSubmit = true
-                if(res.data.message=='berhasil'){
-                    this.messageSubmit = 'Pengaduan Berhasil';
-                    Object.keys(this.fields).forEach(key => {
-                        if(key!='jenis_kelamin' && key!='jenis_kelamin_perwakilan' && key!='jenis_rekening'){
-                            this.fields[key] = ''
-                        }
-                    })
-                    this.successSubmit = true
-                }
-                else{
-                    this.successSubmit = false
-                    this.messageSubmit = 'Pengaduan Gagal';
-                }
-                console.log(this.messageSubmit)
-            })
-            .catch(err => {
-                    this.successSubmit = false
-                    this.messageSubmit = 'Pengaduan Gagal';
-                console.log(this.messageSubmit)
-                console.log(err)
-            })
-        }
-    }
+        async submitPengaduan() {
+            if (this.isSubmitting) {
+                return;
+            }
 
+            this.isSubmitting = true;
+            this.isSubmit = true;
+
+            try {
+                await this.axios.post(this.$serverURL + "api/add-pengaduan-nasabah", this.fields);
+                this.successSubmit = true;
+                
+                Object.keys(this.fields).forEach((key) => {
+                    if (
+                        key != "jenis_kelamin" &&
+                        key != "jenis_kelamin_perwakilan" &&
+                        key != "jenis_rekening"
+                    ) {
+                        this.fields[key] = "";
+                    }
+                });
+
+                Swal.fire(
+                    "Pengaduan Berhasil Di Simpan",
+                    "Terima Kasih, pengaduan anda akan segera ditindak lanjuti.",
+                    "success"
+                );
+            } catch (error) {
+                this.successSubmit = false;
+                Swal.fire(
+                    "Pengaduan Gagal Di Simpan",
+                    "Mohon Hubungi Pihak Bank Terkait",
+                    "error"
+                );
+            } finally {
+                this.isSubmitting = false;
+            }
+        },
+    }
 }
 </script>
 <style scoped>
