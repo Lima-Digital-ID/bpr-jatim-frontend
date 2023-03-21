@@ -20,7 +20,7 @@
                         <div v-if="data.detail">
                             <div v-for="detail in data.detail" :key="detail.id">
                                 <h6 style="font-weight: 700;">{{ detail.pertanyaan}}</h6>
-                                <p>{{ detail.jawaban }}</p>
+                                <p v-html="detail.jawaban"></p>
                             </div>
                         </div>
                     </div>
