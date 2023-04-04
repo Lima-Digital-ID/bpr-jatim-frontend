@@ -29,7 +29,7 @@
                             <div class="box-white">
                                 <img :src="data.cover" class="img-cover" alt="">
                                 <h5 class="font-weight-bold color-red mt-3">{{data.judul}} ...</h5>
-                                <p class="mb-0 font-14 color-dark2 font-weight-light">{{data.konten}} ...</p>
+                                <p class="mb-0 font-14 color-dark2 font-weight-light" v-html="data.konten"></p>
                             </div>
                         </a>
                     </div>
