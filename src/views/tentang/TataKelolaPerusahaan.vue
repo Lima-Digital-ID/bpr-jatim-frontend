@@ -23,8 +23,8 @@
         </section>
         <section class="pb-5">
             <div class="container custom">
-                <div class="row" v-if="governance && governance.length">
-                    <div class="col-md-3" v-for="data in governance" :key="data.id">
+                <div class="row" v-if="tatakelola && tatakelola.length">
+                    <div class="col-md-3" v-for="data in tatakelola" :key="data.id">
                         <div class="box-white">
                             <img :src="data.cover" class="img-cover" alt="" srcset="">
                             <p class="mt-3 mb-1 font-14 color-red">Tahun {{data.tahun}}</p>
@@ -54,12 +54,7 @@ export default {
     components : {Header,Footer},
     data() {
         return {
-            // detail : [],
-            // sideMenu : [],
-            // data: null,
-            // loading: true,
-            // errored: false
-            governance: []
+            tatakelola: []
         }
     },
     watch: {
@@ -74,16 +69,16 @@ export default {
     },
     methods: {
         searchHandler() {
-            this.$router.push('/governance?key=' + this.$refs.key.value)
+            this.$router.push('/tatakelolaperusahaan?key=' + this.$refs.key.value)
         },
         getData() {
             const isKeyword = typeof this.$route.query.key !== 'undefined' ? "?keyword="+this.$route.query.key : ''
 
             this.axios
-            .get(this.$serverURL+'api/get-laporan-keuangan'+isKeyword)
+            .get(this.$serverURL+'api/get-tata-kelola'+isKeyword)
             .then(res => {
-                this.governance = res.data.data
-                console.log(this.governance);
+                this.tatakelola = res.data.data
+                console.log(this.tatakelola);
             })
             .catch(err => console.log(err));
         }
