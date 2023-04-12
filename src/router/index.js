@@ -13,6 +13,7 @@ import Profile from '@/views/tentang/Profile'
 import Transparansi from '@/views/tentang/Transparansi'
 import Governance from '@/views/tentang/Governance'
 import SocialResponsibility from '@/views/tentang/SocialResponsibility'
+import TataKelolaPerusahaan from '@/views/tentang/TataKelolaPerusahaan'
 import PetaCabang from '@/views/berita/PetaCabang'
 import Karier from '@/views/berita/Karier'
 import Tips from '@/views/berita/Tips'
@@ -150,6 +151,11 @@ const routes = [
     path: '/pengajuan',
     name: 'PengajuanKredit',
     component: PengajuanKredit
+  },
+  {
+    path: '/tatakelolaperusahaan',
+    name: 'TataKelolaPerusahaan',
+    component: TataKelolaPerusahaan
   },
   {
     path: '/about',

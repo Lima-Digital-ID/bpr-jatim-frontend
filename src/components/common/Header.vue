@@ -41,6 +41,10 @@
                                                     <h6>{{$t('nav.socialresponsibility')}} <span class="fa fa-chevron-right fa-sm ml-1"></span></h6>
                                                     <p class="color-softGrey2 font-weight-light">{{$t('nav.textSocialResponsibility')}}</p>
                                                 </router-link>
+                                                <router-link to="/tatakelolaperusahaan" class="megamenu-link">
+                                                    <h6>{{$t('nav.tataKelolaPerusahaan')}} <span class="fa fa-chevron-right fa-sm ml-1"></span></h6>
+                                                    <p class="color-softGrey2 font-weight-light">{{$t('nav.textTataKelolaPerusahaan')}}</p>
+                                                </router-link>
                                             </div>
                                         </div>
                                     </div>
