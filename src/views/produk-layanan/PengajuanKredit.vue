@@ -25,7 +25,7 @@
                                     <div class="col">
                                         <div class="form-group">
                                             <label for="">Estimasi Angsuran /bulan (bunga {{bunga}}%)</label>
-                                            <input type="text" class="form-control" id="estimasi" placeholder="Rp 0">
+                                            <input type="text" class="form-control" id="estimasi" placeholder="Rp 0" disabled>
                                         </div>
                                     </div>
                                 </div>
@@ -137,27 +137,39 @@ export default {
             this.isSubmit = true
             
             try {
-                await this.axios.post(this.$serverURL+'api/post-pengajuan-kredit',this.fields);
-                this.successSubmit = true
+                const response = await this.axios
+                .post(this.$serverURL+'api/post-pengajuan-kredit',this.fields);
+                if (response.data.status == 200) {
+                    this.successSubmit = true
 
-                document.getElementById('nominalPinjaman').value = "";
-                document.getElementById("estimasi").value = "";
-                Object.keys(this.fields).forEach(key => {
-                    this.fields[key] = '';
-                });
-                
-                Swal.fire(
-                    'Pengajuan Anda Telah Terdata Di Sistem Kami',
-                    'Terima Kasih, pengajuan anda akan segera ditindak lanjuti dalam waktu 1 x 24 jam. Silahkan Menunggu Telfon dari petugas yang berwenang.',
-                    'success'
-                );
+                    document.getElementById('nominalPinjaman').value = "";
+                    document.getElementById("estimasi").value = "";
+                    Object.keys(this.fields).forEach(key => {
+                        this.fields[key] = '';
+                    });
+                    
+                    Swal.fire(
+                        'Pengajuan Anda Telah Terdata Di Sistem Kami',
+                        'Terima Kasih, pengajuan anda akan segera ditindak lanjuti dalam waktu 1 x 24 jam. Silahkan Menunggu Telfon dari petugas yang berwenang.',
+                        'success'
+                    );
+                }
             } catch (error) {
-                this.successSubmit = false;
-                Swal.fire(
-                    'Pengajuan Anda Gagal',
-                    'Mohon Hubungi Pihak Bank Terkait',
-                    'error'
-                );
+                if (error.response.data.status == 422) {
+                    this.successSubmit = false;
+                    Swal.fire(
+                        'Pengajuan Anda Gagal',
+                        'Mohon Pastikan Semua Data Terisi',
+                        'error'
+                    );
+                } else {
+                    this.successSubmit = false;
+                    Swal.fire(
+                        'Pengajuan Anda Gagal',
+                        'Mohon Hubungi Pihak Bank Terkait',
+                        'error'
+                    );
+                }
             } finally {
                 this.isSubmitting = false;
             }

@@ -199,31 +199,38 @@ export default {
             this.isSubmit = true;
 
             try {
-                await this.axios.post(this.$serverURL + "api/add-pengaduan-nasabah", this.fields);
-                this.successSubmit = true;
-                
-                Object.keys(this.fields).forEach((key) => {
-                    if (
-                        key != "jenis_kelamin" &&
-                        key != "jenis_kelamin_perwakilan" &&
-                        key != "jenis_rekening"
-                    ) {
-                        this.fields[key] = "";
-                    }
-                });
+                const response = await this.axios
+                .post(this.$serverURL+'api/add-pengaduan-nasabah',this.fields)
+                    if(response.data.status == 201){
+                        this.successSubmit = true
+                        Object.keys(this.fields).forEach(key => {
+                            if(key!='jenis_kelamin' && key!='jenis_kelamin_perwakilan' && key!='jenis_rekening'){
+                                this.fields[key] = ''
+                            }
+                        })
 
-                Swal.fire(
-                    "Pengaduan Berhasil Di Simpan",
-                    "Terima Kasih, pengaduan anda akan segera ditindak lanjuti.",
-                    "success"
-                );
+                        Swal.fire(
+                            "Pengaduan Berhasil Di Simpan",
+                            "Terima Kasih, pengaduan anda akan segera ditindak lanjuti.",
+                            "success"
+                        );
+                    }
             } catch (error) {
-                this.successSubmit = false;
-                Swal.fire(
-                    "Pengaduan Gagal Di Simpan",
-                    "Mohon Hubungi Pihak Bank Terkait",
-                    "error"
-                );
+                if (error.response.data.status == 422) {
+                    this.successSubmit = false;
+                    Swal.fire(
+                        "Pengaduan Gagal Di Simpan",
+                        "Mohon Pastikan Semua Data Terisi",
+                        "error"
+                    );
+                } else {
+                    this.successSubmit = false;
+                    Swal.fire(
+                        "Terjadi Kegagalan Sistem",
+                        "Mohon Hubungi Pihak Bank Terkait",
+                        "error"
+                    );
+                }
             } finally {
                 this.isSubmitting = false;
             }
