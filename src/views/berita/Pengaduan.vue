@@ -5,7 +5,44 @@
             <div class="container custom">
                 <div class="row justify-content-center">
                     <div class="col-md-12">
-                        <h1 class="font-weight-bold text-center">Pengaduan <span class="color-blue">Nasabah</span></h1>
+                        <h1 class="font-weight-bold text-center">Tata Cara Pengaduan <span class="color-blue">Konsumen</span></h1>
+                        <div class="box-white mt-4 mb-4">
+                            <label for="">Cara Pengisian Form Pengaduan Konsumen:</label>
+                            <ol>
+                                <li>Setiap nasabah dapat melakukan pengaduan kepada Bank disebabkan oleh adanya kerugian dan/ atau potensi kerugian material pada nasabah yang diduga karena kesalahan atau kelalaian pihak Bank</li>
+                                <li>Pengaduan dapat disampaikan secara lisan atau tertulis ke Kantor Bank terkait atau melalui <b>Hotline (031) 5677844</b> atau website di <a href="https://bankumkm.id">bankumkm.id</a></li>
+                                <ol type="a">
+                                    <li><b>Pengaduan Lisan</b></li>
+                                        <ol type="i">
+                                            <li>Pengaduan disampaikan melalui telepon atau datang ke Cabang tatap muka dengan pejabat/ pegawai penyelenggara.</li>
+                                            <li>Pengaduan harus dilengkapi dengan informasi identitas Konsumen antara lain: nama; alamat; telepon yang dapat dihubungi; serta deskripsi singkat pengaduan.</li>
+                                        </ol>
+                                    <li><b>Pengaduan secara tertulis</b></li>
+                                        <ol type="i">
+                                            <li>Pengaduan disampaikan melalui sarana/ media seperti surat ke Cabang atau kantor pusat, email ke <a href="mailto:info@bprjatim.co.id">info@bprjatim.co.id</a> atau  di <a href="">bankumkm.id/pengaduan</a></li>
+                                            <li>Pengaduan transaksi keuangan harus dilengkapi dengan fotocopy identitas Konsumen dan dokumen pendukung lainnya seperti:</li>
+                                            <ul>
+                                                <li>Jenis jasa sistem pembayaran yang digunakan.</li>
+                                                <li>No Kartu/ rekening, transaksi/ setoran dan/ atau bukti transaksi lainnya/ sales draft, dsb.</li>
+                                                <li>Menulis Kronologi kejadiaan:</li>
+                                                <ul>
+                                                    <li>tanggal dilakukan transaksi/ terjadinya peristiwa</li>
+                                                    <li>permasalahan yang diadukan</li>
+                                                </ul>
+                                            </ul>
+                                        </ol>
+                                </ol>
+                                <li>Cara Pengisian Form Pengaduan Nasabah melalui Website:</li>
+                                <ol type="a">
+                                    <li>Pilih salah satu cabang tempat pengaduan</li>
+                                    <li>Bila nasabah mengisi sendiri, silahkan isi seluruh kolom pada bagian nasabah. Bila nasabah meminta bantuan pihak lain untuk mengisi formulir pengaduan, maka pihak lain tersebut dapat mengisi pada bagian perwakilan nasabah.</li>
+                                    <li>Isi seluruh kolom isian yang tertera pada bagian (baik nasabah maupun perwakilan nasabah sesuai poin 2) dengan benar dan lengkap</li>
+                                    <li>Ketik uraian pengaduan yang ingin disampaikan</li>
+                                    <li>Klik submit</li>
+                                </ol>
+                            </ol>
+                        </div>
+                        <h1 class="font-weight-bold text-center">Pengaduan <span class="color-blue">Konsumen</span></h1>
                         <div class="box-white p-4 mt-4">
                             <form id="formPengaduan"  v-on:submit.prevent="submitPengaduan()">
                                 <label for="">Cabang</label>
