@@ -232,7 +232,7 @@
                 target="modalKomisaris1"
                 alt="Komisaris Utama Bank Umkm"
                 :img="$imgProfile('Ibu-Ina.jpg')"
-                bio="Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore suscipit ducimus vitae soluta"
+                bio="Lahir pada tanggal 18 Juni 1966 di Situbondo Jawa Timur. Menjabat sebagai Komisaris Utama Bank BPR Jatim sejak 2023. Sebelumnya berkaris di Manulife Indonesia ssbagai Business Director 2020-2022, OCBC NISP 2010-2019 dengan jabatan terakhir sebagai Corporate Funding Business Head."
               />
             </div>
           </div>
@@ -266,7 +266,7 @@
                 target="modalKomisaris2"
                 alt="Komisaris Bank Umkm"
                 :img="$imgProfile('Ibu-Kartika.jpg')"
-                bio="Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore suscipit ducimus vitae soluta"
+                bio="Lahir pada tanggal 16 Mei 1967 di Lamongan Jawa Timur. Menjabat sebagai Komisaris Bank BPR Jatim sejak 2023. Sebelumnya sebgai Wakil Bupati Kabupaten Lamongan 2016-2021"
               />
             </div>
             <div
@@ -293,7 +293,7 @@
                 target="modalKomisaris3"
                 alt="Komisaris Bank Umkm"
                 :img="$imgProfile('Bpk-Purbo.jpg')"
-                bio="Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore suscipit ducimus vitae soluta"
+                bio="Lahir pada tanggal 5 februari 1964 di Mataram Nusa Tenggara Barat. Menjabat sebagai Komisaris Bank BPR Jatim sejak 2023. Sebelumnya berkarir di Dana Pensiun Bank Jatim sebgai Direktur Keuangan 2022, Bank Jatim 1993-2021 dengan jabatan terakhir sebagai Pemimpni Divisi Penyelamatan Penyelesaian Kredit."
               />
             </div>
             <div
@@ -320,7 +320,7 @@
                 target="modalKomisaris4"
                 alt="Direktur Bank Umkm"
                 :img="$imgProfile('Bpk-Dwi-Ariadi.jpg')"
-                bio="Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore suscipit ducimus vitae soluta"
+                bio="Lahir pada tanggal 18 Juni 1985 di Bangkalan Jawa Timur. Menjabat sebagai Komisaris Bank BPR Jatim sejak 2023. Sebelumnya sebagai Koodinator bidang media dan kemitraan strategis Pemerintah Provinsi Jawa Timur 2019-2022."
               />
             </div>
           </div>
