@@ -196,249 +196,252 @@
             </div> -->
           </div>
         </div>
-        <div class="row justify-content-center mx-auto mt-5">
-          <!-- Komisaris -->
-          <div class="col-md-7 col-lg-6">
-            <div class="text-center">
-              <h2 style="font-weight: bold;" class="fw-bold text-primary">
-                {{ $t("jajaranKomisaris") }}
-              </h2>
-            </div>
-            <br /><br />
-            <!-- parents direktur -->
-            <div class="d-flex justify-content-center mb-5">
-              <div
-                class="col-lg-3 col-md-7 col-7 text-center"
-                data-toggle="modal"
-                data-target="#modalKomisaris1"
-              >
-                <div class="img-manajemen mb-2">
-                  <img
-                    src="../../assets/Ibu-Ina.jpg"
-                    class="img-fluid border p-1"
-                    alt=""
-                  />
-                  <div class="title">Komisaris Utama</div>
-                </div>
-                <p class="font-14 color-grey mb-1">
-                  <i>President Commisioner</i>
-                </p>
-                <h6 class="font-weight-bold">
-                  Ina Dewayanti SE.Ak
-                </h6>
-                <!-- modal 1 -->
-                <modal-profile
-                  target="modalKomisaris1"
-                  alt="Komisaris Utama Bank Umkm"
-                  :img="$imgProfile('Ibu-Ina.jpg')"
-                  bio="Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore suscipit ducimus vitae soluta"
+      </div>
+      <div class="row justify-content-center mx-auto mt-5">
+        <!-- Komisaris -->
+        <div class="col-md-7 col-lg-6">
+          <div class="text-center">
+            <h2 style="font-weight: bold;" class="fw-bold text-primary">
+              {{ $t("jajaranKomisaris") }}
+            </h2>
+          </div>
+          <br /><br />
+          <!-- parents direktur -->
+          <div class="d-flex justify-content-center mb-5">
+            <div
+              class="col-lg-3 col-md-7 col-7 text-center"
+              data-toggle="modal"
+              data-target="#modalKomisaris1"
+            >
+              <div class="img-manajemen mb-2">
+                <img
+                  src="../../assets/Ibu-Ina.jpg"
+                  class="img-fluid border p-1"
+                  alt=""
                 />
+                <div class="title">Komisaris Utama</div>
               </div>
-            </div>
-
-            <!-- child komisaris -->
-            <div class="d-lg-flex row justify-content-center">
-              <div
-                class="col-lg-3 col-md-6 col-7 text-center"
-                data-toggle="modal"
-                data-target="#modalKomisaris2"
-              >
-                <div class="img-manajemen mb-2">
-                  <img
-                    src="../../assets/Ibu-Kartika.jpg"
-                    class="img-fluid border p-1"
-                    alt=""
-                  />
-                  <div class="title">Komisaris</div>
-                </div>
-                <p class="font-14 color-grey mb-1">
-                  <i>President Commisioner</i>
-                </p>
-                <h6 class="font-weight-bold">
-                  Dr.Hj.Kartika Hidayanti M.M. M.HP
-                </h6>
-                <!-- modal 2 -->
-                <modal-profile
-                  target="modalKomisaris2"
-                  alt="Komisaris Bank Umkm"
-                  :img="$imgProfile('Ibu-Kartika.jpg')"
-                  bio="Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore suscipit ducimus vitae soluta"
-                />
-              </div>
-              <div
-                class="col-lg-3 col-md-6  col-7 text-center"
-                data-toggle="modal"
-                data-target="#modalKomisaris3"
-              >
-                <div class="img-manajemen mb-2">
-                  <img
-                    src="../../assets/Bpk-Purbo.jpg"
-                    class="img-fluid border p-1"
-                    alt=""
-                  />
-                  <div class="title">Komisaris</div>
-                </div>
-                <p class="font-14 color-grey mb-1">
-                  <i>President Director</i>
-                </p>
-                <h6 class="font-weight-bold">
-                  Ir.Purboyo Sinugroho M.M
-                </h6>
-                <!-- modal 3 -->
-                <modal-profile
-                  target="modalKomisaris3"
-                  alt="Komisaris Bank Umkm"
-                  :img="$imgProfile('Bpk-Purbo.jpg')"
-                  bio="Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore suscipit ducimus vitae soluta"
-                />
-              </div>
-              <div
-                class="col-lg-3 col-md-6  col-7 text-center"
-                data-toggle="modal"
-                data-target="#modalKomisaris4"
-              >
-                <div class="img-manajemen mb-2">
-                  <img
-                    src="../../assets/Bpk-Dwi-Ariadi.jpg"
-                    class="img-fluid border p-1"
-                    alt=""
-                  />
-                  <div class="title">Komisaris</div>
-                </div>
-                <p class="font-14 color-grey mb-1">
-                  <i>President Director</i>
-                </p>
-                <h6 class="font-weight-bold">
-                  Dwi Ariady Kusuma M.PSDM
-                </h6>
-                <!-- modal 4 -->
-                <modal-profile
-                  target="modalKomisaris4"
-                  alt="Direktur Bank Umkm"
-                  :img="$imgProfile('Bpk-Dwi-Ariadi.jpg')"
-                  bio="Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore suscipit ducimus vitae soluta"
-                />
-              </div>
+              <p class="font-14 color-grey mb-1">
+                <i>President Commisioner</i>
+              </p>
+              <h6 class="font-weight-bold">
+                Ina Dewayanti SE.Ak
+              </h6>
+              <!-- modal 1 -->
+              <modal-profile
+                target="modalKomisaris1"
+                alt="Komisaris Utama Bank Umkm"
+                :img="$imgProfile('Ibu-Ina.jpg')"
+                bio="Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore suscipit ducimus vitae soluta"
+              />
             </div>
           </div>
-          <!-- Direktur -->
-          <div class="col-md-7 mt-8 col-lg-6">
-            <div class="text-center">
-              <h2 style="font-weight: bold;" class="fw-bold text-primary">
-                {{ $t("jajaranDireksi") }}
-              </h2>
+
+          <!-- child komisaris -->
+          <div
+            class="d-lg-flex row justify-content-center"
+            style="margin-top: 5.2rem;"
+          >
+            <div
+              class="col-lg-3 col-md-6 col-7 text-center"
+              data-toggle="modal"
+              data-target="#modalKomisaris2"
+            >
+              <div class="img-manajemen mb-2">
+                <img
+                  src="../../assets/Ibu-Kartika.jpg"
+                  class="img-fluid border p-1"
+                  alt=""
+                />
+                <div class="title">Komisaris</div>
+              </div>
+              <p class="font-14 color-grey mb-1">
+                <i>President Commisioner</i>
+              </p>
+              <h6 class="font-weight-bold">
+                Dr.Hj.Kartika Hidayanti M.M. M.HP
+              </h6>
+              <!-- modal 2 -->
+              <modal-profile
+                target="modalKomisaris2"
+                alt="Komisaris Bank Umkm"
+                :img="$imgProfile('Ibu-Kartika.jpg')"
+                bio="Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore suscipit ducimus vitae soluta"
+              />
             </div>
-            <br />
-            <!-- parents direktur -->
-            <div class="d-lg-flex row justify-content-center mb-5">
-              <div
-                class="col-lg-3 col-md-6 col-7 text-center"
-                data-toggle="modal"
-                data-target="#modalDirektur1"
-              >
-                <div class="img-manajemen mb-2">
-                  <img
-                    src="../../assets/Direktur-Utama.png"
-                    class="img-fluid border p-1"
-                    alt=""
-                  />
-                  <div class="title">Direktur Utama</div>
-                </div>
-                <p class="font-14 color-grey mb-1"><i>President Director</i></p>
-                <h6 class="font-weight-bold">
-                  Drs. Yudhi Wahyu Maharani, Ak., MM.
-                </h6>
-                <!-- modal 5 -->
-                <modal-profile
-                  target="modalDirektur1"
-                  alt="Direktur Utama Bank Umkm"
-                  :img="$imgProfile('Direktur-Utama.png')"
-                  bio="Lahir pada tanggal 31 Maret 1967 di Magetan. Menjabat Direktur Utama Bank BPR Jatim sejak September 2018. Sebelumnya, berkarir di PT. Bank Jatim Tbk, sejak 1998 sampai dengan 2018 dan jabatan terakhir sebagai Pemimpin Divisi Perencanaan Strategis dan Manajemen Kinerja"
+            <div
+              class="col-lg-3 col-md-6  col-7 text-center"
+              data-toggle="modal"
+              data-target="#modalKomisaris3"
+            >
+              <div class="img-manajemen mb-2">
+                <img
+                  src="../../assets/Bpk-Purbo.jpg"
+                  class="img-fluid border p-1"
+                  alt=""
                 />
+                <div class="title">Komisaris</div>
               </div>
+              <p class="font-14 color-grey mb-1">
+                <i>President Director</i>
+              </p>
+              <h6 class="font-weight-bold">
+                Ir.Purboyo Sinugroho M.M
+              </h6>
+              <!-- modal 3 -->
+              <modal-profile
+                target="modalKomisaris3"
+                alt="Komisaris Bank Umkm"
+                :img="$imgProfile('Bpk-Purbo.jpg')"
+                bio="Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore suscipit ducimus vitae soluta"
+              />
             </div>
-            <!-- child direktur -->
-            <div class="d-lg-flex row justify-content-center">
-              <div
-                class="col-lg-3 col-md-6  col-7 text-center"
-                data-toggle="modal"
-                data-target="#modalDirektur2"
-              >
-                <div class="img-manajemen mb-2">
-                  <img
-                    src="../../assets/Direktur-Pemasaran.png"
-                    class="img-fluid border p-1"
-                    alt=""
-                  />
-                  <div class="title">Direktur Pemasaran</div>
-                </div>
-                <p class="font-14 color-grey mb-1">
-                  <i>Marketing Director</i>
-                </p>
-                <h6 class="font-weight-bold">
-                  Irwan Eka Wijaya Arsyad, ST.,MM.
-                </h6>
-                <!-- modal 6 -->
-                <modal-profile
-                  target="modalDirektur2"
-                  alt="Direktur Bank Umkm"
-                  :img="$imgProfile('Direktur-Pemasaran.png')"
-                  bio="Lahir pada tanggal 24 Agustus 1975 di Ambon. Menjabat Direktur Pemasaran Bank BPR Jatim sejak Juni 2022. Sebelumnya, berkarir di BRI Syariah, PT Bank DKI Jakarta dan PT. Bank Jatim Tbk. Sejak 2013 sampai dengan 2022 dan jabatan terakhir sebagai Kepala Cabang di PT. Bank Jatim Tbk."
+            <div
+              class="col-lg-3 col-md-6  col-7 text-center"
+              data-toggle="modal"
+              data-target="#modalKomisaris4"
+            >
+              <div class="img-manajemen mb-2">
+                <img
+                  src="../../assets/Bpk-Dwi-Ariadi.jpg"
+                  class="img-fluid border p-1"
+                  alt=""
                 />
+                <div class="title">Komisaris</div>
               </div>
-              <div
-                class="col-lg-3 col-md-6  col-7 text-center"
-                data-toggle="modal"
-                data-target="#modalDirektur3"
-              >
-                <div class="img-manajemen mb-2">
-                  <img
-                    src="../../assets/Direktur-Kepatuhan.png"
-                    class="img-fluid border p-1"
-                    alt=""
-                  />
-                  <div class="title">Direktur Kepatuhan</div>
-                </div>
-                <p class="font-14 color-grey mb-1">
-                  <i>Compliance Director</i>
-                </p>
-                <h6 class="font-weight-bold">
-                  Ir. Mohamad Amin
-                </h6>
-                <!-- modal 7 -->
-                <modal-profile
-                  target="modalDirektur3"
-                  alt="Direktu Bank Umkm"
-                  :img="$imgProfile('Direktur-Kepatuhan.png')"
-                  bio="Lahir pada tanggal 04 Agustus 1968 di Kediri. Menjabat Direktur Kepatuhan Bank BPR Jatim sejak Juni 2022. Sebelumnya, berkarir di Ditjen Migas, Nusa Bank management BUMN PT. Surveyor Indonesia, Direktur di Oil & Gas Service Company, Pengurus PWNU Jatim Bidang Pengembangan Ekonomi Umat"
+              <p class="font-14 color-grey mb-1">
+                <i>President Director</i>
+              </p>
+              <h6 class="font-weight-bold">
+                Dwi Ariady Kusuma M.PSDM
+              </h6>
+              <!-- modal 4 -->
+              <modal-profile
+                target="modalKomisaris4"
+                alt="Direktur Bank Umkm"
+                :img="$imgProfile('Bpk-Dwi-Ariadi.jpg')"
+                bio="Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore suscipit ducimus vitae soluta"
+              />
+            </div>
+          </div>
+        </div>
+        <!-- Direktur -->
+        <div class="col-md-7 mt-8 col-lg-6">
+          <div class="text-center">
+            <h2 style="font-weight: bold;" class="fw-bold text-primary">
+              {{ $t("jajaranDireksi") }}
+            </h2>
+          </div>
+          <br />
+          <!-- parents direktur -->
+          <div class="d-lg-flex row justify-content-center mb-5">
+            <div
+              class="col-lg-3 col-md-6 col-7 text-center"
+              data-toggle="modal"
+              data-target="#modalDirektur1"
+            >
+              <div class="img-manajemen mb-2">
+                <img
+                  src="../../assets/Direktur-Utama.png"
+                  class="img-fluid border p-1"
+                  alt=""
                 />
+                <div class="title">Direktur Utama</div>
               </div>
-              <div
-                class="col-lg-3 col-md-6 col-7 text-center"
-                data-toggle="modal"
-                data-target="#modalDirektur4"
-              >
-                <div class="img-manajemen mb-2">
-                  <img
-                    src="../../assets/Direktur-Umum-Keuangan.png"
-                    class="img-fluid border p-1"
-                    alt=""
-                  />
-                  <div class="title">Direktur Umum & Keuangan</div>
-                </div>
-                <p class="font-14 color-grey mb-1">
-                  <i>General & Finance Director</i>
-                </p>
-                <h6 class="font-weight-bold">
-                  Agung Soeprihatmanto, SE.
-                </h6>
-                <modal-profile
-                  target="modalDirektur4"
-                  alt="Direktur Bank Umkm"
-                  :img="$imgProfile('Direktur-Umum-Keuangan.png')"
-                  bio="Lahir pada tanggal 30 Agustus 1977 di Surabaya. Menjabat Direktur Umum & Keuangan Bank BPR Jatim sejak Agustus 2022. Sebelumnya, berkarir di PT. Bank DKI Jakarta sejak 2018 - 2022 menjabat sebagai Micro Area Head & Retail Manager, Bank BPD Banten sejak 2012 - 2018 menjabat sebagai Pemimpin Cabang dan Manager Penyelamatan & Penyelesaian Kredit Bermasalah."
+              <p class="font-14 color-grey mb-1"><i>President Director</i></p>
+              <p class="font-weight-bold " style="font-size: 15px;">
+                Drs. Yudhi Wahyu Maharani, Ak., MM.
+              </p>
+              <!-- modal 5 -->
+              <modal-profile
+                target="modalDirektur1"
+                alt="Direktur Utama Bank Umkm"
+                :img="$imgProfile('Direktur-Utama.png')"
+                bio="Lahir pada tanggal 31 Maret 1967 di Magetan. Menjabat Direktur Utama Bank BPR Jatim sejak September 2018. Sebelumnya, berkarir di PT. Bank Jatim Tbk, sejak 1998 sampai dengan 2018 dan jabatan terakhir sebagai Pemimpin Divisi Perencanaan Strategis dan Manajemen Kinerja"
+              />
+            </div>
+          </div>
+          <!-- child direktur -->
+          <div class="d-lg-flex row justify-content-center">
+            <div
+              class="col-lg-3 col-md-6  col-7 text-center"
+              data-toggle="modal"
+              data-target="#modalDirektur2"
+            >
+              <div class="img-manajemen mb-2">
+                <img
+                  src="../../assets/Direktur-Pemasaran.png"
+                  class="img-fluid border p-1"
+                  alt=""
                 />
+                <div class="title">Direktur Pemasaran</div>
               </div>
+              <p class="font-14 color-grey mb-1">
+                <i>Marketing Director</i>
+              </p>
+              <h6 class="font-weight-bold">
+                Irwan Eka Wijaya Arsyad, ST.,MM.
+              </h6>
+              <!-- modal 6 -->
+              <modal-profile
+                target="modalDirektur2"
+                alt="Direktur Bank Umkm"
+                :img="$imgProfile('Direktur-Pemasaran.png')"
+                bio="Lahir pada tanggal 24 Agustus 1975 di Ambon. Menjabat Direktur Pemasaran Bank BPR Jatim sejak Juni 2022. Sebelumnya, berkarir di BRI Syariah, PT Bank DKI Jakarta dan PT. Bank Jatim Tbk. Sejak 2013 sampai dengan 2022 dan jabatan terakhir sebagai Kepala Cabang di PT. Bank Jatim Tbk."
+              />
+            </div>
+            <div
+              class="col-lg-3 col-md-6  col-7 text-center"
+              data-toggle="modal"
+              data-target="#modalDirektur3"
+            >
+              <div class="img-manajemen mb-2">
+                <img
+                  src="../../assets/Direktur-Kepatuhan.png"
+                  class="img-fluid border p-1"
+                  alt=""
+                />
+                <div class="title">Direktur Kepatuhan</div>
+              </div>
+              <p class="font-14 color-grey mb-1">
+                <i>Compliance Director</i>
+              </p>
+              <h6 class="font-weight-bold">
+                Ir. Mohamad Amin
+              </h6>
+              <!-- modal 7 -->
+              <modal-profile
+                target="modalDirektur3"
+                alt="Direktu Bank Umkm"
+                :img="$imgProfile('Direktur-Kepatuhan.png')"
+                bio="Lahir pada tanggal 04 Agustus 1968 di Kediri. Menjabat Direktur Kepatuhan Bank BPR Jatim sejak Juni 2022. Sebelumnya, berkarir di Ditjen Migas, Nusa Bank management BUMN PT. Surveyor Indonesia, Direktur di Oil & Gas Service Company, Pengurus PWNU Jatim Bidang Pengembangan Ekonomi Umat"
+              />
+            </div>
+            <div
+              class="col-lg-3 col-md-6 col-7 text-center"
+              data-toggle="modal"
+              data-target="#modalDirektur4"
+            >
+              <div class="img-manajemen mb-2">
+                <img
+                  src="../../assets/Direktur-Umum-Keuangan.png"
+                  class="img-fluid border p-1"
+                  alt=""
+                />
+                <div class="title">Direktur Umum & Keuangan</div>
+              </div>
+              <p class="font-14 color-grey mb-1">
+                <i>General & Finance Director</i>
+              </p>
+              <h6 class="font-weight-bold">
+                Agung Soeprihatmanto, SE.
+              </h6>
+              <modal-profile
+                target="modalDirektur4"
+                alt="Direktur Bank Umkm"
+                :img="$imgProfile('Direktur-Umum-Keuangan.png')"
+                bio="Lahir pada tanggal 30 Agustus 1977 di Surabaya. Menjabat Direktur Umum & Keuangan Bank BPR Jatim sejak Agustus 2022. Sebelumnya, berkarir di PT. Bank DKI Jakarta sejak 2018 - 2022 menjabat sebagai Micro Area Head & Retail Manager, Bank BPD Banten sejak 2012 - 2018 menjabat sebagai Pemimpin Cabang dan Manager Penyelamatan & Penyelesaian Kredit Bermasalah."
+              />
             </div>
           </div>
         </div>
