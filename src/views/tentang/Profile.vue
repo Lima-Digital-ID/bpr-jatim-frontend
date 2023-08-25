@@ -256,7 +256,7 @@
                 <div class="title">Komisaris</div>
               </div>
               <p class="font-14 color-grey mb-1">
-                <i>President Commisioner</i>
+                <i>Commisioner</i>
               </p>
               <h6 class="font-weight-bold">
                 Dr.Hj.Kartika Hidayanti M.M. M.HP
@@ -283,7 +283,7 @@
                 <div class="title">Komisaris</div>
               </div>
               <p class="font-14 color-grey mb-1">
-                <i>President Director</i>
+                <i>Commisioner</i>
               </p>
               <h6 class="font-weight-bold">
                 Ir.Purboyo Sinugroho M.M
@@ -310,7 +310,7 @@
                 <div class="title">Komisaris</div>
               </div>
               <p class="font-14 color-grey mb-1">
-                <i>President Director</i>
+                <i>Commisioner</i>
               </p>
               <h6 class="font-weight-bold">
                 Dwi Ariady Kusuma M.PSDM
