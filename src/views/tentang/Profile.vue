@@ -232,7 +232,7 @@
                 target="modalKomisaris1"
                 alt="Komisaris Utama Bank Umkm"
                 :img="$imgProfile('Ibu-Ina.jpg')"
-                bio="Lahir pada tanggal 18 Juni 1966 di Situbondo Jawa Timur. Menjabat sebagai Komisaris Utama Bank BPR Jatim sejak 2023. Sebelumnya berkaris di Manulife Indonesia ssbagai Business Director 2020-2022, OCBC NISP 2010-2019 dengan jabatan terakhir sebagai Corporate Funding Business Head."
+                bio="Lahir pada tanggal 18 Juni 1966 di Situbondo Jawa Timur. Menjabat sebagai Komisaris Utama Bank BPR Jatim sejak 2023. Sebelumnya berkarir di Manulife Indonesia sebagai Business Director 2020-2022, OCBC NISP 2010-2019 dengan jabatan terakhir sebagai Corporate Funding Business Head."
               />
             </div>
           </div>
@@ -293,7 +293,7 @@
                 target="modalKomisaris3"
                 alt="Komisaris Bank Umkm"
                 :img="$imgProfile('Bpk-Purbo.jpg')"
-                bio="Lahir pada tanggal 5 februari 1964 di Mataram Nusa Tenggara Barat. Menjabat sebagai Komisaris Bank BPR Jatim sejak 2023. Sebelumnya berkarir di Dana Pensiun Bank Jatim sebgai Direktur Keuangan 2022, Bank Jatim 1993-2021 dengan jabatan terakhir sebagai Pemimpni Divisi Penyelamatan Penyelesaian Kredit."
+                bio="Lahir pada tanggal 5 februari 1964 di Mataram Nusa Tenggara Barat. Menjabat sebagai Komisaris Bank BPR Jatim sejak 2023. Sebelumnya berkarir di Dana Pensiun Bank Jatim sebagai Direktur Keuangan 2022, Bank Jatim 1993-2021 dengan jabatan terakhir sebagai Pemimpin Divisi Penyelamatan Penyelesaian Kredit."
               />
             </div>
             <div
