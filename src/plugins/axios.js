@@ -1,11 +1,11 @@
 import axios from "axios";
 
 const $axios = axios.create({
-  baseURL: "http://localhost:8000/api/",
-  // base_url_prod: "",
+  // baseURL: "http://localhost:8000/api/",
+  baseURL: "https://backoffice.bankumkm.id/api/",
   headers: {
     // "Content-Type": "application/x-www-form-urlencoded",
-    withCredentials: true,
+    // withCredentials: true,
     "Content-Type": "application/json",
   },
 });

@@ -1,10 +1,10 @@
 <template>
     <section id="kurs-section" class="py-3">
         <div class="container custom" style="padding-bottom: 5%;">
-            <div class="row">
+            <div class="row mb-4">
                 <div class="col-md-6">
                     <h3 class="font-weight-bold">Kurs Bank UMKM</h3>
-                    <p>{{$t('textBeritaTerbaru')}}</p>
+                    <!-- <p>{{$t('textBeritaTerbaru')}}</p> -->
                 </div>
             </div>
             <div class="row">
