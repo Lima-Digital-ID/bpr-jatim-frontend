@@ -4,7 +4,7 @@ import Popup from './components/popup/Popup.vue';
 <template>
   <div id="app">
     <router-view/>
-    <FloatingWaButton nomor="+6282247623501" message="" type="redirect" />
+    <FloatingWaButton nomor="+6285335844624" message="" type="redirect" />
   </div>
 </template>
 
