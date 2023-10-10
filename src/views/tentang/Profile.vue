@@ -188,7 +188,7 @@
           <div class="col-md-7">
             <!-- <div class="img-struktur">
               <img
-                src="http://www.bprjatim.co.id/img/struktur/Struktur%20BPR_2018-11-01%2008_19_47.png"
+                src="http://www.bprjatim.co.id/img/struktur/Struktur%20BPR_2018-11-01%2008_19_47.webp"
                 class="img-fluid"
                 alt=""
                 srcset=""
@@ -342,7 +342,7 @@
             >
               <div class="img-manajemen mb-2">
                 <img
-                  src="../../assets/Direktur-Utama.png"
+                  src="../../assets/Direktur-Utama.webp"
                   class="img-fluid border p-1"
                   alt=""
                 />
@@ -356,7 +356,7 @@
               <modal-profile
                 target="modalDirektur1"
                 alt="Direktur Utama Bank Umkm"
-                :img="$imgProfile('Direktur-Utama.png')"
+                :img="$imgProfile('Direktur-Utama.webp')"
                 bio="Lahir pada tanggal 31 Maret 1967 di Magetan. Menjabat Direktur Utama Bank BPR Jatim sejak September 2018. Sebelumnya, berkarir di PT. Bank Jatim Tbk, sejak 1998 sampai dengan 2018 dan jabatan terakhir sebagai Pemimpin Divisi Perencanaan Strategis dan Manajemen Kinerja"
               />
             </div>
@@ -370,7 +370,7 @@
             >
               <div class="img-manajemen mb-2">
                 <img
-                  src="../../assets/Direktur-Pemasaran.png"
+                  src="../../assets/Direktur-Pemasaran.webp"
                   class="img-fluid border p-1"
                   alt=""
                 />
@@ -386,7 +386,7 @@
               <modal-profile
                 target="modalDirektur2"
                 alt="Direktur Bank Umkm"
-                :img="$imgProfile('Direktur-Pemasaran.png')"
+                :img="$imgProfile('Direktur-Pemasaran.webp')"
                 bio="Lahir pada tanggal 24 Agustus 1975 di Ambon. Menjabat Direktur Pemasaran Bank BPR Jatim sejak Juni 2022. Sebelumnya, berkarir di BRI Syariah, PT Bank DKI Jakarta dan PT. Bank Jatim Tbk. Sejak 2013 sampai dengan 2022 dan jabatan terakhir sebagai Kepala Cabang di PT. Bank Jatim Tbk."
               />
             </div>
@@ -397,7 +397,7 @@
             >
               <div class="img-manajemen mb-2">
                 <img
-                  src="../../assets/Direktur-Kepatuhan.png"
+                  src="../../assets/Direktur-Kepatuhan.webp"
                   class="img-fluid border p-1"
                   alt=""
                 />
@@ -413,7 +413,7 @@
               <modal-profile
                 target="modalDirektur3"
                 alt="Direktu Bank Umkm"
-                :img="$imgProfile('Direktur-Kepatuhan.png')"
+                :img="$imgProfile('Direktur-Kepatuhan.webp')"
                 bio="Lahir pada tanggal 04 Agustus 1968 di Kediri. Menjabat Direktur Kepatuhan Bank BPR Jatim sejak Juni 2022. Sebelumnya, berkarir di Ditjen Migas, Nusa Bank management BUMN PT. Surveyor Indonesia, Direktur di Oil & Gas Service Company, Pengurus PWNU Jatim Bidang Pengembangan Ekonomi Umat"
               />
             </div>
@@ -424,7 +424,7 @@
             >
               <div class="img-manajemen mb-2">
                 <img
-                  src="../../assets/Direktur-Umum-Keuangan.png"
+                  src="../../assets/Direktur-Umum-Keuangan.webp"
                   class="img-fluid border p-1"
                   alt=""
                 />
@@ -439,7 +439,7 @@
               <modal-profile
                 target="modalDirektur4"
                 alt="Direktur Bank Umkm"
-                :img="$imgProfile('Direktur-Umum-Keuangan.png')"
+                :img="$imgProfile('Direktur-Umum-Keuangan.webp')"
                 bio="Lahir pada tanggal 30 Agustus 1977 di Surabaya. Menjabat Direktur Umum & Keuangan Bank BPR Jatim sejak Agustus 2022. Sebelumnya, berkarir di PT. Bank DKI Jakarta sejak 2018 - 2022 menjabat sebagai Micro Area Head & Retail Manager, Bank BPD Banten sejak 2012 - 2018 menjabat sebagai Pemimpin Cabang dan Manager Penyelamatan & Penyelesaian Kredit Bermasalah."
               />
             </div>
