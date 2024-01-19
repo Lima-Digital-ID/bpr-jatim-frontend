@@ -7,7 +7,7 @@
                     <div class="text-left" id="line">
                         <div class="row align-items-center" id="container-card">
                             <div class="col-xs-6 col-sm-2 text-center">
-                                <img src="https://backoffice.bankumkm.id/public/upload/umkm.png" class="img-content" alt="">
+                                <img src="https://backoffice.bankumkm.id/upload/umkm.png" class="img-content" alt="">
                             </div>
                             <div class="col-xs-6 col-sm-10">
                                 <p>Solusi Digital bagi UMKM dan Komunitas anda</p>
@@ -21,7 +21,7 @@
                     <div class="text-left" id="line">
                         <div class="row align-items-center" id="container-card">
                             <div class="col-xs-6 col-sm-2">
-                                <img src="https://backoffice.bankumkm.id/public/upload/gozis.png" class="img-content" alt="">
+                                <img src="https://backoffice.bankumkm.id/upload/gozis.png" class="img-content" alt="">
                             </div>
                             <div class="col-xs-6 col-sm-10">
                                 <!-- <h6>GoZIS</h6> -->
@@ -36,7 +36,7 @@
                     <div class="text-left">
                         <div class="row align-items-center" id="container-card">
                             <div class="col-xs-6 col-sm-2">
-                                <img src="https://backoffice.bankumkm.id/public/upload/phone.png" class="img-content" alt="">
+                                <img src="https://backoffice.bankumkm.id/upload/phone.png" class="img-content" alt="">
                             </div>
                             <div class="col-xs-6 col-sm-10">
                                 <!-- <h6>Konsumen</h6> -->
