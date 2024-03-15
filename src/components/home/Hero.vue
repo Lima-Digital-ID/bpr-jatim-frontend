@@ -1,29 +1,29 @@
 <template>
-    <section id="hero" style="height: 100vh;">
+    <section id="hero" style="height: 90vh; margin-top: -2%;">
         <div class="video-container" :class="{focus : heroFocus}">
-            <Header :nav-transition="navTransition" class-nav="transparent-white"/>
+            <!-- <Header :nav-transition="navTransition" class-nav="transparent-white"/> -->
             <div class="close-focus" @click="toggleHeroFocus"><span class="fa fa-times-circle"></span></div>
-            <div v-html="this.video.vidio_url"></div>
-            <div class="layer"></div>
+            <!-- <div v-html="this.video.vidio_url"></div> -->
+            <!-- <div class="layer"></div> -->
             <div class="hero d-flex align-items-center">
                 <div class="container custom pl-4">
                     <div class="row">
                         <div class="col-md-7" id="hero-text">
                             <div class="row my-5">
                                 <div class="col-md-12">
-                                    <h1 class="font-weight-bold"> <span class="color-blue">{{$t('welcomeMsg')}}</span> <br> <span class="color-white">BANK UMKM JAWA TIMUR</span></h1>
-                                    <a href="#" @click="toggleHeroFocus"><span class="playVideo fa fa-play color-blue mt-4"></span> </a>
+                                    <h1 class="font-weight-bold"> <span class="color-blue">{{$t('welcomeMsg')}}</span> <br> <span class="">BANK UMKM JAWA TIMUR</span></h1>
+                                    <!-- <a @click="toggleHeroFocus"><span class="playVideo fa fa-play color-blue mt-4"></span> </a> -->
                                 </div>
                             </div>
                             <div class="row mt-5">
                                 <div class="col">
-                                    <a href="#" class="font-weight-light" @click="togglePromo">
+                                    <a class="font-weight-light" @click="togglePromo">
                                         <span class="color-blue fa fa-newspaper fa-lg mr-2"></span> 
-                                        <span class="color-white">{{$t('promoTerbaru')}}</span>
+                                        <span class="color-darkBlue">{{$t('promoTerbaru')}}</span>
                                     </a>
-                                    <a href="#" class="ml-4 font-weight-light" @click="scrollTo('#kurs-section')" data-target="#kurs-section">
+                                    <a class="ml-4 font-weight-light" @click="scrollTo('#kurs-section')" data-target="#kurs-section">
                                         <span class="color-blue fa fa-coins fa-lg mr-2"></span> 
-                                        <span class="color-white">{{$t('kursBankUmkm')}}</span>
+                                        <span class="color-darkBlue">{{$t('kursBankUmkm')}}</span>
                                     </a>
                                 </div>
                             </div>
@@ -54,10 +54,10 @@
                         </div>
                     </div>
                 </div>
-                <div class="promo-on-hero py-3" :class="{show : clickedPromo}">
-                    <div class="container custom">
+                <!-- <div class="promo-on-hero" :class="{show : clickedPromo}">
+                    <div class="container custom mb-2">
                         <div class="text-right font-13 hide-promo c-pointer color-white"  @click="togglePromo">
-                            <span class="fa fa-chevron-down mr-2"></span> Sembunyikan Promo 
+                            <span class="fa fa-chevron-down mr-2 mt-3"></span> Sembunyikan Promo 
                         </div>
                         <div v-if="promo.length>0">
                             <carousel class="mt-3 owl-promo" :nav="true" :loop="true" :margin="20" :dots="false" :responsive="{0:{items:3},600:{items:4},1000:{items:6}}" :navText="customNav">
@@ -70,21 +70,22 @@
                             </carousel>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
     </section>
 </template>
+
 <script>
-import Header from '@/components/common/Header';
-import carousel from 'vue-owl-carousel'
+// import Header from '@/components/common/Header';
+// import carousel from 'vue-owl-carousel'
 import {myFunction} from '@/helper/myFunction'
 
 export default {
     name : 'Hero',
     components : {
-        Header,
-        carousel,
+        // Header,
+        // carousel,
     },
     data(){
         return{
@@ -137,7 +138,7 @@ export default {
             this.navTransition= true
         },
         toRupiah() {
-            document.getElementById('nominal').value = myFunction.rupiah(parseFloat(document.getElementById('nominal').value))
+            document.getElementById('nominalPinjaman').value = myFunction.rupiah(parseFloat(document.getElementById('nominalPinjaman').value))
         },
         getEstimasi(){
             const nominal = document.getElementById('nominalPinjaman').value.replace(".", "")
@@ -172,5 +173,9 @@ export default {
     .simulasi .bottom input::placeholder{
         color : #495057;
         font-weight : normal;
+    }
+
+    a:hover {
+        cursor: pointer;
     }
 </style>

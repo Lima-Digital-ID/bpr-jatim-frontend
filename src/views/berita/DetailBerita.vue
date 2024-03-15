@@ -18,7 +18,7 @@
                                 </p>
                             </div>
                         </div>
-                        <div class="box-white no-hover">
+                        <div class="box-white no-hover" id="konten">
                             <img :src="this.detail.cover" class="img-fluid mb-4" alt="">
                             <p class="color-dark2" v-html="this.detail.konten"></p>
                         </div>
@@ -94,3 +94,20 @@ export default {
     }, 
 }
 </script>
+<style scoped>
+#konten >>> p img {
+        /* height: auto; */
+        width: 100%;
+    }
+@media (max-width: 768px) {
+    #konten >>> p img {
+        /* height: auto; */
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 2rem;
+        /* text-align: center; */
+    }
+}
+</style>

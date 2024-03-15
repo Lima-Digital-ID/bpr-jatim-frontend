@@ -1,6 +1,6 @@
 <template>
-    <section id="app-section" class="py-5">
-        <div class="container custom">
+    <section id="app-section" class="py-0">
+        <!-- <div class="container custom">
             <div class="row align-items-center">
                 <div class="col-md-6">
                     <h3 class="font-weight-bold">{{$t('bannerApp.judul')}}</h3>
@@ -36,12 +36,12 @@
                     <img src="@/assets/images/common/app.png" class="img-fluid" alt="">
                 </div>
             </div>
-        </div>
+        </div> -->
     </section>
 </template>
 
-<script>
+<!-- <script>
 export default {
     name : "BannerApp"
 }
-</script>
+</script> -->

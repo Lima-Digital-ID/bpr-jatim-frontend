@@ -1,10 +1,12 @@
 <template>
   <div>
-    <Hero/>
-    <Kurs/>
+    <!-- <Popup/> -->
+    <Heroimage/>
+    <Carditem/>
+    <!-- <Hero/> -->
     <line-chart :data="chartData"></line-chart>
     <section id="berita-section" class="pb-5">
-        <div class="container custom">
+        <div class="container custom" style="margin-top: 30px;">
             <div class="row">
                 <div class="col-md-6">
                     <h3 class="font-weight-bold">{{$t('beritaTerbaru')}}</h3>
@@ -32,33 +34,46 @@
               </div>
             </div>
             <div class="row mt-5">
-                <div class="col text-center">
+                <div class="col text-right">
                     <router-link to="/berita" class="btn btn-primary px-4 py-2">{{$t('btnLebihBanyakBerita')}}</router-link>
                 </div>
             </div>
         </div>
     </section>
-    <BannerApp/>
-    <BannerPinjaman/>
+    <!-- <BannerApp/>
+    <BannerPinjaman/> -->
+    <Kurs/>
     <Footer/>
   </div>
 </template>
 
 <script>
-import Hero from '@/components/home/Hero'
+// import Hero from '@/components/home/Hero'
 import Kurs from '@/components/home/Kurs'
 import BeritaStyle1 from '@/components/berita/BeritaStyle1'
 import BeritaStyle2 from '@/components/berita/BeritaStyle2'
-import BannerApp from '@/components/app/BannerApp'
-import BannerPinjaman from '@/components/app/BannerPinjaman'
+// import BannerApp from '@/components/app/BannerApp'
+// import BannerPinjaman from '@/components/app/BannerPinjaman'
 import Footer from '@/components/common/Footer'
 import carousel from 'vue-owl-carousel'
+import Heroimage from '@/components/home/Heroimage'
+import Carditem from '@/components/home/Carditem'
+// import Popup from '@/components/popup/Popup'
 
 export default {
   name: 'Home',
   components: {
-    Hero,Footer,Kurs,BeritaStyle1,BeritaStyle2,BannerApp,BannerPinjaman,carousel
-  },
+    // Hero,
+    Footer,
+    Kurs,
+    BeritaStyle1,
+    BeritaStyle2,
+    // BannerApp,
+    // BannerPinjaman,
+    carousel,
+    Heroimage,
+    Carditem
+},
   data() {
     return {
       beritaSlide : [],

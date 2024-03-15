@@ -6,10 +6,12 @@
         "textProfil" : "Bank UMKM Jatim Profile. Always committed to give the best contribution to society",
         "transparansi" : "Transaparency",
         "textTransparansi" : "Bank UMKM Jatim as a public company has an obligation to carry out transparency",
-        "governance":"Good Corporate Governance",
-        "textGovernance": "Bank UMKM Jatim Corporate Governance",
+        "governance":"Financial Reporting ",
+        "textGovernance": "Bank UMKM Jatim Financial Reporting ",
         "socialresponsibility":"Corporate Social Responsibility",
         "textSocialResponsibility": "Bank UMKM Jatim Corporate responsibility",
+        "tataKelolaPerusahaan" : "Corporate Governance",
+        "textTataKelolaPerusahaan" : "Bank UMKM Jatim Corporate Governance",
         "produkLayanan" : "Products",
         "textPersonal" : "Bank UMKM Jawa Timur provides many choices of savings in the form of savings with various advantages",
         "bisnis" : "Business",
@@ -17,6 +19,7 @@
         "layanan" : "Services",
         "textLayanan" : "Bank UMKM provides a variety of services that you can enjoy at each of our branch offices.",
         "umkm" : "UMKM Partner",
+        "textUmkm" : "Our List of Supported",
         "info" : "Info & News",
         "berita" : "News",
         "textBerita" : "See the latest news and information from Bank UMKM",
@@ -37,7 +40,11 @@
         "kantor" : "Branch Office and Cash Office",
         "textKantor" : "List of Bank UMKM Branch Offices and Cash Offices",
         "lelang" : "Guarantee Auction Announcement",
-        "textLelang" : "Information about the guarantee auction can be accessed here"
+        "textLelang" : "Information about the guarantee auction can be accessed here",
+        "bantuan" : "Help & FAQ",
+        "textBantuan" : "We are ready to serve and answer your questions",
+        "pengajuan" : "Loan Application",
+        "textPengajuan" : "We are ready to help grow your business by providing loan facilities"
     },
     "welcomeMsg" : "WELCOME TO",
     "promoTerbaru" : "Latest Promo",
@@ -110,5 +117,7 @@
     "textPeranan3" : "Support regional economic growth.",
     "textPeranan4" : "Supporting gender equality (participation of women) in managing a (productive) business.",
     "textPeranan5" : "Supporting business activities In its role as an intermediary institution and supporting the government program of Bank UMKM Jatim",
-    "strukturOrganisasi" : "Organizational structure"
+    "strukturOrganisasi" : "Organizational structure",
+    "jajaranKomisaris" : "Board of Commissioners",
+    "jajaranDireksi" : "Board of Director"
 }
